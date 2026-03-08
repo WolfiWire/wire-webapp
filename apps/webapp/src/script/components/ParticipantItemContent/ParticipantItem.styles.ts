@@ -26,7 +26,7 @@ export const listWrapper = ({isHighlighted = false, noUnderline = false, noInter
   alignItems: 'center',
 
   '&:hover, &:focus, &:focus-visible': {
-    background: 'var(--wire-background-base-primary-focus)',
+    background: 'var(--wire-background-base-secondary-focus)',
     '&::after': {
       borderBottom: 'none',
     },
@@ -39,10 +39,10 @@ export const listWrapper = ({isHighlighted = false, noUnderline = false, noInter
   ...(!noInteraction && {
     transition: 'background-color 0.15s ease-in-out',
     '&:hover': {
-      backgroundColor: 'var(--wire-background-base-primary-focus)',
+      backgroundColor: 'var(--wire-background-base-secondary-focus)',
     },
     '&:focus-visible': {
-      backgroundColor: 'var(--wire-background-base-primary-focus)',
+      backgroundColor: 'var(--wire-background-base-secondary-focus)',
       outline: '1px solid var(--accent-color-focus)',
     },
   }),

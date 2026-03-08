@@ -41,17 +41,6 @@ export const label: CSSObject = {
 
 export const button: CSSObject = {
   marginBottom: 0,
-  backgroundColor: 'var(--wire-background-accent-primary)',
-  border: 'none',
-  color: 'var(--wire-content-accent-on-primary)',
-  svg: {
-    path: {
-      fill: 'var(--wire-content-accent-on-primary)',
-    },
-  },
-  '&:hover': {
-    backgroundColor: 'var(--wire-background-accent-primary-focus)',
-  },
 };
 
 const commonIconStyles: CSSObject = {
