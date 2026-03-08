@@ -33,7 +33,6 @@ import {
   Box,
   Link,
   LinkVariant,
-  COLOR_V2,
   H2,
   QUERY,
   useMatchMedia,
@@ -160,7 +159,7 @@ const OAuthPermissionsComponent = ({
     <Page>
       <ContainerXS centerText verticalCenter css={containerCSS}>
         {!oAuthApp ? (
-          <Icon.LoadingIcon width="36" height="36" css={{path: {fill: COLOR_V2.BLUE_DARK_500}}} />
+          <Icon.LoadingIcon width="36" height="36" css={{path: {fill: 'var(--wire-content-accent-primary)'}}} />
         ) : (
           <>
             <H2 css={headerCSS}>{t('oauth.headline')}</H2>
@@ -171,7 +170,7 @@ const OAuthPermissionsComponent = ({
               onClick={doLogout}
               data-uie-name="go-logout"
               variant={LinkVariant.PRIMARY}
-              color={COLOR_V2.BLUE}
+              color="var(--wire-content-accent-primary)"
             >
               {t('oauth.logout')}
             </Link>

@@ -19,7 +19,7 @@
 
 import {CSSObject} from '@emotion/react';
 
-import {COLOR_V2, media} from '@wireapp/react-ui-kit';
+import {media} from '@wireapp/react-ui-kit';
 
 export const leftSectionCss: CSSObject = {
   background: 'black',
@@ -52,7 +52,7 @@ export const whiteFontCss: CSSObject = {
 export const bodyCss: CSSObject = {
   flex: 'auto',
   flexDirection: 'row',
-  background: COLOR_V2.GRAY_10,
+  background: 'var(--wire-background-base-secondary)',
   height: '100%',
   minHeight: '100vh',
 };

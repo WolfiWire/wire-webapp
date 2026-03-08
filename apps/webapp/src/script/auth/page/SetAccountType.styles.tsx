@@ -19,7 +19,7 @@
 
 import {CSSObject} from '@emotion/react';
 
-import {COLOR_V2, WIDTH} from '@wireapp/react-ui-kit';
+import {WIDTH} from '@wireapp/react-ui-kit';
 
 const breakpoints = [WIDTH.TABLET_MAX, WIDTH.DESKTOP_MAX];
 
@@ -101,11 +101,11 @@ export const styles: {
     padding: '24px',
     borderRadius: 12,
     border: '1px solid',
-    borderColor: isHighlighted ? 'var(--accent-color)' : 'var(--text-input-border)',
+    borderColor: isHighlighted ? 'var(--accent-color)' : 'var(--wire-border-base-primary)',
     flex: 1,
     height: 360,
     position: 'relative',
-    background: COLOR_V2.WHITE,
+    background: 'var(--wire-background-base-primary)',
     [mediaQueryDesktop]: {
       margin: '16px 0',
     },
@@ -136,7 +136,7 @@ export const styles: {
   horizontalLine: {
     width: '100%',
     height: '0.5px',
-    background: COLOR_V2.GRAY_40,
+    background: 'var(--wire-border-base-primary)',
     margin: '12px 0px',
   },
 };

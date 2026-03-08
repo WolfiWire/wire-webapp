@@ -35,7 +35,7 @@ const titleStyles: CSSObject = {
 };
 
 const subTitleStyles: CSSObject = {
-  color: 'var(--text-input-placeholder)',
+  color: 'var(--wire-content-base-secondary)',
   fontSize: '0.75rem',
   fontWeight: 400,
   marginBottom: 16,

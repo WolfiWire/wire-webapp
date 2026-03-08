@@ -50,7 +50,7 @@ export const arrowButtonStyles: CSSObject = {
 export const arrowPreviousIconStyles: CSSObject = {
   height: '32px',
   path: {
-    fill: 'var(--main-color)',
+    fill: 'var(--wire-content-base-primary)',
   },
   marginTop: '2px',
   marginRight: '3px',
@@ -67,7 +67,7 @@ export const arrowPreviousIconDisabledStyles: CSSObject = {
 export const arrowNextIconStyles: CSSObject = {
   height: '32px',
   path: {
-    fill: 'var(--main-color)',
+    fill: 'var(--wire-content-base-primary)',
   },
   marginBottom: '2px',
 };

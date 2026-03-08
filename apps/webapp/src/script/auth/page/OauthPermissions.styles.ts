@@ -19,7 +19,6 @@
 
 import {CSSObject} from '@emotion/react';
 
-import {COLOR_V2} from '@wireapp/react-ui-kit';
 
 export const teamImageCSS: CSSObject = {
   width: '22px',
@@ -45,8 +44,8 @@ export const headerCSS: CSSObject = {
 
 export const boxCSS: CSSObject = {
   marginBottom: '24px',
-  background: COLOR_V2.GRAY_20,
-  borderColor: COLOR_V2.GRAY_20,
+  background: 'var(--wire-background-base-tertiary)',
+  borderColor: 'var(--wire-background-base-tertiary)',
   padding: '8px',
 };
 

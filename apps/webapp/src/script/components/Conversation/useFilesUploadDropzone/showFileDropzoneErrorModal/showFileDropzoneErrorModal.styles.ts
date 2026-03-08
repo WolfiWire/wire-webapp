@@ -42,9 +42,5 @@ export const fileNameStyles: CSSObject = {
   WebkitLineClamp: '2',
   WebkitBoxOrient: 'vertical',
   overflow: 'hidden',
-  color: 'var(--gray-70)',
-
-  'body.theme-dark &': {
-    color: 'var(--gray-60)',
-  },
+  color: 'var(--wire-content-base-secondary)',
 };

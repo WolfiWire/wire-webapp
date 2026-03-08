@@ -39,7 +39,7 @@ export const participantListWrapperStyles: CSSObject = {
     width: '100%',
     height: '100%',
     zIndex: 2,
-    backgroundColor: 'var(--app-bg-secondary)',
+    backgroundColor: 'var(--wire-background-base-primary)',
     border: '2px solid var(--accent-color)',
     borderRadius: 10,
   },
@@ -52,7 +52,7 @@ export const headerStyles: CSSObject = {
     justifyContent: 'flex-end',
     alignItems: 'center',
     padding: '12px 10px',
-    borderBottom: '1px solid var(--border-color)',
+    borderBottom: '1px solid var(--wire-border-base-primary)',
   },
   '& button': {
     minWidth: 'auto',

@@ -39,7 +39,7 @@ export const passwordInputRowStyles: CSSObject = {
 export const passwordInputLabelStyles: CSSObject = {
   fontSize: 'var(--font-size-medium)',
   fontWeight: 'var(--font-weight-regular)',
-  color: 'var(--main-color)',
+  color: 'var(--wire-content-base-primary)',
   gridColumn: 1,
   gridRow: 1,
 };
@@ -55,14 +55,11 @@ export const passwordInputStyles: CSSObject = {
 export const passwordActionButtonStyles: CSSObject = {
   alignSelf: 'flex-start',
   '& button': {
-    backgroundColor: 'var(--white)',
+    backgroundColor: 'var(--wire-background-base-primary)',
     marginBottom: 0,
     whiteSpace: 'nowrap',
     overflow: 'visible',
     textOverflow: 'clip',
-  },
-  'body.theme-dark & button': {
-    backgroundColor: 'var(--gray-90)',
   },
 };
 
@@ -71,10 +68,10 @@ export const passwordCopyButtonStyles: CSSObject = {
   gridColumn: 2,
   gridRow: 2,
   '& button': {
-    backgroundColor: 'var(--white)',
+    backgroundColor: 'var(--wire-background-base-primary)',
     borderRadius: '12px',
-    border: '1px solid var(--gray-40)',
-    color: 'var(--main-color)',
+    border: '1px solid var(--wire-border-base-primary)',
+    color: 'var(--wire-content-base-primary)',
     cursor: 'pointer',
     marginBottom: 0,
     whiteSpace: 'nowrap',
@@ -84,17 +81,8 @@ export const passwordCopyButtonStyles: CSSObject = {
       fill: 'currentColor',
     },
     '&:hover, &:focus': {
-      backgroundColor: 'var(--gray-20)',
-      borderColor: 'var(--gray-50)',
-    },
-  },
-  'body.theme-dark & button': {
-    backgroundColor: 'var(--gray-90)',
-    border: '1px solid var(--gray-100)',
-    color: 'var(--white)',
-    '&:hover, &:focus': {
-      backgroundColor: 'var(--gray-80)',
-      borderColor: 'var(--gray-70)',
+      backgroundColor: 'var(--wire-background-base-tertiary)',
+      borderColor: 'var(--wire-border-base-primary)',
     },
   },
 };

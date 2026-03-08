@@ -23,11 +23,8 @@ import {CSSObject} from '@emotion/react';
 
 import {ValidationUtil} from '@wireapp/commons';
 import {
-  BASE_DARK_COLOR,
-  BASE_LIGHT_COLOR,
   Button,
   ButtonVariant,
-  COLOR_V2,
   Input,
   Label,
   Switch,
@@ -140,12 +137,12 @@ interface CellsShareModalContentProps {
 }
 
 const DEFAULT_SWITCH_COLORS: SwitchColorProps = {
-  activatedColor: BASE_LIGHT_COLOR.GREEN,
-  activatedColorDark: BASE_DARK_COLOR.GREEN,
-  deactivatedColor: COLOR_V2.GRAY_70,
-  deactivatedColorDark: COLOR_V2.GRAY_60,
-  disabledColor: COLOR_V2.GRAY_70,
-  disabledColorDark: COLOR_V2.GRAY_60,
+  activatedColor: 'var(--wire-content-positive-primary)',
+  activatedColorDark: 'var(--wire-content-positive-primary)',
+  deactivatedColor: 'var(--wire-content-base-secondary)',
+  deactivatedColorDark: 'var(--wire-content-base-secondary)',
+  disabledColor: 'var(--wire-content-base-secondary)',
+  disabledColorDark: 'var(--wire-content-base-secondary)',
 };
 
 const getDefaultLabels = (): CellsShareModalContentLabels => ({

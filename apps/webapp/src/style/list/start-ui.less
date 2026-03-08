@@ -90,7 +90,7 @@
   display: flex;
   height: 44px;
   padding: 0 8px;
-  border-bottom: 1px solid var(--gray-50);
+  border-bottom: 1px solid var(--wire-border-base-primary);
   margin: 20px -8px 0;
 
   .start-ui-list-tab {
@@ -103,8 +103,8 @@
     transition: background-color 0.15s ease-in-out;
 
     &:hover {
-      border-bottom: 1px solid var(--gray-50);
-      background-color: @white;
+      border-bottom: 1px solid var(--wire-border-base-primary);
+      background-color: var(--wire-background-base-primary-focus);
     }
 
     &.active {
@@ -125,7 +125,7 @@
       width: 100%;
       height: 100%;
 
-      color: var(--main-color);
+      color: var(--wire-content-base-primary);
       cursor: pointer;
       line-height: var(--line-height-md);
     }
@@ -139,14 +139,7 @@ body.theme-dark {
     color: var(--black);
   }
   .start-ui-list-tabs {
-    border-bottom-color: var(--gray-70);
-
     .start-ui-list-tab {
-      &:hover {
-        border-bottom: 1px solid var(--gray-70);
-        background: @black;
-      }
-
       &.active {
         border-bottom-color: var(--white);
       }
@@ -231,16 +224,11 @@ body.theme-dark {
   .heading-h4;
   padding-bottom: 4px;
   padding-left: 16px;
-  border-bottom: 1px solid var(--gray-60);
+  border-bottom: 1px solid var(--wire-border-base-primary);
   margin-top: 16px;
   margin-bottom: 0;
-  color: var(--gray-70);
+  color: var(--wire-content-base-secondary);
   line-height: var(--line-height-lg);
-}
-
-body.theme-dark .start-ui-list-header {
-  border-bottom-color: var(--gray-70);
-  color: var(--gray-50);
 }
 
 .start-ui-list-header-top-people {
@@ -289,7 +277,7 @@ body.theme-dark .start-ui-list-header {
   border: 1px solid rgba(141, 152, 159, 0.16);
   border-radius: 4px;
   margin-right: 16px;
-  background-color: #fff;
+  background-color: var(--wire-background-base-primary);
   color: var(--background);
 }
 
@@ -382,7 +370,7 @@ body.theme-dark .start-ui-list-header {
 
   &__text,
   &__link {
-    color: #9fa1a2;
+    color: var(--wire-content-base-secondary);
     font-size: var(--font-size-small);
   }
 

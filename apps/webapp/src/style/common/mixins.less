@@ -41,11 +41,11 @@
   .setVariables(foreground background);
   .setColorFade(foreground, @foreground);
   .setColorFade(background, @background);
-  .setVariables(app-bg sidebar-bg input-bar-bg transparent-img-bg sidebar-border-color sidebar-folder-selected-bg main-color border-color app-bg-secondary conversation-list-bg-opacity group-icon-bg base-secondary-text);
-  .setVariables(group-video-bg group-video-tile-bg participant-audio-connecting-color inactive-call-button-bg inactive-call-button-border inactive-call-button-hover-bg inactive-call-button-hover-border disabled-call-button-bg disabled-call-button-border disabled-call-button-svg button-group-left-hover button-group-right-hover toggle-button-unselected-hover-border toggle-button-unselected-hover-bg);
-  .setVariables(modal-bg modal-border-color);
+  .setVariables(transparent-img-bg sidebar-folder-selected-bg conversation-list-bg-opacity);
+  .setVariables(group-video-bg participant-audio-connecting-color inactive-call-button-bg inactive-call-button-border inactive-call-button-hover-bg disabled-call-button-bg disabled-call-button-border disabled-call-button-svg toggle-button-unselected-hover-border toggle-button-unselected-hover-bg);
+  .setVariables(modal-border-color);
   .setVariables(preference-account-input-bg);
-  .setVariables(text-input-editing text-input-background text-input-border text-input-border-hover text-input-placeholder text-input-color text-input-alert text-input-disabled text-input-label text-input-success);
+  .setVariables(text-input-editing text-input-border-hover text-input-label);
   .setVariables(checkbox-background checkbox-background-selected checkbox-background-disabled checkbox-background-disabled-selected checkbox-border checkbox-border-hover checkbox-border-disabled checkbox-alert);
   .setVariables(message-quote-bg);
   .setVariables(group-creation-modal-teamname-input-bg);
@@ -368,33 +368,24 @@
 .panel-header {
   .heading-h4;
   padding: 0 20px 4px;
-  border-bottom: 1px solid var(--gray-60);
+  border-bottom: 1px solid var(--wire-border-base-primary);
   margin-top: 24px;
-  color: var(--gray-70);
-
-  body.theme-dark & {
-    border-bottom-color: var(--gray-70);
-    color: var(--gray-50);
-  }
+  color: var(--wire-content-base-secondary);
 }
 
 .button-active() {
-  background-color: var(--accent-color-500) !important;
-
-  body.theme-dark & {
-    background-color: var(--accent-color-600) !important;
-  }
+  background-color: var(--wire-background-accent-secondary) !important;
 }
 
 .button-states() {
   transition: background-color 0.15s ease-in-out;
 
   &:hover {
-    background-color: var(--app-bg-secondary);
+    background-color: var(--wire-background-base-primary-focus);
   }
 
   &:focus-visible {
-    background-color: var(--app-bg-secondary);
+    background-color: var(--wire-background-base-primary-focus);
     outline: 1px solid var(--accent-color-focus);
   }
 }

@@ -28,41 +28,27 @@ body.theme-default {
   // -------------------------------------------
   // Framework
   // ----------------------------------------------------------------------------
-  @app-bg: var(--gray-10);
-  @sidebar-bg: var(--gray-20);
-  @sidebar-border-color: var(--gray-50);
-  @sidebar-folder-selected-bg: var(--gray-30);
-  @border-color: var(--gray-40);
-  @main-color: var(--black);
-  @app-bg-secondary: var(--white);
+  @sidebar-folder-selected-bg: var(--wire-background-base-secondary-focus);
   @conversation-list-bg-opacity: fade(#000, 64%);
-  @input-bar-bg: var(--white);
-  @transparent-img-bg: var(--gray-20);
-  @group-icon-bg: var(--white);
-  @base-secondary-text: var(--gray-70);
+  @transparent-img-bg: var(--wire-background-base-tertiary);
 
   // ----------------------------------------------------------------------------
   // Calling
   // ----------------------------------------------------------------------------
-  @group-video-bg: var(--gray-10);
-  @group-video-tile-bg: var(--gray-90);
+  @group-video-bg: var(--wire-background-base-secondary);        // gray-10 — exact
   @participant-audio-connecting-color: @red-dark-500;
-  @inactive-call-button-bg: var(--white);
-  @inactive-call-button-border: var(--gray-40);
-  @inactive-call-button-hover-bg: var(--gray-20);
-  @inactive-call-button-hover-border: var(--gray-50);
-  @disabled-call-button-bg: var(--gray-20);
-  @disabled-call-button-border: var(--gray-40);
-  @disabled-call-button-svg: var(--gray-60);
-  @button-group-left-hover: var(--gray-20);
-  @button-group-right-hover: var(--gray-90);
-  @toggle-button-unselected-hover-border: var(--gray-80);
-  @toggle-button-unselected-hover-bg: var(--gray-30);
+  @inactive-call-button-bg: var(--wire-background-neutral-secondary);
+  @inactive-call-button-border: var(--wire-border-base-primary);
+  @inactive-call-button-hover-bg: var(--wire-background-base-tertiary);  // gray-20 — exact
+  @disabled-call-button-bg: var(--wire-background-disabled-secondary);
+  @disabled-call-button-border: var(--wire-border-disabled-primary);
+  @disabled-call-button-svg: var(--wire-content-disabled-primary);
+  @toggle-button-unselected-hover-border: var(--wire-border-neutral-primary);  // gray-70 — closest (original gray-80)
+  @toggle-button-unselected-hover-bg: var(--wire-background-base-secondary-focus);  // gray-30 — exact
 
   // ----------------------------------------------------------------------------
   // Modal
   // ----------------------------------------------------------------------------
-  @modal-bg: #f8f8f8;
   @modal-border-color: 1px solid transparent;
 
   // ----------------------------------------------------------------------------
@@ -74,27 +60,20 @@ body.theme-default {
   // Editing Input
   // ----------------------------------------------------------------------------
   @text-input-editing: mix(@w-yellow, #fff, 16%);
-  @text-input-background: #fff;
-  @text-input-border: @gray-40;
   @text-input-border-hover: @gray-60;
-  @text-input-placeholder: @gray-70;
-  @text-input-color: #000;
-  @text-input-alert: @red-500;
-  @text-input-disabled: @gray-20;
   @text-input-label: @gray-80;
-  @text-input-success: @green-500;
 
   // ----------------------------------------------------------------------------
   // Checkbox
   // ----------------------------------------------------------------------------
   @checkbox-background: @gray-20;
-  @checkbox-background-selected: @blue-500;
+  @checkbox-background-selected: var(--wire-background-accent-primary);
   @checkbox-background-disabled: @gray-10;
   @checkbox-background-disabled-selected: @gray-60;
   @checkbox-border: @gray-80;
-  @checkbox-border-hover: @blue-500;
+  @checkbox-border-hover: var(--wire-border-accent-primary);
   @checkbox-border-disabled: @gray-60;
-  @checkbox-alert: @red-500;
+  @checkbox-alert: var(--wire-border-danger-primary);
 
   // ----------------------------------------------------------------------------
   // Message Quote Vertical Bar
@@ -107,8 +86,8 @@ body.theme-default {
   @group-creation-modal-teamname-input-bg: #fff;
 
   // message actions menu
-  @message-actions-background: #fff;
-  @message-actions-border: @gray-40;
+  @message-actions-background: var(--wire-background-base-primary);
+  @message-actions-border: var(--wire-border-base-primary);
   @message-actions-background-hover: @gray-20;
   @message-actions-border-hover: @gray-50;
 
@@ -133,41 +112,27 @@ body.theme-dark {
   // ----------------------------------------------------------------------------
   // Framework
   // ----------------------------------------------------------------------------
-  @app-bg: var(--gray-95);
-  @sidebar-bg: var(--gray-100);
-  @sidebar-border-color: var(--gray-95);
-  @sidebar-folder-selected-bg: var(--gray-95);
-  @main-color: var(--white);
-  @border-color: var(--gray-90);
-  @app-bg-secondary: var(--black);
+  @sidebar-folder-selected-bg: var(--wire-background-base-secondary);  // gray-95 — exact
   @conversation-list-bg-opacity: fade(#000, 78%);
-  @input-bar-bg: var(--gray-100);
-  @transparent-img-bg: var(--gray-90);
-  @group-icon-bg: var(--gray-95);
-  @base-secondary-text: var(--gray-60);
+  @transparent-img-bg: var(--wire-background-base-tertiary);
 
   // ----------------------------------------------------------------------------
   // Calling
   // ----------------------------------------------------------------------------
-  @group-video-bg: var(--gray-100);
-  @group-video-tile-bg: var(--gray-95);
+  @group-video-bg: var(--wire-background-base-primary);           // gray-100 — exact
   @participant-audio-connecting-color: @red-dark-500;
-  @inactive-call-button-bg: var(--gray-90);
-  @inactive-call-button-border: var(--gray-100);
-  @inactive-call-button-hover-bg: var(--gray-80);
-  @inactive-call-button-hover-border: var(--gray-70);
-  @disabled-call-button-bg: var(--gray-95);
-  @disabled-call-button-border: var(--gray-95);
-  @disabled-call-button-svg: var(--gray-70);
-  @button-group-left-hover: var(--gray-100);
-  @button-group-right-hover: var(--gray-30);
-  @toggle-button-unselected-hover-border: var(--gray-50);
-  @toggle-button-unselected-hover-bg: var(--gray-90);
+  @inactive-call-button-bg: var(--wire-background-base-tertiary);
+  @inactive-call-button-border: var(--wire-border-inverted-primary);
+  @inactive-call-button-hover-bg: var(--wire-background-base-tertiary-focus);  // gray-80 — exact
+  @disabled-call-button-bg: var(--wire-background-disabled-secondary);
+  @disabled-call-button-border: var(--wire-border-disabled-primary);
+  @disabled-call-button-svg: var(--wire-content-disabled-primary);
+  @toggle-button-unselected-hover-border: var(--wire-border-disabled-secondary);  // gray-60 — closest (original gray-50)
+  @toggle-button-unselected-hover-bg: var(--wire-background-base-tertiary);      // gray-90 — exact
 
   // ----------------------------------------------------------------------------
   // Modal
   // ----------------------------------------------------------------------------
-  @modal-bg: #26272c;
   @modal-border-color: 1px solid rgba(255, 255, 255, 0.12);
 
   // ----------------------------------------------------------------------------
@@ -179,31 +144,24 @@ body.theme-dark {
   // Editing Input
   // ----------------------------------------------------------------------------
   @text-input-editing: #42391c;
-  @text-input-background: #000;
-  @text-input-border: @gray-80;
   @text-input-border-hover: @gray-40;
-  @text-input-placeholder: @gray-60;
-  @text-input-color: #fff;
-  @text-input-alert: @red-dark-500;
-  @text-input-disabled: @gray-100;
   @text-input-label: @gray-40;
-  @text-input-success: @green-dark-500;
 
   // ----------------------------------------------------------------------------
   // Checkbox
   // ----------------------------------------------------------------------------
   @checkbox-background: @gray-90;
-  @checkbox-background-selected: @blue-dark-500;
+  @checkbox-background-selected: var(--wire-background-accent-primary);
   @checkbox-background-disabled: @gray-90;
   @checkbox-background-disabled-selected: @gray-80;
   @checkbox-border: @gray-60;
-  @checkbox-border-hover: @blue-dark-500;
+  @checkbox-border-hover: var(--wire-border-accent-primary);
   @checkbox-border-disabled: @gray-70;
-  @checkbox-alert: @red-dark-500;
+  @checkbox-alert: var(--wire-border-danger-primary);
 
   // message actions menu
-  @message-actions-background: @gray-90;
-  @message-actions-border: @gray-100;
+  @message-actions-background: var(--wire-background-base-tertiary);
+  @message-actions-border: var(--wire-border-inverted-primary);
   @message-actions-background-hover: @gray-80;
   @message-actions-border-hover: @gray-70;
 

@@ -125,7 +125,7 @@ const ModalComponent = ({
           {...rest}
         >
           {showLoading ? (
-            <LoadingIcon width="48" height="48" css={{path: {fill: 'var(--modal-bg)'}}} />
+            <LoadingIcon width="48" height="48" css={{path: {fill: 'var(--wire-background-base-secondary)'}}} />
           ) : (
             <div
               id={trapId}

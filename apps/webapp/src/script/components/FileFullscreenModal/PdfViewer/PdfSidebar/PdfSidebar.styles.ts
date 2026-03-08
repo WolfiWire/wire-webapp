@@ -22,7 +22,7 @@ import {CSSObject} from '@emotion/react';
 export const wrapperStyles = (isOpen: boolean): CSSObject => ({
   width: isOpen ? '200px' : '0',
   overflowY: 'auto',
-  borderRight: '1px solid var(--border-color)',
+  borderRight: '1px solid var(--wire-border-base-primary)',
   padding: '8px 4px',
   height: '100%',
   transition: 'all 0.3s var(--ease-out-quart)',

@@ -23,12 +23,8 @@ export const wrapperStyles: CSSObject = {
   width: '76px',
   height: '76px',
   borderRadius: '10px',
-  border: '1px solid var(--gray-40)',
+  border: '1px solid var(--wire-border-base-primary)',
   position: 'relative',
-
-  'body.theme-dark &': {
-    border: '1px solid transparent',
-  },
 };
 
 export const iconWrapperStyles: CSSObject = {

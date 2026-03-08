@@ -17,8 +17,8 @@
   position: relative;
   width: 100%;
   max-height: 200px;
-  background: var(--input-bar-bg);
-  color: var(--main-color);
+  background: var(--wire-background-base-primary);
+  color: var(--wire-content-base-primary);
   overflow-y: scroll;
 }
 
@@ -49,7 +49,7 @@
 
   overflow: hidden;
 
-  color: var(--text-input-placeholder);
+  color: var(--wire-content-base-secondary);
   font-size: var(--font-size-xsmall);
   font-weight: var(--font-weight-regular);
   pointer-events: none;
@@ -93,7 +93,7 @@
 .typeahead-popover {
   border-radius: 8px;
   margin-top: 25px;
-  background: #fff;
+  background: var(--wire-background-base-primary);
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
   //width: auto;
 
@@ -131,7 +131,7 @@
 }
 
 .typeahead-popover ul li.selected {
-  background: #eee;
+  background: var(--wire-background-base-tertiary);
 }
 
 .typeahead-popover li {
@@ -143,8 +143,8 @@
   border: 0;
   border-radius: 8px;
   margin: 0 8px 0 8px;
-  background-color: #fff;
-  color: #050505;
+  background-color: var(--wire-background-base-primary);
+  color: var(--wire-content-base-primary);
   cursor: pointer;
   font-size: 15px;
   line-height: 16px;
@@ -166,7 +166,7 @@
 }
 
 .typeahead-popover li:hover {
-  background-color: #eee;
+  background-color: var(--wire-background-base-tertiary);
 }
 
 .typeahead-popover li .text {

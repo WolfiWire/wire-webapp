@@ -19,8 +19,6 @@
 
 import {CSSObject} from '@emotion/react';
 
-import {COLOR_V2} from '@wireapp/react-ui-kit';
-
 import {fileHeaderHeight} from '../common/fileHeaderHeight';
 
 export const headerStyles: CSSObject = {
@@ -30,8 +28,8 @@ export const headerStyles: CSSObject = {
   height: fileHeaderHeight,
   width: '100%',
   lineHeight: 'var(--line-height-sm)',
-  borderBottom: '1px solid var(--border-color)',
-  backgroundColor: 'var(--app-bg)',
+  borderBottom: '1px solid var(--wire-border-base-primary)',
+  backgroundColor: 'var(--wire-background-base-secondary)',
 };
 
 export const closeButtonStyles: CSSObject = {
@@ -74,11 +72,7 @@ export const nameStyles: CSSObject = {
 
 export const textStyles: CSSObject = {
   fontSize: 'var(--font-size-small)',
-  color: 'var(--gray-70)',
-
-  'body.theme-dark &': {
-    color: 'var(--gray-40)',
-  },
+  color: 'var(--wire-content-base-secondary)',
 };
 
 export const actionButtonsStyles: CSSObject = {
@@ -104,25 +98,21 @@ export const editModeButtonStyles: CSSObject = {
   flexShrink: '0',
   marginRight: '8px',
   marginLeft: '16px',
-  backgroundColor: COLOR_V2.GRAY_20,
+  backgroundColor: 'var(--wire-background-base-tertiary)',
   padding: '4px',
   borderRadius: '12px',
-
-  'body.theme-dark &': {
-    backgroundColor: 'var(--gray-90)',
-  },
 
   button: {
     padding: '4px 18px',
     borderRadius: '8px',
     backgroundColor: 'transparent',
     border: 'none',
-    color: 'var(--base-secondary-text)',
+    color: 'var(--wire-content-base-secondary)',
     transition: 'background-color 0.3s ease-in-out, color 0.3s ease-in-out',
 
     '&.active': {
-      backgroundColor: 'var(--app-bg-secondary)',
-      color: 'var(--main-color)',
+      backgroundColor: 'var(--wire-background-base-primary)',
+      color: 'var(--wire-content-base-primary)',
     },
     svg: {
       marginRight: '8px',

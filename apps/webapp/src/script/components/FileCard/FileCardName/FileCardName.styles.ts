@@ -41,9 +41,5 @@ export const primaryStyles: CSSObject = {
 
 export const secondaryStyles: CSSObject = {
   fontWeight: 'var(--font-weight-regular)',
-  color: 'var(--gray-70)',
-
-  'body.dark &': {
-    color: 'var(--gray-40)',
-  },
+  color: 'var(--wire-content-base-secondary)',
 };

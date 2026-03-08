@@ -30,7 +30,7 @@
   overflow: hidden;
   width: 100vw;
   height: 100vh;
-  background-color: var(--app-bg-secondary);
+  background-color: var(--wire-background-base-primary);
 
   &.app--small-offset {
     height: calc(100vh - 32px);
@@ -67,7 +67,7 @@
   padding: 0 4px 0 4px;
   // fade in animation
   animation: video-fade-in var(--animation-timing-slower) var(--ease-out-quart) forwards;
-  background-color: var(--app-bg-secondary);
+  background-color: var(--wire-background-base-primary);
   opacity: 0;
 
   @media (min-width: 640px) {
@@ -104,7 +104,7 @@
     padding: 5px 10px;
     border-radius: 6px;
     background-color: var(--accent-color);
-    color: var(--app-bg-secondary);
+    color: var(--wire-background-base-primary);
   }
 }
 
@@ -130,7 +130,7 @@
   .list-unstyled;
   position: relative;
   width: 100%;
-  background-color: var(--app-bg-secondary);
+  background-color: var(--wire-background-base-primary);
   transition: opacity 0.25s ease-in-out;
 
   &__item {
@@ -202,7 +202,7 @@
       bottom: -16px;
       left: 50%;
       margin: 0;
-      color: var(--main-color);
+      color: var(--wire-content-base-primary);
       font-size: 11px;
       font-weight: var(--font-weight-regular);
       transform: translateX(-50%);
@@ -229,7 +229,7 @@
       background-color: var(--red-500);
 
       svg > path {
-        fill: var(--app-bg-secondary);
+        fill: var(--wire-background-base-primary);
       }
 
       &:focus-visible {
@@ -350,6 +350,6 @@
   line-height: 0;
 
   > svg {
-    fill: var(--main-color);
+    fill: var(--wire-content-base-primary);
   }
 }

@@ -1,0 +1,336 @@
+/*
+ * Wire
+ * Copyright (C) 2024 Wire Swiss GmbH
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see http://www.gnu.org/licenses/.
+ *
+ */
+
+// ---------------------------------------------------------------------------
+// Wire Design System — Semantic Color Tokens
+//
+// Source: /design-tokens-exported-from-figma/
+//   - Theme.Light Mode.tokens.json  (light values)
+//   - Theme.Dark Mode.tokens.json   (dark values)
+//   - Color Primitives.Mode 1.tokens.json (primitive hex values)
+//   - Accent Color.Blue.tokens.json (active accent resolved at runtime)
+//
+// Primitive references are resolved via CSS custom properties already defined
+// in colors.less (--gray-*, --white, --black) and accent-color.less
+// (--accent-color, --accent-color-NNN, --red-500, --green-500, --amber-500).
+//
+// Token naming: --wire-{category}-{group}-{variant}
+//   Background → --wire-background-*
+//   Content    → --wire-content-*
+//   Border     → --wire-border-*
+// ---------------------------------------------------------------------------
+
+// ---------------------------------------------------------------------------
+// Light Mode
+// ---------------------------------------------------------------------------
+body,
+body.theme-default {
+
+  // ---- Background / Base --------------------------------------------------
+  --wire-background-base-primary:            var(--white);     // {White.100}
+  --wire-background-base-primary-focus:      var(--gray-10);   // {Gray.010}
+  --wire-background-base-secondary:          var(--gray-10);   // {Gray.010}
+  --wire-background-base-secondary-focus:    var(--gray-30);   // {Gray.030}
+  --wire-background-base-tertiary:           var(--gray-20);   // {Gray.020}
+  --wire-background-base-tertiary-focus:     var(--gray-40);   // {Gray.040}
+
+  // ---- Background / Accent Color ------------------------------------------
+  // Resolved at runtime via active accent (--accent-color set by accent-color.less)
+  --wire-background-accent-primary:          var(--accent-color);       // {Light.Accent_color.500}
+  --wire-background-accent-primary-focus:    var(--accent-color-700);   // {Light.Accent_color.700}
+  --wire-background-accent-secondary:        var(--accent-color-50);    // {Light.Accent_color.050}
+  --wire-background-accent-secondary-focus:  var(--accent-color-100);   // {Light.Accent_color.100}
+
+  // ---- Background / Backdrop ----------------------------------------------
+  --wire-background-backdrop-primary:        #0000008c;  // {Black.055}
+
+  // ---- Background / Danger ------------------------------------------------
+  --wire-background-danger-primary:          var(--red-500);  // {Light.Red.500}  #c20013
+  --wire-background-danger-primary-focus:    #74000b;         // {Light.Red.700}
+  --wire-background-danger-secondary:        #f9e6e8;         // {Light.Red.050}
+  --wire-background-danger-secondary-focus:  #f3ccd0;         // {Light.Red.100}
+
+  // ---- Background / Warning -----------------------------------------------
+  --wire-background-warning-primary:         var(--amber-500);  // {Light.Amber.500}  #a25915
+  --wire-background-warning-primary-focus:   #61350d;           // {Light.Amber.700}
+  --wire-background-warning-secondary:       #f6eee8;           // {Light.Amber.050}
+  --wire-background-warning-secondary-focus: #ecded0;           // {Light.Amber.100}
+
+  // ---- Background / Positive ----------------------------------------------
+  --wire-background-positive-primary:        var(--green-500);  // {Light.Green.500}  #1d7833
+  --wire-background-positive-primary-focus:  #11481f;           // {Light.Green.700}
+  --wire-background-positive-secondary:      #e8f1ea;           // {Light.Green.050}
+  --wire-background-positive-secondary-focus:#d2e4d6;           // {Light.Green.100}
+
+  // ---- Background / Neutral -----------------------------------------------
+  --wire-background-neutral-primary:         var(--gray-40);    // {Gray.040}
+  --wire-background-neutral-primary-focus:   var(--gray-90);    // {Gray.090}
+  --wire-background-neutral-secondary:       var(--white);      // {White.100}
+  --wire-background-neutral-secondary-focus: var(--gray-20);    // {Gray.020}
+
+  // ---- Background / Disabled ----------------------------------------------
+  --wire-background-disabled-primary:        var(--gray-50);    // {Gray.050}
+  --wire-background-disabled-secondary:      var(--gray-20);    // {Gray.020}
+
+  // ---- Background / Inverted ----------------------------------------------
+  --wire-background-inverted-primary:        var(--gray-100);   // {Gray.100}
+  --wire-background-inverted-primary-focus:  var(--gray-80);    // {Gray.080}
+  --wire-background-inverted-secondary:      var(--gray-100);   // {Gray.100}
+  --wire-background-inverted-secondary-focus:var(--gray-95);    // {Gray.095}
+
+  // ---- Background / Bubbles (own messages) --------------------------------
+  --wire-background-bubbles-primary:         var(--accent-color);      // {Light.Accent_color.500}
+  --wire-background-bubbles-primary-focus:   var(--accent-color-700);  // {Light.Accent_color.700}
+  --wire-background-bubbles-secondary:       var(--accent-color-600);  // {Light.Accent_color.600}
+  --wire-background-bubbles-secondary-focus: var(--accent-color-800);  // {Light.Accent_color.800}
+
+  // ---- Content / Base -----------------------------------------------------
+  --wire-content-base-primary:               var(--black);      // {Black.100}
+  --wire-content-base-secondary:             var(--gray-70);    // {Gray.070}
+
+  // ---- Content / Accent Color ---------------------------------------------
+  --wire-content-accent-primary:             var(--accent-color);      // {Light.Accent_color.500}
+  --wire-content-accent-on-primary:          var(--white);             // {White.100}
+  --wire-content-accent-on-secondary:        var(--accent-color);      // {Light.Accent_color.500}
+
+  // ---- Content / Danger ---------------------------------------------------
+  --wire-content-danger-primary:             var(--red-500);    // {Light.Red.500}
+  --wire-content-danger-on-primary:          var(--white);      // {White.100}
+  --wire-content-danger-on-secondary:        var(--red-500);    // {Light.Red.500}
+
+  // ---- Content / Warning --------------------------------------------------
+  --wire-content-warning-primary:            var(--amber-500);  // {Light.Amber.500}
+  --wire-content-warning-on-primary:         var(--white);      // {White.100}
+  --wire-content-warning-on-secondary:       var(--amber-500);  // {Light.Amber.500}
+
+  // ---- Content / Positive -------------------------------------------------
+  --wire-content-positive-primary:           var(--green-500);  // {Light.Green.500}
+  --wire-content-positive-on-primary:        var(--white);      // {White.100}
+  --wire-content-positive-on-secondary:      var(--green-500);  // {Light.Green.500}
+
+  // ---- Content / Neutral --------------------------------------------------
+  --wire-content-neutral-on-primary:         var(--gray-100);   // {Gray.100}
+  --wire-content-neutral-on-secondary:       var(--gray-100);   // {Gray.100}
+
+  // ---- Content / Disabled -------------------------------------------------
+  --wire-content-disabled-primary:           var(--gray-70);    // {Gray.070}
+  --wire-content-disabled-on-primary:        var(--gray-80);    // {Gray.080}
+  --wire-content-disabled-on-secondary:      var(--gray-70);    // {Gray.070}
+
+  // ---- Content / Inverted -------------------------------------------------
+  --wire-content-inverted-on-primary:        var(--white);      // {White.100}
+  --wire-content-inverted-on-secondary:      var(--white);      // {White.100}
+
+  // ---- Content / Bubbles --------------------------------------------------
+  --wire-content-bubbles-primary:            var(--white);             // {White.100}
+  --wire-content-bubbles-on-primary:         var(--accent-color-100);  // {Light.Accent_color.100}
+  --wire-content-bubbles-on-secondary:       var(--accent-color-200);  // {Light.Accent_color.200}
+
+  // ---- Border / Base ------------------------------------------------------
+  --wire-border-base-primary:                var(--gray-20);           // {Gray.020}
+  --wire-border-base-secondary:              var(--white);             // {White.100}
+  --wire-border-base-focus:                  var(--accent-color-300);  // {Light.Accent_color.300}
+
+  // ---- Border / Accent Color ----------------------------------------------
+  --wire-border-accent-primary:              var(--accent-color);      // {Light.Accent_color.500}
+  --wire-border-accent-secondary:            var(--accent-color-100);  // {Light.Accent_color.100}
+  --wire-border-accent-focus:                var(--accent-color-300);  // {Light.Accent_color.300}
+
+  // ---- Border / Danger ----------------------------------------------------
+  --wire-border-danger-primary:              var(--red-500);  // {Light.Red.500}
+  --wire-border-danger-secondary:            #f3ccd0;         // {Light.Red.100}
+  --wire-border-danger-focus:                #da6671;         // {Light.Red.300}
+
+  // ---- Border / Warning ---------------------------------------------------
+  --wire-border-warning-primary:             var(--amber-500);  // {Light.Amber.500}
+  --wire-border-warning-secondary:           #ecded0;           // {Light.Amber.100}
+  --wire-border-warning-focus:               #c79b73;           // {Light.Amber.300}
+
+  // ---- Border / Positive --------------------------------------------------
+  --wire-border-positive-primary:            var(--green-500);  // {Light.Green.500}
+  --wire-border-positive-secondary:          #d2e4d6;           // {Light.Green.100}
+  --wire-border-positive-focus:              #77ae85;           // {Light.Green.300}
+
+  // ---- Border / Neutral ---------------------------------------------------
+  --wire-border-neutral-primary:             var(--gray-70);    // {Gray.070}
+  --wire-border-neutral-secondary:           var(--gray-40);    // {Gray.040}
+
+  // ---- Border / Disabled --------------------------------------------------
+  --wire-border-disabled-primary:            var(--gray-40);    // {Gray.040}
+  --wire-border-disabled-secondary:          var(--gray-70);    // {Gray.070}
+
+  // ---- Border / Inverted --------------------------------------------------
+  --wire-border-inverted-primary:            var(--white);      // {White.100}
+
+  // ---- react-ui-kit legacy variable overrides ---------------------------------
+  // Injected at runtime by GlobalCssVariables.js — overridden here so react-ui-kit
+  // components that still reference them resolve to correct DS tokens.
+  --dropdown-menu-bg:                        var(--wire-background-base-secondary);
+
+  // ---- Component / IconButton (react-ui-kit IconButton PRIMARY variant) ----
+  // These variables are consumed by @wireapp/react-ui-kit IconButton.
+  // Values mirror .button-icon-primary() LESS mixin so both styling paths render identically.
+  --icon-button-primary-enabled-bg:          var(--wire-background-base-primary);
+  --icon-button-primary-border:              var(--wire-border-base-primary);
+  --icon-button-primary-hover-bg:            var(--wire-background-base-tertiary);
+  --icon-button-primary-hover-border:        var(--wire-border-base-primary);
+  --icon-button-primary-disabled-bg:         var(--wire-background-disabled-secondary);
+  --icon-button-primary-disabled-border:     transparent;
+}
+
+// ---------------------------------------------------------------------------
+// Dark Mode
+// ---------------------------------------------------------------------------
+body.theme-dark {
+
+  // ---- Background / Base --------------------------------------------------
+  --wire-background-base-primary:            var(--gray-100);   // {Gray.100}  #17181a
+  --wire-background-base-primary-focus:      var(--gray-90);    // {Gray.090}  #34373d
+  --wire-background-base-secondary:          var(--gray-95);    // {Gray.095}  #26272c
+  --wire-background-base-secondary-focus:    var(--gray-80);    // {Gray.080}  #54585f
+  --wire-background-base-tertiary:           var(--gray-90);    // {Gray.090}  #34373d
+  --wire-background-base-tertiary-focus:     var(--gray-80);    // {Gray.080}  #54585f
+
+  // ---- Background / Accent Color ------------------------------------------
+  --wire-background-accent-primary:          var(--accent-color);      // {Dark.Accent_color.500}
+  --wire-background-accent-primary-focus:    var(--accent-color-300);  // {Dark.Accent_color.300}
+  --wire-background-accent-secondary:        var(--accent-color-800);  // {Dark.Accent_color.800}
+  --wire-background-accent-secondary-focus:  var(--accent-color-700);  // {Dark.Accent_color.700}
+
+  // ---- Background / Backdrop (same in both modes) -------------------------
+  --wire-background-backdrop-primary:        #0000008c;  // {Black.055}
+
+  // ---- Background / Danger ------------------------------------------------
+  --wire-background-danger-primary:          var(--red-500);  // {Dark.Red.500}  #ff7770
+  --wire-background-danger-primary-focus:    #ffada9;         // {Dark.Red.300}
+  --wire-background-danger-secondary:        #66302d;         // {Dark.Red.800}
+  --wire-background-danger-secondary-focus:  #994743;         // {Dark.Red.700}
+
+  // ---- Background / Warning -----------------------------------------------
+  --wire-background-warning-primary:         var(--amber-500);  // {Dark.Amber.500}  #ffd426
+  --wire-background-warning-primary-focus:   #ffe57d;           // {Dark.Amber.300}
+  --wire-background-warning-secondary:       #66550f;           // {Dark.Amber.800}
+  --wire-background-warning-secondary-focus: #997f17;           // {Dark.Amber.700}
+
+  // ---- Background / Positive ----------------------------------------------
+  --wire-background-positive-primary:        var(--green-500);  // {Dark.Green.500}  #30db5b
+  --wire-background-positive-primary-focus:  #83e99d;           // {Dark.Green.300}
+  --wire-background-positive-secondary:      #135824;           // {Dark.Green.800}
+  --wire-background-positive-secondary-focus:#1d8337;           // {Dark.Green.700}
+
+  // ---- Background / Neutral -----------------------------------------------
+  --wire-background-neutral-primary:         var(--gray-80);    // {Gray.080}
+  --wire-background-neutral-primary-focus:   var(--gray-90);    // {Gray.090}
+  --wire-background-neutral-secondary:       var(--gray-95);    // {Gray.095}
+  --wire-background-neutral-secondary-focus: var(--gray-90);    // {Gray.090}
+
+  // ---- Background / Disabled ----------------------------------------------
+  --wire-background-disabled-primary:        var(--gray-80);    // {Gray.080}
+  --wire-background-disabled-secondary:      var(--gray-95);    // {Gray.095}
+
+  // ---- Background / Inverted ----------------------------------------------
+  --wire-background-inverted-primary:        var(--white);      // {White.100}
+  --wire-background-inverted-primary-focus:  var(--gray-20);    // {Gray.020}
+  --wire-background-inverted-secondary:      var(--gray-80);    // {Gray.080}
+  --wire-background-inverted-secondary-focus:var(--gray-90);    // {Gray.090}
+
+  // ---- Background / Bubbles (own messages) --------------------------------
+  --wire-background-bubbles-primary:         var(--accent-color-800);  // {Dark.Accent_color.800}
+  --wire-background-bubbles-primary-focus:   var(--accent-color-600);  // {Dark.Accent_color.600}
+  --wire-background-bubbles-secondary:       var(--accent-color-900);  // {Dark.Accent_color.900}
+  --wire-background-bubbles-secondary-focus: var(--accent-color-700);  // {Dark.Accent_color.700}
+
+  // ---- Content / Base -----------------------------------------------------
+  --wire-content-base-primary:               var(--white);      // {White.100}
+  --wire-content-base-secondary:             var(--gray-60);    // {Gray.060}
+
+  // ---- Content / Accent Color ---------------------------------------------
+  --wire-content-accent-primary:             var(--accent-color);      // {Dark.Accent_color.500}
+  --wire-content-accent-on-primary:          var(--black);             // {Black.100}
+  --wire-content-accent-on-secondary:        var(--accent-color-300);  // {Dark.Accent_color.300}
+
+  // ---- Content / Danger ---------------------------------------------------
+  --wire-content-danger-primary:             var(--red-500);  // {Dark.Red.500}
+  --wire-content-danger-on-primary:          var(--black);    // {Black.100}
+  --wire-content-danger-on-secondary:        #ffada9;         // {Dark.Red.300}
+
+  // ---- Content / Warning --------------------------------------------------
+  --wire-content-warning-primary:            var(--amber-500);  // {Dark.Amber.500}
+  --wire-content-warning-on-primary:         var(--black);      // {Black.100}
+  --wire-content-warning-on-secondary:       #ffe57d;           // {Dark.Amber.300}
+
+  // ---- Content / Positive -------------------------------------------------
+  --wire-content-positive-primary:           var(--green-500);  // {Dark.Green.500}
+  --wire-content-positive-on-primary:        var(--black);      // {Black.100}
+  --wire-content-positive-on-secondary:      #83e99d;           // {Dark.Green.300}
+
+  // ---- Content / Neutral --------------------------------------------------
+  --wire-content-neutral-on-primary:         var(--white);      // {White.100}
+  --wire-content-neutral-on-secondary:       var(--white);      // {White.100}
+
+  // ---- Content / Disabled -------------------------------------------------
+  --wire-content-disabled-primary:           var(--gray-60);    // {Gray.060}
+  --wire-content-disabled-on-primary:        var(--gray-50);    // {Gray.050}
+  --wire-content-disabled-on-secondary:      var(--gray-60);    // {Gray.060}
+
+  // ---- Content / Inverted -------------------------------------------------
+  --wire-content-inverted-on-primary:        var(--black);      // {Black.100}
+  --wire-content-inverted-on-secondary:      var(--white);      // {White.100}
+
+  // ---- Content / Bubbles --------------------------------------------------
+  --wire-content-bubbles-primary:            var(--white);             // {White.100}
+  --wire-content-bubbles-on-primary:         var(--accent-color-400);  // {Dark.Accent_color.400}
+  --wire-content-bubbles-on-secondary:       var(--accent-color-400);  // {Dark.Accent_color.400}
+
+  // ---- Border / Base ------------------------------------------------------
+  --wire-border-base-primary:                var(--gray-95);           // {Gray.095}
+  --wire-border-base-secondary:              var(--gray-90);           // {Gray.090}
+  --wire-border-base-focus:                  var(--accent-color-200);  // {Dark.Accent_color.200}
+
+  // ---- Border / Accent Color ----------------------------------------------
+  --wire-border-accent-primary:              var(--accent-color);      // {Dark.Accent_color.500}
+  --wire-border-accent-secondary:            var(--accent-color-800);  // {Dark.Accent_color.800}
+  --wire-border-accent-focus:                var(--accent-color-200);  // {Dark.Accent_color.200}
+
+  // ---- Border / Danger ----------------------------------------------------
+  --wire-border-danger-primary:              var(--red-500);  // {Dark.Red.500}
+  --wire-border-danger-secondary:            #66302d;         // {Dark.Red.800}
+  --wire-border-danger-focus:                #ffc9c6;         // {Light.Red.200} — as specified in Figma tokens
+
+  // ---- Border / Warning ---------------------------------------------------
+  --wire-border-warning-primary:             var(--amber-500);  // {Dark.Amber.500}
+  --wire-border-warning-secondary:           #66550f;           // {Dark.Amber.800}
+  --wire-border-warning-focus:               #ffeea8;           // {Dark.Amber.200}
+
+  // ---- Border / Positive --------------------------------------------------
+  --wire-border-positive-primary:            var(--green-500);  // {Dark.Green.500}
+  --wire-border-positive-secondary:          #135824;           // {Dark.Green.800}
+  --wire-border-positive-focus:              #acf1bd;           // {Dark.Green.200}
+
+  // ---- Border / Neutral ---------------------------------------------------
+  --wire-border-neutral-primary:             var(--gray-70);    // {Gray.070}
+  --wire-border-neutral-secondary:           var(--gray-90);    // {Gray.090}
+
+  // ---- Border / Disabled --------------------------------------------------
+  --wire-border-disabled-primary:            var(--gray-90);    // {Gray.090}
+  --wire-border-disabled-secondary:          var(--gray-60);    // {Gray.060}
+
+  // ---- Border / Inverted --------------------------------------------------
+  --wire-border-inverted-primary:            var(--gray-100);   // {Gray.100}
+}

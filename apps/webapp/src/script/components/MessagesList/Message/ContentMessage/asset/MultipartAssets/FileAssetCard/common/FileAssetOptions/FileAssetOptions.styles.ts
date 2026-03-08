@@ -29,6 +29,6 @@ export const buttonStyles: CSSObject = {
 };
 
 export const iconStyles: CSSObject = {
-  fill: 'var(--main-color)',
+  fill: 'var(--wire-content-base-primary)',
   display: 'block',
 };

@@ -21,7 +21,7 @@ import {ReactNode} from 'react';
 
 import {WavesPattern} from '@wireapp/react-ui-kit/lib/Images/WavesPattern';
 
-import {Bold, COLOR_V2, FlexBox, Link, Logo, Text} from '@wireapp/react-ui-kit';
+import {Bold, FlexBox, Link, Logo, Text} from '@wireapp/react-ui-kit';
 
 import {t} from 'Util/LocalizerUtil';
 
@@ -33,7 +33,7 @@ export const Layout = ({children}: {children: ReactNode}) => {
   return (
     <FlexBox css={bodyCss}>
       <div css={leftSectionCss}>
-        <Logo color={COLOR_V2.WHITE} scale={1.9} ariaLabel={t('accessibility.logo.wire')} />
+        <Logo color="white" scale={1.9} ariaLabel={t('accessibility.logo.wire')} />
         <div css={{margin: '4rem 0'}}>
           <Text bold css={whiteFontCss} fontSize="1.5rem">
             {t('layoutSidebarHeader')}

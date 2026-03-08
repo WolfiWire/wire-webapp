@@ -27,7 +27,7 @@ export const headingTitle: CSSObject = {
   paddingLeft: '16px',
   marginTop: '24px',
   marginBottom: '0',
-  borderBottom: '1px solid var(--border-color)',
+  borderBottom: '1px solid var(--wire-border-base-primary)',
   textTransform: 'uppercase',
 };
 

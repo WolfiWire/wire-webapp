@@ -49,8 +49,8 @@ export const iconStyles = (availabilityState: AvailabilityProp.Type, avatarSize:
 };
 
 export const AvailabilityIcon: CSSObject = {
-  background: 'var(--app-bg)',
-  border: '2px solid var(--app-bg)',
+  background: 'var(--wire-background-base-secondary)',
+  border: '2px solid var(--wire-background-base-secondary)',
   borderRadius: '50%',
   display: 'grid',
   placeContent: 'center',

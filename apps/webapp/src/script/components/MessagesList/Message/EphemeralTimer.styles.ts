@@ -23,7 +23,7 @@ const strokewidth = 4;
 const strokelength = strokewidth * Math.PI;
 
 export const ephemeralTimerBackgroundStyle: CSSObject = {
-  fill: 'var(--app-bg-secondary)',
+  fill: 'var(--wire-background-base-primary)',
   stroke: 'var(--foreground)',
   strokeWidth: '1px',
 };

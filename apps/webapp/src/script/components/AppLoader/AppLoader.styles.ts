@@ -21,7 +21,7 @@ import {CSSObject} from '@emotion/react';
 
 export const styles: CSSObject = {
   alignItems: 'center',
-  backgroundColor: 'var(--app-bg)',
+  backgroundColor: 'var(--wire-background-base-secondary)',
   color: 'var(--foreground)',
   display: 'flex',
   height: '100%',

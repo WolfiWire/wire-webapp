@@ -64,7 +64,7 @@
 
 body.theme-dark {
   .left-list-header {
-    border-bottom-color: var(--gray-95);
+    border-bottom-color: var(--wire-border-base-primary);
   }
 }
 
@@ -90,8 +90,8 @@ body.theme-dark {
   padding: 4px 0px 4px 0px;
   border-radius: 24px;
   margin-top: 8px;
-  background-color: var(--sidebar-bg);
-  color: var(--main-color);
+  background-color: var(--wire-background-base-primary);
+  color: var(--wire-content-base-primary);
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-semibold);
   gap: 8px;
@@ -99,7 +99,7 @@ body.theme-dark {
 
 .slow-connection-indicator svg,
 .slow-connection-indicator svg * {
-  fill: var(--main-color);
+  fill: var(--wire-content-base-primary);
 }
 
 .left-list-center {
@@ -155,7 +155,7 @@ body.theme-dark {
       bottom: 0;
       left: var(--left-list-item-left-width);
       height: 1px;
-      background-color: var(--border-color);
+      background-color: var(--wire-border-base-primary);
       content: '';
     }
 
@@ -166,8 +166,8 @@ body.theme-dark {
     &:hover,
     &:focus-visible,
     &--active:focus-visible {
-      background: @white;
-      color: @black;
+      background: var(--wire-background-base-primary-focus);
+      color: var(--wire-content-base-primary);
     }
 
     &:focus-visible,
@@ -176,17 +176,21 @@ body.theme-dark {
       outline-offset: -2px;
 
       .left-column-icon > svg {
-        fill: @black;
+        fill: var(--wire-content-base-primary);
       }
     }
 
     &--active,
     &--active:hover {
-      background-color: var(--accent-color);
-      color: @white;
+      background-color: var(--wire-background-accent-secondary);
+      color: var(--wire-content-accent-on-secondary);
 
       .left-column-icon > svg {
-        fill: @white;
+        fill: var(--wire-content-accent-on-secondary);
+      }
+
+      .column-center {
+        font-weight: var(--font-weight-bold) !important;
       }
     }
   }
@@ -265,34 +269,7 @@ body.theme-dark {
   .left-list-item {
     > .column-center,
     > .left-list-item-button > .column-center {
-      border-bottom-color: var(--gray-90);
-    }
-  }
-
-  .left-list-item-button {
-    &:hover,
-    &:focus-visible,
-    &--active:focus-visible {
-      background: @black;
-      color: @white;
-    }
-    &:focus-visible,
-    &--active:focus-visible {
-      outline: 1px solid var(--accent-color);
-      outline-offset: -2px;
-
-      .left-column-icon > svg {
-        fill: @white;
-      }
-    }
-    &--active,
-    &--active:hover {
-      background-color: var(--accent-color-600);
-      color: var(--black);
-
-      .left-column-icon > svg {
-        fill: var(--black);
-      }
+      border-bottom-color: var(--wire-border-base-primary);
     }
   }
 }

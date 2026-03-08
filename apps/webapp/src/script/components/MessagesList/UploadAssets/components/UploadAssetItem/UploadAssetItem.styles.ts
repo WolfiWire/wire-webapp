@@ -20,6 +20,6 @@
 import {CSSObject} from '@emotion/react';
 
 export const uploadingProgressText: CSSObject = {
-  color: 'var(--gray-70)',
+  color: 'var(--wire-content-base-secondary)',
   fontSize: 'var(--font-size-small)',
 };

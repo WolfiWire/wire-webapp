@@ -67,7 +67,7 @@ export const contentText: CSSObject = {
 };
 
 export const nameWrapper = (isAudioEstablished: boolean): CSSObject => ({
-  color: isAudioEstablished ? 'var(--main-color)' : 'var(--text-input-placeholder)',
+  color: isAudioEstablished ? 'var(--wire-content-base-primary)' : 'var(--wire-content-base-secondary)',
   display: 'flex',
   overflow: 'hidden',
   width: '100%',

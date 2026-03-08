@@ -17,7 +17,7 @@
  *
  */
 
-import {Button, ButtonVariant, COLOR} from '@wireapp/react-ui-kit';
+import {Button, ButtonVariant} from '@wireapp/react-ui-kit';
 
 import type {CompositeMessage} from 'Repositories/entity/message/CompositeMessage';
 import {useKoSubscribableChildren} from 'Util/ComponentUtil';
@@ -53,7 +53,7 @@ export const MessageButton = ({id, label, message, onClick = noop}: MessageButto
         data-uie-waiting={isWaiting}
         showLoading={isWaiting}
         isActive={isSelected}
-        loadingColor={COLOR.GRAY}
+        loadingColor="var(--wire-content-base-secondary)"
         style={{maxWidth: '400px', width: '100%', marginTop: '8px', marginBottom: 0}}
       >
         {label}

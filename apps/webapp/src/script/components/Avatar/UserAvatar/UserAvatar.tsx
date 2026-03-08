@@ -22,7 +22,6 @@ import {MouseEvent as ReactMouseEvent, KeyboardEvent as ReactKeyBoardEvent} from
 import {container} from 'tsyringe';
 
 import {Availability as AvailabilityType} from '@wireapp/protocol-messaging';
-import {COLOR} from '@wireapp/react-ui-kit';
 
 import {AvailabilityIcon} from 'Components/AvailabilityIcon';
 import {useUserName} from 'Components/UserName';
@@ -83,7 +82,7 @@ export const UserAvatar = ({
 }: UserAvatarProps) => {
   const isImageGrey = !noFilter && [STATE.BLOCKED, STATE.IGNORED, STATE.PENDING, STATE.UNKNOWN].includes(state);
   const isBlocked = state === STATE.BLOCKED;
-  const backgroundColor = state === STATE.UNKNOWN ? COLOR.GRAY : undefined;
+  const backgroundColor = state === STATE.UNKNOWN ? 'var(--wire-background-base-tertiary)' : undefined;
   const name = useUserName(participant);
   const {
     availability,

@@ -19,7 +19,7 @@
 
 import {useNavigate} from 'react-router';
 
-import {ArrowIcon, COLOR} from '@wireapp/react-ui-kit';
+import {ArrowIcon} from '@wireapp/react-ui-kit';
 
 import {t} from 'Util/LocalizerUtil';
 
@@ -34,7 +34,7 @@ export const BackButton = () => {
       data-uie-name="go-index"
       css={{background: 'none', border: 'none', cursor: 'pointer'}}
     >
-      <ArrowIcon direction="left" aria-hidden="true" focusable="false" color={COLOR.TEXT} />
+      <ArrowIcon direction="left" aria-hidden="true" focusable="false" color="var(--wire-content-base-primary)" />
     </button>
   );
 };

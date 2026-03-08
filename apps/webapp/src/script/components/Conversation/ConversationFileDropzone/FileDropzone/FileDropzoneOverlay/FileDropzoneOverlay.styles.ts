@@ -29,7 +29,7 @@ export const overlayStyles: CSSObject = {
   position: 'absolute',
   top: 0,
   left: 0,
-  backgroundColor: 'var(--app-bg)',
+  backgroundColor: 'var(--wire-background-base-secondary)',
   opacity: 0,
   zIndex: 'var(--z-index-modal)',
   transition: 'opacity var(--animation-timing-fast) var(--ease-out-quart)',
@@ -43,7 +43,7 @@ export const overlayStyles: CSSObject = {
     left: '16px',
     width: 'calc(100% - 32px)',
     height: 'calc(100% - 32px)',
-    border: '2px dashed var(--border-color)',
+    border: '2px dashed var(--wire-border-base-primary)',
     borderRadius: '8px',
   },
 };

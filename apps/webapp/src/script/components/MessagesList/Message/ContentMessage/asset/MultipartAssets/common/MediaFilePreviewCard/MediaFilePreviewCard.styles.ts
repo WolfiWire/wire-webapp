@@ -23,12 +23,11 @@ export const wrapperStyles: CSSObject = {
   width: '76px',
   height: '76px',
   borderRadius: '10px',
-  border: '1px solid var(--gray-40)',
+  border: '1px solid var(--wire-border-base-primary)',
   position: 'relative',
 
   'body.theme-dark &': {
     backgroundColor: 'var(--foreground-fade-8)',
-    border: 'none',
   },
 };
 
@@ -39,7 +38,7 @@ export const wrapperErrorStyles: CSSObject = {
   alignItems: 'flex-start',
   justifyContent: 'space-between',
   flexDirection: 'column',
-  backgroundColor: 'var(--app-bg-secondary)',
+  backgroundColor: 'var(--wire-background-base-primary)',
   padding: '8px 8px 6px',
 
   'body.theme-dark &': {
@@ -63,12 +62,8 @@ export const loadingWrapperStyles: CSSObject = {
 };
 
 export const loadingIconStyles: CSSObject = {
-  color: 'var(--gray-70)',
+  color: 'var(--wire-content-base-secondary)',
   fontSize: 'var(--font-size-medium)',
-
-  'body.theme-dark &': {
-    color: 'var(--gray-40)',
-  },
 };
 
 export const errorIconStyles: CSSObject = {
@@ -79,10 +74,6 @@ export const errorTextStyles: CSSObject = {
   fontSize: 'var(--font-size-medium)',
   fontWeight: 'var(--line-height-md)',
   lineHeight: 'var(--line-height-sm)',
-  color: 'var(--gray-70)',
+  color: 'var(--wire-content-base-secondary)',
   textAlign: 'left',
-
-  'body.dark &': {
-    color: 'var(--gray-40)',
-  },
 };

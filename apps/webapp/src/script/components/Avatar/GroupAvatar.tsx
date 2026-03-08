@@ -34,14 +34,14 @@ export const GroupAvatar = ({conversationID, className, size = 'large'}: GroupAv
       className={className}
       css={{
         ...CSS_SQUARE(size === 'small' ? 16 : 32),
-        border: `${size === 'small' ? 0.5 : 1}px solid var(--border-color)`,
+        border: `${size === 'small' ? 0.5 : 1}px solid var(--wire-border-base-primary)`,
         borderRadius: size === 'small' ? 4 : 8,
       }}
     >
       <div
         css={{
           ...CSS_SQUARE(size === 'small' ? '100%' : 28),
-          backgroundColor: 'var(--group-icon-bg)',
+          backgroundColor: 'var(--wire-background-neutral-secondary)',
           display: 'flex',
           flexWrap: 'wrap',
           margin: size === 'small' ? 0 : 1,

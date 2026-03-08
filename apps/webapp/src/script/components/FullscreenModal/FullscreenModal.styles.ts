@@ -40,7 +40,7 @@ export const modalStyles = (isAnimating: boolean): CSSObject => ({
     right: 0,
     bottom: 0,
     left: 0,
-    backgroundColor: 'var(--app-bg)',
+    backgroundColor: 'var(--wire-background-base-secondary)',
     content: '" "',
     opacity: isAnimating ? 1 : 0,
     transition: `opacity var(--animation-timing-slower) var(--ease-out-quart)`,

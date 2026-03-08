@@ -23,7 +23,6 @@ import {RegisteredClient} from '@wireapp/api-client/lib/client/index';
 
 import {
   TabIndex,
-  COLOR,
   ContainerXS,
   DeviceIcon,
   FlexBox,
@@ -225,7 +224,7 @@ const ClientItem = ({selected, onClientRemoval, onClick, client, clientError, re
       <ContainerXS
         css={{
           ['&:focus-within']: {
-            boxShadow: `0 0 0 1px ${COLOR.BLUE}`,
+            boxShadow: '0 0 0 1px var(--wire-border-accent-primary)',
           },
           backgroundColor: selected ? '#FFF' : '',
           borderRadius: '12px',

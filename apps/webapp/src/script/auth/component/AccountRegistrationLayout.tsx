@@ -21,7 +21,7 @@ import {ReactNode} from 'react';
 
 import {WavesPattern} from '@wireapp/react-ui-kit/lib/Images/WavesPattern';
 
-import {CheckRoundIcon, COLOR_V2, FlexBox, Logo, Text} from '@wireapp/react-ui-kit';
+import {CheckRoundIcon, FlexBox, Logo, Text} from '@wireapp/react-ui-kit';
 
 import {t} from 'Util/LocalizerUtil';
 
@@ -47,7 +47,7 @@ export const AccountRegistrationLayout = ({children}: {children: ReactNode}) => 
   return (
     <FlexBox css={bodyCss}>
       <div css={leftSectionCss}>
-        <Logo color={COLOR_V2.WHITE} scale={1.9} ariaLabel={t('accessibility.logo.wire')} />
+        <Logo color="white" scale={1.9} ariaLabel={t('accessibility.logo.wire')} />
         <div css={registrationLayoutContainerCss}>
           <Text bold css={whiteFontCss} fontSize="1.5rem">
             {t('registrationLayout.header')}
@@ -63,7 +63,7 @@ export const AccountRegistrationLayout = ({children}: {children: ReactNode}) => 
                 css={registrationLayoutListItemIconCss}
                 width={16}
                 height={16}
-                color={COLOR_V2.GREEN_DARK_500}
+                color="var(--wire-content-positive-primary)"
               />
               <Text css={whiteFontCss}>{item}</Text>
             </div>

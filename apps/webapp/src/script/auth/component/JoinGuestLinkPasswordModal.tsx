@@ -21,7 +21,7 @@ import {FormEvent, useState} from 'react';
 
 import {StatusCodes as HTTP_STATUS} from 'http-status-codes';
 
-import {Button, COLOR, Container, ErrorMessage, Form, H2, Input, Link, Modal, Text} from '@wireapp/react-ui-kit';
+import {Button, Container, ErrorMessage, Form, H2, Input, Link, Modal, Text} from '@wireapp/react-ui-kit';
 
 import {t} from 'Util/LocalizerUtil';
 
@@ -91,7 +91,7 @@ const JoinGuestLinkPasswordModal = ({
           />
         </Form>
         <Link href={Config.getConfig().URL.SUPPORT.LEARN_MORE_ABOUT_GUEST_LINKS} target="_blank">
-          <Text block color={COLOR.BLUE} style={{textDecoration: 'underline', marginBottom: 24}}>
+          <Text block color="var(--wire-content-accent-primary)" style={{textDecoration: 'underline', marginBottom: 24}}>
             {t('guestLinkPasswordModal.learnMoreLink')}
           </Text>
         </Link>

@@ -46,20 +46,12 @@ export const messageReactionWrapper: CSSObject = {
   flexWrap: 'wrap',
   maxWidth: '100%',
   '.tooltip-content': {
-    backgroundColor: 'var(--white) !important',
+    backgroundColor: 'var(--wire-background-base-primary) !important',
     marginBottom: '0.5rem !important',
     padding: '6px 8px !important',
     '.tooltip-arrow': {
-      borderTopColor: 'var(--white) !important',
+      borderTopColor: 'var(--wire-background-base-primary) !important',
       filter: 'none !important',
-
-      'body.theme-dark &': {
-        borderTopColor: 'var(--gray-95) !important',
-      },
-    },
-
-    'body.theme-dark &': {
-      backgroundColor: 'var(--gray-95) !important',
     },
   },
 };
@@ -122,17 +114,11 @@ export const getReactionsButtonCSS = (isActive?: boolean, isDisabled?: boolean):
   }
   if (isDisabled) {
     return {
-      border: '1px solid var(--gray-40)',
-      backgroundColor: 'var(--gray-20)',
-      color: 'var(--gray-60)',
+      border: '1px solid var(--wire-border-disabled-primary)',
+      backgroundColor: 'var(--wire-background-disabled-secondary)',
+      color: 'var(--wire-content-disabled-primary)',
       cursor: 'not-allowed',
       outline: 'none',
-
-      'body.theme-dark &': {
-        border: '1px solid var(--gray-95)',
-        backgroundColor: 'var(--gray-90)',
-        color: 'var(--gray-60)',
-      },
     };
   }
   return {

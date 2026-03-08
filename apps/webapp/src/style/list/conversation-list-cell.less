@@ -54,7 +54,7 @@
       border-bottom: 0 !important;
     }
     .call-ui__button--join {
-      outline: 1px solid var(--app-bg-secondary);
+      outline: 1px solid var(--wire-background-base-primary);
     }
   }
 }
@@ -84,7 +84,7 @@
   flex: 1 1 auto;
   flex-direction: column;
   justify-content: center;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--wire-border-base-primary);
 
   &.conversation-list-cell-center-no-left {
     padding-left: 16px;
@@ -95,7 +95,7 @@
   .flex-center;
 
   padding-right: 16px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--wire-border-base-primary);
 }
 
 .conversation-recent-view-list {
@@ -113,7 +113,8 @@
   font-weight: var(--font-weight-medium);
 
   &--active {
-    color: var(--app-bg-secondary);
+    color: var(--wire-content-accent-on-secondary);
+    font-weight: var(--font-weight-bold);
   }
 }
 
@@ -126,20 +127,7 @@
   color: var(--background);
 
   &--active {
-    color: var(--white);
-  }
-}
-
-body.theme-dark {
-  .conversation-list-cell-description {
-    &--active {
-      color: var(--black);
-    }
-  }
-  .conversation-list-cell-name {
-    &--active {
-      color: var(--black);
-    }
+    color: var(--wire-content-accent-on-secondary);
   }
 }
 
@@ -155,7 +143,7 @@ body.theme-dark {
   &::before {
     width: 0;
     height: 0;
-    border-top: 4px solid var(--main-color);
+    border-top: 4px solid var(--wire-content-base-primary);
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
     content: '';
@@ -177,7 +165,7 @@ body.theme-dark {
 
   &--active {
     &::before {
-      border-top-color: var(--app-bg-secondary);
+      border-top-color: var(--wire-background-base-primary);
     }
   }
 }

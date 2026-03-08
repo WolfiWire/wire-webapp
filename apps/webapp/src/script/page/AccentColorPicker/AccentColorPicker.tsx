@@ -98,17 +98,11 @@ const AccentColorPicker: React.FunctionComponent<AccentColorPickerProps> = ({use
                       border: '1px solid currentColor',
                     },
                     '&:focus-visible + label': {
-                      backgroundColor: 'var(--gray-20)',
-                      'body.theme-dark &': {
-                        backgroundColor: 'var(--gray-90)',
-                      },
+                      backgroundColor: 'var(--wire-background-base-tertiary)',
                       boxShadow: 'inset 0 0 0 1px var(--accent-color-focus)',
                     },
                     '&:hover + label': {
-                      backgroundColor: 'var(--gray-20)',
-                      'body.theme-dark &': {
-                        backgroundColor: 'var(--gray-90)',
-                      },
+                      backgroundColor: 'var(--wire-background-base-tertiary)',
                     },
                     opacity: 0,
                     position: 'absolute',

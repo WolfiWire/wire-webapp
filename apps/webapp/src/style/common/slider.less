@@ -37,7 +37,8 @@
       width: 48px;
       height: 24px;
       border-radius: 12px;
-      background-color: var(--gray-70);
+      background-color: var(--wire-content-base-secondary);
+      border: 1px solid var(--wire-border-base-primary);
       transition: var(--animation-timing-faster) ease-in-out;
 
       &::after {
@@ -54,10 +55,6 @@
         content: '';
         transform: translateY(-50%);
         transition: var(--animation-timing-faster) ease-in-out;
-      }
-
-      body.theme-dark & {
-        border: 1px solid var(--gray-60);
       }
     }
 

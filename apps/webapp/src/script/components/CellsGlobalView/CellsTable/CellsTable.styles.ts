@@ -40,7 +40,7 @@ export const tableStyles: CSSObject = {
 export const headerCellStyles: CSSObject = {
   padding: '12px',
   textAlign: 'left',
-  borderBottom: '1px solid var(--gray-70)',
+  borderBottom: '1px solid var(--wire-border-base-primary)',
   fontSize: 'var(--font-size-small)',
   fontWeight: 'var(--font-weight-medium)',
   whiteSpace: 'nowrap',
@@ -52,18 +52,18 @@ export const headerCellStyles: CSSObject = {
 
 export const tableCellStyles: CSSObject = {
   padding: '12px',
-  borderBottom: '1px solid var(--border-color)',
+  borderBottom: '1px solid var(--wire-border-base-primary)',
   fontSize: 'var(--font-size-small)',
   whiteSpace: 'nowrap',
 
   [`@media (max-width: ${styleBreakpoint}px)`]: {
     display: 'block',
     padding: '12px 0',
-    borderBottom: '1px solid var(--border-color)',
+    borderBottom: '1px solid var(--wire-border-base-primary)',
     width: '100% !important',
 
     '&[data-cell]': {
-      borderBottom: '1px solid var(--border-color)',
+      borderBottom: '1px solid var(--wire-border-base-primary)',
       '&:nth-last-of-type(2)': {
         borderBottom: 'none',
       },
@@ -91,16 +91,12 @@ export const tableActionsCellStyles: CSSObject = {
 
 export const tableCellRow: CSSObject = {
   display: 'block',
-  border: '1px solid var(--border-color)',
+  border: '1px solid var(--wire-border-base-primary)',
   padding: '8px 12px',
   borderRadius: '8px',
 
   '&:hover': {
-    backgroundColor: 'var(--white)',
-
-    'body.theme-dark &': {
-      backgroundColor: 'var(--gray-90)',
-    },
+    backgroundColor: 'var(--wire-background-base-tertiary)',
   },
 
   '&:not(:last-of-type)': {

@@ -89,7 +89,7 @@ const DeviceToggleButton = ({currentDevice, devices, onChooseDevice, styles}: De
                 border: '1px solid var(--accent-color)',
               },
               '&:not(:last-child)': {marginRight: 5},
-              backgroundColor: isCurrentDevice ? 'var(--accent-color)' : 'var(--app-bg-secondary)',
+              backgroundColor: isCurrentDevice ? 'var(--accent-color)' : 'var(--wire-background-base-primary)',
               border: isCurrentDevice ? '1px solid var(--accent-color)' : '1px solid var(--foreground)',
               borderRadius: '50%',
               color: '#fff',

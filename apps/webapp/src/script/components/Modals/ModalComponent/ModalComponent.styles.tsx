@@ -44,7 +44,7 @@ export const ModalOverlayVisibleStyles: CSSObject = {
 
 export const ModalContentStyles: CSSObject = {
   animation: 'scaleIn 0.35s cubic-bezier(0.165, 0.84, 0.44, 1)',
-  backgroundColor: 'var(--modal-bg)',
+  backgroundColor: 'var(--wire-background-base-secondary)',
   border: 'var(--modal-border-color)',
   borderRadius: 10,
   cursor: 'default',

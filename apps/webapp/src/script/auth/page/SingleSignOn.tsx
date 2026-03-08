@@ -27,7 +27,6 @@ import {useParams} from 'react-router-dom';
 import {AnyAction, Dispatch} from 'redux';
 
 import {
-  COLOR,
   Column,
   Columns,
   Container,
@@ -192,13 +191,13 @@ const SingleSignOnComponent = ({hasDefaultSSOCode}: Props & ConnectedProps & Dis
     <Page withSideBar={isEnterpriseLoginV2Enabled}>
       {isOverlayOpen && (
         <Overlay>
-          <Container centerText style={{color: COLOR.WHITE, maxWidth: '330px'}}>
+          <Container centerText style={{color: 'white', maxWidth: '330px'}}>
             <div style={{alignItems: 'center', display: 'flex', justifyContent: 'center', marginBottom: '30px'}}>
-              <Logo height={24} color={COLOR.WHITE} ariaLabel={t('accessibility.logo.wire')} />
+              <Logo height={24} color={'white'} ariaLabel={t('accessibility.logo.wire')} />
             </div>
             <Text
               style={{fontSize: '0.875rem', fontWeight: 400, marginTop: '32px'}}
-              color={COLOR.WHITE}
+              color={'white'}
               data-uie-name="status-overlay-description"
             >
               {t('ssoLogin.overlayDescription')}
@@ -207,7 +206,7 @@ const SingleSignOnComponent = ({hasDefaultSSOCode}: Props & ConnectedProps & Dis
               block
               center
               style={{
-                color: COLOR.WHITE,
+                color: 'white',
                 fontSize: '0.875rem',
                 fontWeight: 600,
                 marginTop: '24px',

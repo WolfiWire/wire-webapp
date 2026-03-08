@@ -25,9 +25,9 @@ export const wrapperStyles: CSSObject = {
   alignItems: 'center',
   width: '100%',
   backgroundColor: 'var(--foreground-fade-8)',
-  border: '1px solid var(--border-color)',
+  border: '1px solid var(--wire-border-base-primary)',
   borderRadius: '10px',
-  color: 'var(--gray-70)',
+  color: 'var(--wire-content-base-secondary)',
   aspectRatio: '16/9',
 
   // Fallback for the above  aspect-ratio

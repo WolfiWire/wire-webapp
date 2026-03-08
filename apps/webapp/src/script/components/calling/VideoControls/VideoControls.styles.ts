@@ -45,11 +45,11 @@ export const moreControlsWrapperStyles: CSSObject = {
 };
 
 export const videoControlActiveStyles = css`
-  background-color: var(--main-color);
-  border: 1px solid var(--main-color);
+  background-color: var(--wire-content-base-primary);
+  border: 1px solid var(--wire-content-base-primary);
   svg,
   svg > path {
-    fill: var(--app-bg-secondary);
+    fill: var(--wire-background-base-primary);
   }
   &:hover:not(:disabled) {
     background-color: var(--background);
@@ -80,7 +80,7 @@ export const videoControlInActiveStyles = css`
   border: 1px solid var(--inactive-call-button-border);
   svg > path,
   svg > g > path {
-    fill: var(--main-color);
+    fill: var(--wire-content-base-primary);
   }
   &:hover:not(:disabled) {
     background-color: var(--inactive-call-button-hover-bg);

@@ -26,9 +26,9 @@ export const headerStyles: CSSObject = {
   alignItems: 'center',
   columnGap: '4px',
   padding: '16px 16px 0 16px',
-  backgroundColor: 'var(--modal-bg)',
-  color: 'var(--main-color)',
-  fill: 'var(--main-color)',
+  backgroundColor: 'var(--wire-background-base-secondary)',
+  color: 'var(--wire-content-base-primary)',
+  fill: 'var(--wire-content-base-primary)',
   textAlign: 'center',
   whiteSpace: 'pre-line',
 };

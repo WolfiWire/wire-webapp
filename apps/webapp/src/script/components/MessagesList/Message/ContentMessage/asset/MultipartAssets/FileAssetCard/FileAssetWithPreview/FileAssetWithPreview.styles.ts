@@ -25,9 +25,9 @@ export const contentWrapperStyles: CSSObject = {
   alignItems: 'center',
   width: '100%',
   backgroundColor: 'var(--foreground-fade-8)',
-  border: '1px solid var(--border-color)',
+  border: '1px solid var(--wire-border-base-primary)',
   borderRadius: '10px',
-  color: 'var(--gray-70)',
+  color: 'var(--wire-content-base-secondary)',
   aspectRatio: '16/9',
   overflow: 'hidden',
   padding: 0,
@@ -66,27 +66,19 @@ export const infoWrapperStyles: CSSObject = {
 };
 
 export const loaderIconStyles: CSSObject = {
-  color: 'var(--gray-70)',
+  color: 'var(--wire-content-base-secondary)',
   fontSize: 'var(--font-size-medium)',
-
-  'body.theme-dark &': {
-    color: 'var(--gray-40)',
-  },
 };
 
 export const errorIconStyles: CSSObject = {
   flexShrink: 0,
   marginRight: '8px',
-  fill: 'var(--gray-70)',
-
-  'body.theme-dark &': {
-    fill: 'var(--gray-40)',
-  },
+  fill: 'var(--wire-content-base-secondary)',
 };
 
 export const errorTextStyles: CSSObject = {
   fontSize: 'var(--font-size-medium)',
   fontWeight: 'var(--line-height-md)',
   lineHeight: 'var(--line-height-sm)',
-  color: 'var(--main-color)',
+  color: 'var(--wire-content-base-primary)',
 };

@@ -20,8 +20,8 @@
 import {CSSObject} from '@emotion/react';
 
 const wrapperStyles: CSSObject = {
-  backgroundColor: 'var(--app-bg-secondary)',
-  border: '1px solid var(--border-color)',
+  backgroundColor: 'var(--wire-background-base-primary)',
+  border: '1px solid var(--wire-border-base-primary)',
   borderRadius: '10px',
   padding: '8px',
   position: 'relative',

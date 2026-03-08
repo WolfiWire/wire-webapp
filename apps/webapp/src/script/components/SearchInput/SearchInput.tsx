@@ -102,7 +102,7 @@ export const SearchInput = ({
               onClick={() => setInput('')}
               aria-label={t('accessibility.searchInput.cancel')}
             >
-              <Icon.CloseIcon css={{fill: 'var(--text-input-background)', height: 8, width: 8}} />
+              <Icon.CloseIcon css={{fill: 'var(--wire-background-base-primary)', height: 8, width: 8}} />
             </button>
           )}
         </div>

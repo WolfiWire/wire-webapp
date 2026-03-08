@@ -21,10 +21,10 @@ import {CSSObject} from '@emotion/react';
 
 export const collapseButton: CSSObject = {
   alignItems: 'flex-start',
-  backgroundColor: 'var(--app-bg)',
+  backgroundColor: 'var(--wire-background-base-secondary)',
   border: 'none',
   padding: '16px 0 20px 16px',
-  color: 'var(--main-color)',
+  color: 'var(--wire-content-base-primary)',
   display: 'flex',
   fontWeight: 600,
   width: '100%',
@@ -35,6 +35,6 @@ export const collapseIcon = (isOpen: boolean): CSSObject => ({
   transform: isOpen ? 'rotate(90deg)' : undefined,
 
   '> svg': {
-    fill: 'var(--main-color)',
+    fill: 'var(--wire-content-base-primary)',
   },
 });

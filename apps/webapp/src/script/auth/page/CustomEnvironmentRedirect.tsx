@@ -22,7 +22,7 @@ import {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 
 import {Runtime, UrlUtil} from '@wireapp/commons';
-import {COLOR, ContainerXS, FlexBox, Text} from '@wireapp/react-ui-kit';
+import {ContainerXS, FlexBox, Text} from '@wireapp/react-ui-kit';
 
 import {LogoIcon} from 'Components/Icon';
 import {t} from 'Util/LocalizerUtil';
@@ -71,7 +71,7 @@ const CustomEnvironmentRedirectComponent = ({doNavigate, doSendNavigationEvent}:
             justify="center"
             align="center"
             style={{
-              backgroundColor: COLOR.ICON,
+              backgroundColor: 'var(--wire-background-inverted-secondary)',
               borderRadius: '50%',
               boxShadow: '0 2px 4px 0 rgba(53, 63, 71, 0.29)',
               height: 120,
@@ -80,7 +80,7 @@ const CustomEnvironmentRedirectComponent = ({doNavigate, doSendNavigationEvent}:
               width: 120,
             }}
           >
-            <LogoIcon aria-hidden="true" fill={COLOR.WHITE} color={COLOR.WHITE} width={47} height={38} />
+            <LogoIcon aria-hidden="true" fill={'white'} color={'white'} width={47} height={38} />
             <svg
               aria-hidden="true"
               style={{position: 'absolute'}}
@@ -99,7 +99,7 @@ const CustomEnvironmentRedirectComponent = ({doNavigate, doSendNavigationEvent}:
                 cy="62"
                 r="60"
                 strokeWidth="4"
-                stroke={COLOR.BLUE}
+                stroke="var(--wire-border-accent-primary)"
                 strokeLinecap="round"
                 strokeDasharray={377}
                 transform="rotate(-90)"

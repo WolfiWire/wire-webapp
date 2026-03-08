@@ -20,26 +20,26 @@
 @w-black: #000000;
 @w-white: #ffffff;
 
-@w-gray-10: #F2F2F7;  // iOS gray-50
-@w-gray-20: #E5E5EA;  // iOS gray-100
-@w-gray-30: #D1D1D6;  // iOS gray-200
-@w-gray-40: #C7C7CC;  // iOS gray-300
-@w-gray-50: #AEAEB2;  // iOS gray-400
-@w-gray-60: #8E8E93;  // iOS gray-500
-@w-gray-70: #636366;  // iOS gray-600
-@w-gray-80: #48484A;  // iOS gray-700
-@w-gray-90: #3A3A3C;  // iOS gray-800
-@w-gray-95: #2C2C2E;  // iOS gray-900
-@w-gray-100: #1C1C1E; // iOS gray-1000
+@w-gray-10: #fafafa;
+@w-gray-20: #edeff0;
+@w-gray-30: #e5e8ea;
+@w-gray-40: #dce0e3;
+@w-gray-50: #cbced1;
+@w-gray-60: #9fa1a7;
+@w-gray-70: #676b71;
+@w-gray-80: #54585f;
+@w-gray-90: #34373d;
+@w-gray-95: #26272c;
+@w-gray-100: #17181a;
 
-@w-blue: #007AFF;    // iOS blue-500
-@w-green: #34C759;   // iOS green-500
-@w-gray: #C7C7CC;    // iOS gray-300
-@w-orange: #FF9500;  // iOS orange-500
-@w-pink: #FF2D55;    // iOS pink-500
-@w-purple: #AF52DE;  // iOS purple-500
-@w-red: #FF3B30;     // iOS red-500
-@w-yellow: #FFCC00;  // iOS yellow-500
+@w-blue: #2391d3;
+@w-green: #00c800;
+@w-gray: #bac8d1;
+@w-orange: #ff8900;
+@w-pink: #fe5ebd;
+@w-purple: #9c00fe;
+@w-red: #fb0807;
+@w-yellow: #febf02;
 
 @accent_colors-0: transparent;
 @accent_colors-1: @w-blue;
@@ -50,27 +50,27 @@
 @accent_colors-6: @w-pink;
 @accent_colors-7: @w-purple;
 
-@blue-50: #B8DAFF;   // iOS blue-50
-@blue-100: #A3CFFF;  // iOS blue-100
-@blue-200: #7ABAFF;  // iOS blue-200
-@blue-300: #52A5FF;  // iOS blue-300
-@blue-400: #298FFF;  // iOS blue-400
-@blue-500: #007AFF;  // iOS blue-500
-@blue-600: #005FC7;  // iOS blue-600
-@blue-700: #00448F;  // iOS blue-700
-@blue-800: #002957;  // iOS blue-800
-@blue-900: #000F1F;  // iOS blue-900
+@blue-50: #e7f0fa;
+@blue-100: #cde1f4;
+@blue-200: #9bc2e9;
+@blue-300: #6aa4de;
+@blue-400: #3885d3;
+@blue-500: #0667c8;
+@blue-600: #0552a0;
+@blue-700: #043e78;
+@blue-800: #022950;
+@blue-900: #021f3c;
 
-@blue-dark-50: #B8DAFF;   // iOS blue-50
-@blue-dark-100: #A3CFFF;  // iOS blue-100
-@blue-dark-200: #7ABAFF;  // iOS blue-200
-@blue-dark-300: #52A5FF;  // iOS blue-300
-@blue-dark-400: #298FFF;  // iOS blue-400
-@blue-dark-500: #007AFF;  // iOS blue-500
-@blue-dark-600: #005FC7;  // iOS blue-600
-@blue-dark-700: #00448F;  // iOS blue-700
-@blue-dark-800: #002957;  // iOS blue-800
-@blue-dark-900: #000F1F;  // iOS blue-900
+@blue-dark-50: #eef7ff;
+@blue-dark-100: #ddedff;
+@blue-dark-200: #bbdbff;
+@blue-dark-300: #98caff;
+@blue-dark-400: #76b8ff;
+@blue-dark-500: #54a6ff;
+@blue-dark-600: #4385cc;
+@blue-dark-700: #326499;
+@blue-dark-800: #224266;
+@blue-dark-900: #19324d;
 
 @black-50: @w-gray-30;
 @black-100: @w-gray-40;
@@ -80,115 +80,115 @@
 @black-dark-800: @w-gray-80;
 @black-dark-900: @w-gray-90;
 
-@green-50: #C3EFCE;   // iOS green-50
-@green-100: #B3EBC1;  // iOS green-100
-@green-200: #93E3A7;  // iOS green-200
-@green-300: #72DA8D;  // iOS green-300
-@green-400: #52D272;  // iOS green-400
-@green-500: #34C759;  // iOS green-500
-@green-600: #289B45;  // iOS green-600
-@green-700: #1D6E31;  // iOS green-700
-@green-800: #11421D;  // iOS green-800
-@green-900: #061509;  // iOS green-900
+@green-50: #e8f1ea;
+@green-100: #d2e4d6;
+@green-200: #a5c9ad;
+@green-300: #77ae85;
+@green-400: #4a935c;
+@green-500: #1d7833;
+@green-600: #176029;
+@green-700: #11481f;
+@green-800: #0c3014;
+@green-900: #09240f;
 
-@green-dark-50: #C3EFCE;   // iOS green-50
-@green-dark-100: #B3EBC1;  // iOS green-100
-@green-dark-200: #93E3A7;  // iOS green-200
-@green-dark-300: #72DA8D;  // iOS green-300
-@green-dark-400: #52D272;  // iOS green-400
-@green-dark-500: #34C759;  // iOS green-500
-@green-dark-600: #289B45;  // iOS green-600
-@green-dark-700: #1D6E31;  // iOS green-700
-@green-dark-800: #11421D;  // iOS green-800
-@green-dark-900: #061509;  // iOS green-900
+@green-dark-50: #ebfcef;
+@green-dark-100: #d6f8de;
+@green-dark-200: #acf1bd;
+@green-dark-300: #83e99d;
+@green-dark-400: #59e27c;
+@green-dark-500: #30db5b;
+@green-dark-600: #26af49;
+@green-dark-700: #1d8337;
+@green-dark-800: #135824;
+@green-dark-900: #0e421b;
 
-@turquoise-50: #BFE8F0;   // iOS teal-50
-@turquoise-100: #AFE2EC;  // iOS teal-100
-@turquoise-200: #8ED7E4;  // iOS teal-200
-@turquoise-300: #6DCBDC;  // iOS teal-300
-@turquoise-400: #4CBFD4;  // iOS teal-400
-@turquoise-500: #30B0C7;  // iOS teal-500
-@turquoise-600: #25889A;  // iOS teal-600
-@turquoise-700: #1A606D;  // iOS teal-700
-@turquoise-800: #0F383F;  // iOS teal-800
-@turquoise-900: #041012;  // iOS teal-900
+@turquoise-50: #e5f1f3;
+@turquoise-100: #cce2e7;
+@turquoise-200: #99c6d0;
+@turquoise-300: #67a9b8;
+@turquoise-400: #348da1;
+@turquoise-500: #01718e;
+@turquoise-600: #015a6e;
+@turquoise-700: #014352;
+@turquoise-800: #002d37;
+@turquoise-900: #002229;
 
-@turquoise-dark-50: #BFE8F0;   // iOS teal-50
-@turquoise-dark-100: #AFE2EC;  // iOS teal-100
-@turquoise-dark-200: #8ED7E4;  // iOS teal-200
-@turquoise-dark-300: #6DCBDC;  // iOS teal-300
-@turquoise-dark-400: #4CBFD4;  // iOS teal-400
-@turquoise-dark-500: #30B0C7;  // iOS teal-500
-@turquoise-dark-600: #25889A;  // iOS teal-600
-@turquoise-dark-700: #1A606D;  // iOS teal-700
-@turquoise-dark-800: #0F383F;  // iOS teal-800
-@turquoise-dark-900: #041012;  // iOS teal-900
+@turquoise-dark-50: #effdff;
+@turquoise-dark-100: #dffaff;
+@turquoise-dark-200: #bef5ff;
+@turquoise-dark-300: #9ef0ff;
+@turquoise-dark-400: #7debff;
+@turquoise-dark-500: #5de6ff;
+@turquoise-dark-600: #4ab8cc;
+@turquoise-dark-700: #388a99;
+@turquoise-dark-800: #255c66;
+@turquoise-dark-900: #1c454d;
 
-@purple-50: #F6ECFB;   // iOS purple-50
-@purple-100: #EEDBF8;  // iOS purple-100
-@purple-200: #DFB9F2;  // iOS purple-200
-@purple-300: #CF97EB;  // iOS purple-300
-@purple-400: #BF74E5;  // iOS purple-400
-@purple-500: #AF52DE;  // iOS purple-500
-@purple-600: #9828D0;  // iOS purple-600
-@purple-700: #751FA1;  // iOS purple-700
-@purple-800: #531672;  // iOS purple-800
-@purple-900: #310D43;  // iOS purple-900
+@purple-50: #f4edf7;
+@purple-100: #e7daee;
+@purple-200: #d0b4dd;
+@purple-300: #b88fcd;
+@purple-400: #a169bc;
+@purple-500: #8944ab;
+@purple-600: #6e3689;
+@purple-700: #522967;
+@purple-800: #371b44;
+@purple-900: #291433;
 
-@purple-dark-50: #F6ECFB;   // iOS purple-50
-@purple-dark-100: #EEDBF8;  // iOS purple-100
-@purple-dark-200: #DFB9F2;  // iOS purple-200
-@purple-dark-300: #CF97EB;  // iOS purple-300
-@purple-dark-400: #BF74E5;  // iOS purple-400
-@purple-dark-500: #AF52DE;  // iOS purple-500
-@purple-dark-600: #9828D0;  // iOS purple-600
-@purple-dark-700: #751FA1;  // iOS purple-700
-@purple-dark-800: #531672;  // iOS purple-800
-@purple-dark-900: #310D43;  // iOS purple-900
+@purple-dark-50: #fcf4ff;
+@purple-dark-100: #f8e9ff;
+@purple-dark-200: #f0d2ff;
+@purple-dark-300: #e9bcff;
+@purple-dark-400: #e1a5ff;
+@purple-dark-500: #da8fff;
+@purple-dark-600: #ae72cc;
+@purple-dark-700: #835699;
+@purple-dark-800: #573966;
+@purple-dark-900: #412b4d;
 
-@red-50: #FFE9E8;   // iOS red-50
-@red-100: #FFD6D3;  // iOS red-100
-@red-200: #FFAFAA;  // iOS red-200
-@red-300: #FF8882;  // iOS red-300
-@red-400: #FF6259;  // iOS red-400
-@red-500: #FF3B30;  // iOS red-500
-@red-600: #F70D00;  // iOS red-600
-@red-700: #BF0A00;  // iOS red-700
-@red-800: #870700;  // iOS red-800
-@red-900: #4F0400;  // iOS red-900
+@red-50: #f9e6e8;
+@red-100: #f3ccd0;
+@red-200: #e799a1;
+@red-300: #da6671;
+@red-400: #ce3342;
+@red-500: #c20013;
+@red-600: #9b000f;
+@red-700: #74000b;
+@red-800: #4e0008;
+@red-900: #3a0006;
 
-@red-dark-50: #FFE9E8;   // iOS red-50
-@red-dark-100: #FFD6D3;  // iOS red-100
-@red-dark-200: #FFAFAA;  // iOS red-200
-@red-dark-300: #FF8882;  // iOS red-300
-@red-dark-400: #FF6259;  // iOS red-400
-@red-dark-500: #FF3B30;  // iOS red-500
-@red-dark-600: #F70D00;  // iOS red-600
-@red-dark-700: #BF0A00;  // iOS red-700
-@red-dark-800: #870700;  // iOS red-800
-@red-dark-900: #4F0400;  // iOS red-900
+@red-dark-50: #fff2f1;
+@red-dark-100: #ffe4e2;
+@red-dark-200: #ffc9c6;
+@red-dark-300: #ffada9;
+@red-dark-400: #ff928d;
+@red-dark-500: #ff7770;
+@red-dark-600: #cc5f5a;
+@red-dark-700: #994743;
+@red-dark-800: #66302d;
+@red-dark-900: #4d2422;
 
-@amber-50: #FFE1B8;   // iOS orange-50
-@amber-100: #FFD9A3;  // iOS orange-100
-@amber-200: #FFC87A;  // iOS orange-200
-@amber-300: #FFB752;  // iOS orange-300
-@amber-400: #FFA629;  // iOS orange-400
-@amber-500: #FF9500;  // iOS orange-500
-@amber-600: #C77400;  // iOS orange-600
-@amber-700: #8F5300;  // iOS orange-700
-@amber-800: #573300;  // iOS orange-800
-@amber-900: #1F1200;  // iOS orange-900
+@amber-50: #f6eee8;
+@amber-100: #ecded0;
+@amber-200: #dabda1;
+@amber-300: #c79b73;
+@amber-400: #b57a44;
+@amber-500: #a25915;
+@amber-600: #824711;
+@amber-700: #61350d;
+@amber-800: #412408;
+@amber-900: #412408;
 
-@amber-dark-50: #FFE1B8;   // iOS orange-50
-@amber-dark-100: #FFD9A3;  // iOS orange-100
-@amber-dark-200: #FFC87A;  // iOS orange-200
-@amber-dark-300: #FFB752;  // iOS orange-300
-@amber-dark-400: #FFA629;  // iOS orange-400
-@amber-dark-500: #FF9500;  // iOS orange-500
-@amber-dark-600: #C77400;  // iOS orange-600
-@amber-dark-700: #8F5300;  // iOS orange-700
-@amber-dark-800: #573300;  // iOS orange-800
-@amber-dark-900: #1F1200;  // iOS orange-900
+@amber-dark-50: #fffbea;
+@amber-dark-100: #fff6d4;
+@amber-dark-200: #ffeea8;
+@amber-dark-300: #ffe57d;
+@amber-dark-400: #ffdd51;
+@amber-dark-500: #ffd426;
+@amber-dark-600: #ccaa1e;
+@amber-dark-700: #997f17;
+@amber-dark-800: #66550f;
+@amber-dark-900: #4d400b;
 
 .colors() {
   amber: 5;

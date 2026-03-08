@@ -28,7 +28,7 @@ export const labelStyles: CSSObject = {
 };
 
 export const inputStyles: CSSObject = {
-  boxShadow: '0 0 0 1px var(--text-input-border)',
+  boxShadow: '0 0 0 1px var(--wire-border-base-primary)',
   borderRadius: 12,
   margin: 0,
 };

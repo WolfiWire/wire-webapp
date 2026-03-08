@@ -29,7 +29,7 @@ export const header: CSSObject = {
 };
 
 export const label: CSSObject = {
-  color: 'var(--main-color)',
+  color: 'var(--wire-content-base-primary)',
   fontWeight: 'var(--font-weight-semibold)',
   fontSize: 'var(--font-size-medium)',
   paddingBlock: '8px',
@@ -41,6 +41,17 @@ export const label: CSSObject = {
 
 export const button: CSSObject = {
   marginBottom: 0,
+  backgroundColor: 'var(--wire-background-accent-primary)',
+  border: 'none',
+  color: 'var(--wire-content-accent-on-primary)',
+  svg: {
+    path: {
+      fill: 'var(--wire-content-accent-on-primary)',
+    },
+  },
+  '&:hover': {
+    backgroundColor: 'var(--wire-background-accent-primary-focus)',
+  },
 };
 
 const commonIconStyles: CSSObject = {

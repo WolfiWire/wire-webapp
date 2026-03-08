@@ -51,11 +51,7 @@
     &:hover,
     &:focus-visible {
       .content-message-wrapper {
-        background-color: #fff;
-
-        body.theme-dark & {
-          background-color: var(--gray-90);
-        }
+        background-color: var(--wire-background-base-secondary);
       }
     }
   }
@@ -98,7 +94,7 @@
     &.self-mention {
       padding: 3px 0 4px 0;
       background-color: var(--accent-color-self-mention);
-      color: var(--main-color);
+      color: var(--wire-content-base-primary);
     }
 
     &:not(.self-mention) {
@@ -449,14 +445,10 @@
 
   .time {
     .subline;
-    color: var(--gray-70);
+    color: var(--wire-content-base-secondary);
     font-size: 12px !important;
     pointer-events: none;
     user-select: none;
-
-    body.theme-dark & {
-      color: var(--gray-60);
-    }
   }
 }
 
@@ -464,21 +456,17 @@
   margin-left: 12px;
 
   .subline;
-  color: var(--gray-70);
+  color: var(--wire-content-base-secondary);
   font-size: 11px !important;
   pointer-events: none;
   user-select: none;
-
-  body.theme-dark & {
-    color: var(--gray-60);
-  }
 }
 
 .message-status-read {
   display: flex;
   align-items: center;
   margin-left: 12px;
-  color: var(--gray-70);
+  color: var(--wire-content-base-secondary);
   font-size: 11px !important;
   pointer-events: none;
   user-select: none;
@@ -488,10 +476,6 @@
 
   &__clickable {
     pointer-events: all;
-  }
-
-  body.theme-dark & {
-    color: var(--gray-60);
   }
 
   svg {
@@ -561,11 +545,7 @@
 .message-connected-username {
   margin-bottom: 16px;
   .subline;
-  color: var(--gray-90);
-
-  body.theme-dark & {
-    color: var(--white);
-  }
+  color: var(--wire-content-base-primary);
 }
 
 .message-connected-avatar {
@@ -806,10 +786,6 @@
   border-style: none !important;
   background-color: var(--message-actions-background);
   box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
-
-  body.theme-dark & {
-    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
-  }
 }
 
 .overlay .EmojiPickerReact li.epr-emoji-category > .epr-emoji-category-label {
@@ -821,11 +797,9 @@
 }
 
 .EmojiPickerReact .epr-search-container input {
-  body.theme-dark & {
-    border: 1px solid var(--gray-70);
-    border-radius: 12px;
-    background: var(--gray-100);
-  }
+  border: 1px solid var(--wire-border-base-primary);
+  border-radius: 12px;
+  background: var(--wire-background-base-primary);
 }
 
 .overlay .EmojiPickerReact button.epr-emoji {

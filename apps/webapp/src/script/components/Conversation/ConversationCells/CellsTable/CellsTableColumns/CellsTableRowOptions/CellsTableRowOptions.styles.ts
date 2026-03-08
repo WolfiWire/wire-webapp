@@ -46,7 +46,7 @@ export const buttonStyles: CSSObject = {
 };
 
 export const iconStyles: CSSObject = {
-  fill: 'var(--main-color)',
+  fill: 'var(--wire-content-base-primary)',
   display: 'none',
   [`@media (min-width: ${styleBreakpoint}px)`]: {
     display: 'block',

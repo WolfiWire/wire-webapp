@@ -33,7 +33,7 @@ export const footerDisclaimerTooltip: CSSObject = {
 
 export const footerDisclaimerEllipsis: CSSObject = {
   alignSelf: 'center',
-  color: 'var(--text-input-placeholder)',
+  color: 'var(--wire-content-base-secondary)',
   fontSize: '0.75rem',
   fontWeight: '400',
   lineHeight: '14px',

@@ -39,7 +39,7 @@ export const ConversationOption = ({onClick, title, isSelected, isUpgradeBannerV
     <FlexBox css={conversationOptionContainerCss(isSelected)} onClick={onClick}>
       <FlexBox css={conversationOptionCss(isSelected)}>
         {isSelected ? (
-          <CheckRoundIcon viewBox="0 0 20 20" color="var(--app-bg-secondary)" />
+          <CheckRoundIcon viewBox="0 0 20 20" color="var(--wire-background-base-primary)" />
         ) : (
           <div css={conversationOptionNotSelectedCss} />
         )}

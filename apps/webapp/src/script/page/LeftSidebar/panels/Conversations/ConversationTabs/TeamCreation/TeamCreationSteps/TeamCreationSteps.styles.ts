@@ -60,7 +60,7 @@ export const introStepLinkCss: CSSObject = {
 };
 
 export const introItemCss: CSSObject = {
-  borderBottom: '0.5px solid var(--main-color)',
+  borderBottom: '0.5px solid var(--wire-content-base-primary)',
   display: 'flex',
   gap: '0.875rem',
   alignItems: 'center',

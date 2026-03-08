@@ -19,7 +19,7 @@
 
 import type {FormEvent} from 'react';
 
-import {COLOR, Form, Link, Text} from '@wireapp/react-ui-kit';
+import {Form, Link, Text} from '@wireapp/react-ui-kit';
 
 import {Config} from 'src/script/Config';
 import {t} from 'Util/LocalizerUtil';
@@ -55,7 +55,7 @@ export const JoinGuestLinkPasswordForm = ({onSubmit, inputValue, onInputChange}:
       />
 
       <Link css={linkStyles} href={Config.getConfig().URL.SUPPORT.LEARN_MORE_ABOUT_GUEST_LINKS} target="_blank">
-        <Text block color={COLOR.BLUE} css={linkTextStyles}>
+        <Text block color="var(--wire-content-accent-primary)" css={linkTextStyles}>
           {t('guestLinkPasswordModal.learnMoreLink')}
         </Text>
       </Link>

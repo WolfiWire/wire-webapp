@@ -49,12 +49,8 @@ export const infoWrapperStyles: CSSObject = {
 };
 
 export const loaderIconStyles: CSSObject = {
-  color: 'var(--gray-70)',
+  color: 'var(--wire-content-base-secondary)',
   fontSize: 'var(--font-size-medium)',
-
-  'body.theme-dark &': {
-    color: 'var(--gray-40)',
-  },
 };
 
 export const imageWrapperStyles: CSSObject = {
@@ -81,9 +77,5 @@ export const errorTextStyles: CSSObject = {
   fontSize: 'var(--font-size-medium)',
   fontWeight: 'var(--line-height-md)',
   lineHeight: 'var(--line-height-sm)',
-  color: 'var(--gray-70)',
-
-  'body.theme-dark &': {
-    color: 'var(--gray-40)',
-  },
+  color: 'var(--wire-content-base-secondary)',
 };

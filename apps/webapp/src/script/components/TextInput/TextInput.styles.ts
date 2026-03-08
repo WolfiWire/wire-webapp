@@ -40,7 +40,7 @@ export const containerCSS: CSSObject = {
 };
 
 export const errorMessageCSS: CSSObject = {
-  color: 'var(--text-input-alert)',
+  color: 'var(--wire-content-danger-primary)',
   left: 0,
   lineHeight: 'var(--line-height-small-plus)',
   textTransform: 'unset',
@@ -50,7 +50,7 @@ export const errorMessageCSS: CSSObject = {
 
 export const getInputCSS = (disabled?: boolean, borderColor?: string): CSSObject => ({
   '&::placeholder': {
-    color: 'var(--text-input-placeholder)',
+    color: 'var(--wire-content-base-secondary)',
   },
   '&:hover': {
     borderColor: !disabled ? 'var(--text-input-border-hover)' : undefined,
@@ -63,29 +63,29 @@ export const getInputCSS = (disabled?: boolean, borderColor?: string): CSSObject
   },
   ':-ms-input-placeholder': {
     // Internet Explorer 10-11
-    color: 'var(--text-input-placeholder)',
+    color: 'var(--wire-content-base-secondary)',
   },
   '::-ms-input-placeholder': {
     // Microsoft Edge
-    color: 'var(--text-input-placeholder)',
+    color: 'var(--wire-content-base-secondary)',
   },
   '::placeholder': {
     // Chrome, Firefox, Opera, Safari 10.1+
-    color: 'var(--text-input-placeholder)',
+    color: 'var(--wire-content-base-secondary)',
     opacity: 1, // Firefox
   },
-  background: disabled ? 'var(--text-input-disabled)' : 'var(--text-input-background)',
+  background: disabled ? 'var(--wire-background-disabled-secondary)' : 'var(--wire-background-base-primary)',
   border: '1px solid',
-  borderColor: borderColor || 'var(--text-input-border)',
+  borderColor: borderColor || 'var(--wire-border-base-primary)',
   borderRadius: 12,
-  color: 'var(--text-input-color)',
+  color: 'var(--wire-content-base-primary)',
   outline: 'none',
   padding: '12px 38px 12px 16px',
   width: '100%',
 });
 
 export const getLabelCSS = (color?: string): CSSObject => ({
-  color: color || 'var(--text-input-color)',
+  color: color || 'var(--wire-content-base-primary)',
   fontWeight: 'var(--font-weight-semibold)',
   display: 'flex',
   flexDirection: 'column',
@@ -94,7 +94,7 @@ export const getLabelCSS = (color?: string): CSSObject => ({
 
 export const cancelButtonCSS: CSSObject = {
   alignItems: 'center',
-  background: 'var(--text-input-color)',
+  background: 'var(--wire-content-base-primary)',
   border: 'none',
   borderRadius: '50%',
   bottom: '2rem',

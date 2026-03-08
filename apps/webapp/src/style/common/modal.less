@@ -79,7 +79,7 @@
     border: var(--modal-border-color);
     border-radius: 10px;
     margin: auto; // http://stackoverflow.com/questions/24538100/issue-when-centering-vertically-with-flexbox-when-heights-are-unknown
-    background-color: var(--app-bg-secondary);
+    background-color: var(--wire-background-base-primary);
     cursor: default;
 
     a.close {
@@ -234,7 +234,7 @@
       height: 48px;
 
       path {
-        fill: var(--modal-bg);
+        fill: var(--wire-background-base-secondary);
       }
     }
   }
@@ -252,7 +252,7 @@
     align-self: center;
     padding: 20px;
 
-    border: var(--gray-10);
+    border: 1px solid var(--wire-border-base-primary);
     border-radius: 4px;
     margin: auto;
     animation: scaleIn 0.35s var(--ease-out-quart);
@@ -287,9 +287,9 @@
     min-height: 32px;
     padding: 32px 32px 0 32px;
     margin-bottom: 20px;
-    background-color: var(--modal-bg);
-    color: var(--main-color);
-    fill: var(--main-color);
+    background-color: var(--wire-background-base-secondary);
+    color: var(--wire-content-base-primary);
+    fill: var(--wire-content-base-primary);
     text-align: center;
     white-space: pre-line;
 
@@ -358,7 +358,7 @@
     display: flex;
     justify-content: flex-end;
     margin: 20px;
-    background-color: var(--modal-bg);
+    background-color: var(--wire-background-base-secondary);
     --button-color: var(--accent-color);
 
     &--column {
@@ -431,7 +431,7 @@
     border: none;
     border-radius: 4px;
     margin: 0 4px;
-    background-color: var(--app-bg-secondary);
+    background-color: var(--wire-background-base-primary);
     color: currentColor;
     outline: none;
 
@@ -449,7 +449,7 @@
     &__error {
       .label-bold-xs;
       margin: 8px 4px 0;
-      color: #fb0807;
+      color: var(--wire-content-danger-primary);
     }
 
     & + & {
@@ -458,14 +458,14 @@
   }
   &__info {
     margin: 8px 0 24px;
-    color: var(--gray-80);
+    color: var(--wire-content-base-secondary);
     font-size: var(--font-size-small);
     line-height: var(--line-height-xs);
   }
 
   &__cta {
     margin: 32px 0;
-    color: @w-blue;
+    color: var(--wire-content-accent-primary);
     cursor: pointer;
     font-size: var(--font-size-xsmall);
     font-weight: var(--font-weight-bold);
@@ -480,13 +480,8 @@
 }
 
 body.theme-dark {
-  .modal__info {
-    color: var(--gray-40);
-  }
-
   .modal__content {
-    border-color: var(--gray-10);
-    background: var(--gray-95);
+    background: var(--wire-background-base-secondary);
   }
 }
 
@@ -517,7 +512,7 @@ body.theme-dark {
     }
     &__cta {
       margin: 32px 0;
-      color: @w-blue;
+      color: var(--wire-content-accent-primary);
       cursor: pointer;
       font-size: var(--font-size-base);
       font-weight: var(--font-weight-bold);

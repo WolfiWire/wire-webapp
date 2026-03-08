@@ -19,7 +19,6 @@
 
 import {CSSObject} from '@emotion/react';
 
-import {COLOR_V2} from '@wireapp/react-ui-kit';
 
 export const styles: {
   container: CSSObject;
@@ -50,6 +49,6 @@ export const styles: {
     letterSpacing: '0.05px',
     lineHeight: '24px',
     textDecoration: 'underline',
-    color: COLOR_V2.BLACK,
+    color: 'var(--wire-content-base-primary)',
   },
 };

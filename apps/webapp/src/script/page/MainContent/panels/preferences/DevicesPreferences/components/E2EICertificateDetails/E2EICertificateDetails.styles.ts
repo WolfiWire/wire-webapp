@@ -44,7 +44,7 @@ type stylesProps = {
 export const styles: stylesProps = {
   container: {
     paddingLeft: '16px',
-    borderLeft: '4px solid var(--gray-40)',
+    borderLeft: '4px solid var(--wire-border-base-primary)',
     marginTop: '12px',
   },
   title: {
@@ -67,7 +67,7 @@ export const styles: stylesProps = {
     marginBlock: '6px',
   },
   notAvailable: {
-    color: 'var(--text-input-placeholder)',
+    color: 'var(--wire-content-base-secondary)',
   },
   serialNumber: {
     fontSize: 'var(--font-size-medium)',

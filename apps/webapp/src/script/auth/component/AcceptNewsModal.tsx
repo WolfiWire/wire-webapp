@@ -21,7 +21,7 @@ import React from 'react';
 
 import {FormattedMessage} from 'react-intl';
 
-import {Button, COLOR, Column, Columns, Container, H3, Link, Modal, Text} from '@wireapp/react-ui-kit';
+import {Button, Column, Columns, Container, H3, Link, Modal, Text} from '@wireapp/react-ui-kit';
 
 import {t} from 'Util/LocalizerUtil';
 
@@ -57,7 +57,7 @@ const AcceptNewsModal = ({onConfirm, onDecline}: Props) => {
             <Button
               type="button"
               onClick={onDecline}
-              backgroundColor={COLOR.GRAY}
+              backgroundColor="var(--wire-background-neutral-primary)"
               data-uie-name="do-decline-marketing-consent"
             >
               {t('acceptNewsModal.declineButton')}

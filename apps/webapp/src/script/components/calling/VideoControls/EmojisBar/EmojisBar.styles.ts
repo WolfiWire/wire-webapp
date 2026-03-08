@@ -122,10 +122,6 @@ export const styles: {
       borderStyle: 'none !important',
       backgroundColor: 'var(--message-actions-background) !important',
       boxShadow: 'none',
-
-      'body.theme-dark &': {
-        boxShadow: 'none',
-      },
     },
 
     '& .EmojiPickerReact .epr-preview': {
@@ -138,11 +134,9 @@ export const styles: {
 
     '& .EmojiPickerReact .epr-search-container': {
       input: {
-        'body.theme-dark &': {
-          border: '1px solid var(--gray-70)',
-          borderRadius: '12px',
-          background: 'var(--gray-100)',
-        },
+        border: '1px solid var(--wire-border-base-primary)',
+        borderRadius: '12px',
+        background: 'var(--wire-background-base-primary)',
       },
 
       'button.epr-btn:hover': {

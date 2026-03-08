@@ -19,7 +19,7 @@
 
 import React, {forwardRef, useEffect} from 'react';
 
-import {CheckIcon, COLOR} from '@wireapp/react-ui-kit';
+import {CheckIcon} from '@wireapp/react-ui-kit';
 
 import * as Icon from 'Components/Icon';
 import {isTabKey} from 'Util/KeyboardUtil';
@@ -86,10 +86,10 @@ const TextInput = forwardRef<HTMLInputElement, UserInputProps>(
 
     let changedColor = undefined;
     if (isError) {
-      changedColor = 'var(--text-input-alert) !important';
+      changedColor = 'var(--wire-content-danger-primary) !important';
     }
     if (isSuccess) {
-      changedColor = 'var(--text-input-success) !important';
+      changedColor = 'var(--wire-content-positive-primary) !important';
     }
 
     return (
@@ -142,11 +142,11 @@ const TextInput = forwardRef<HTMLInputElement, UserInputProps>(
               }
             }}
           >
-            <Icon.CloseIcon css={{fill: 'var(--text-input-background)', height: 8, width: 8}} />
+            <Icon.CloseIcon css={{fill: 'var(--wire-background-base-primary)', height: 8, width: 8}} />
           </button>
         )}
-        {isSuccess && !isError && <CheckIcon css={getIconCSS(changedColor)} color={COLOR.TEXT} />}
-        {isError && <Icon.ExclamationMark css={getIconCSS(changedColor)} color={COLOR.TEXT} />}
+        {isSuccess && !isError && <CheckIcon css={getIconCSS(changedColor)} color="var(--wire-content-base-primary)" />}
+        {isError && <Icon.ExclamationMark css={getIconCSS(changedColor)} color="var(--wire-content-base-primary)" />}
       </div>
     );
   },

@@ -26,7 +26,7 @@ export const listWrapper = ({isHighlighted = false, noUnderline = false, noInter
   alignItems: 'center',
 
   '&:hover, &:focus, &:focus-visible': {
-    background: 'var(--app-bg-secondary)',
+    background: 'var(--wire-background-base-primary-focus)',
     '&::after': {
       borderBottom: 'none',
     },
@@ -39,10 +39,10 @@ export const listWrapper = ({isHighlighted = false, noUnderline = false, noInter
   ...(!noInteraction && {
     transition: 'background-color 0.15s ease-in-out',
     '&:hover': {
-      backgroundColor: 'var(--app-bg-secondary)',
+      backgroundColor: 'var(--wire-background-base-primary-focus)',
     },
     '&:focus-visible': {
-      backgroundColor: 'var(--app-bg-secondary)',
+      backgroundColor: 'var(--wire-background-base-primary-focus)',
       outline: '1px solid var(--accent-color-focus)',
     },
   }),
@@ -57,7 +57,7 @@ export const listWrapper = ({isHighlighted = false, noUnderline = false, noInter
       right: 0,
       bottom: 0,
       left: 'var(--left-list-item-left-width)',
-      borderBottom: '1px solid var(--gray-40)',
+      borderBottom: '1px solid var(--wire-border-base-primary)',
       content: '""',
     },
   }),
@@ -67,13 +67,6 @@ export const listWrapper = ({isHighlighted = false, noUnderline = false, noInter
     backgroundColor: 'var(--background-fade-8)',
   }),
 
-  'body.theme-dark &': {
-    ...(!noUnderline && {
-      '&::after': {
-        borderBottomColor: 'var(--gray-90)',
-      },
-    }),
-  },
 });
 
 export const listItem = (noInteraction = false): CSSObject => ({
@@ -133,7 +126,7 @@ export const contentText: CSSObject = {
 };
 
 export const nameWrapper: CSSObject = {
-  color: 'var(--main-color)',
+  color: 'var(--wire-content-base-primary)',
   display: 'flex',
   overflow: 'hidden',
   width: '100%',
