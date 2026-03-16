@@ -68,7 +68,6 @@
       opacity: 0;
     }
 
-    #conversation-input-bar,
     #conversation-title-bar,
     #message-list {
       width: 100%;
@@ -77,6 +76,17 @@
       @media (min-width: 1000px) {
         &.is-right-panel-open {
           width: calc(100% - var(--right-width));
+        }
+      }
+    }
+
+    #conversation-input-bar {
+      width: calc(100% - 32px);
+      transition: width var(--animation-timing-fast) var(--ease-out-quart);
+
+      @media (min-width: 1000px) {
+        &.is-right-panel-open {
+          width: calc(100% - var(--right-width) - 32px);
         }
       }
     }

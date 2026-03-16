@@ -41,16 +41,17 @@ export const label: CSSObject = {
 
 export const button: CSSObject = {
   marginBottom: 0,
-  backgroundColor: 'var(--wire-background-accent-primary)',
-  border: 'none',
-  color: 'var(--wire-content-accent-on-primary)',
+  backgroundColor: 'var(--wire-background-base-primary)',
+  border: '1px solid var(--wire-border-base-primary)',
+  color: 'var(--wire-content-base-primary)',
   svg: {
     path: {
-      fill: 'var(--wire-content-accent-on-primary)',
+      fill: 'currentColor',
     },
   },
   '&:hover': {
-    backgroundColor: 'var(--wire-background-accent-primary-focus)',
+    backgroundColor: 'var(--wire-background-base-tertiary)',
+    borderColor: 'var(--wire-border-base-primary)',
   },
 };
 

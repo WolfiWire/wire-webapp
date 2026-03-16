@@ -24,13 +24,23 @@
   min-height: var(--conversation-input-min-height);
   box-sizing: content-box;
   flex-direction: column;
+  margin: 0 16px 16px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--wire-background-base-primary);
+  border: 1px solid var(--wire-border-base-primary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+
+  body.theme-dark & {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 1px 4px rgba(0, 0, 0, 0.2);
+  }
 
   &__input {
     z-index: 10;
     display: flex;
     flex-wrap: wrap;
     padding-right: 8px;
-    background-color: var(--wire-background-base-secondary);
+    background-color: var(--wire-background-base-primary);
 
     &--editing,
     &--editing .editor-container {

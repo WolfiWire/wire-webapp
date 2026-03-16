@@ -28,31 +28,8 @@
 
   .button-states();
 
-  &:focus-visible {
-    .conversation-list-cell-center,
-    .conversation-list-cell-right {
-      border-bottom: 0 !important;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: var(--left-list-item-left-width);
-    height: 1px;
-    background-color: #fff;
-    content: '';
-    opacity: 0.06;
-  }
-
   &--active {
     .button-active();
-
-    .conversation-list-cell-center,
-    .conversation-list-cell-right {
-      border-bottom: 0 !important;
-    }
     .call-ui__button--join {
       outline: 1px solid var(--wire-background-base-primary);
     }
@@ -84,8 +61,6 @@
   flex: 1 1 auto;
   flex-direction: column;
   justify-content: center;
-  border-bottom: 1px solid var(--wire-border-base-primary);
-
   &.conversation-list-cell-center-no-left {
     padding-left: 16px;
   }
@@ -95,7 +70,6 @@
   .flex-center;
 
   padding-right: 16px;
-  border-bottom: 1px solid var(--wire-border-base-primary);
 }
 
 .conversation-recent-view-list {
