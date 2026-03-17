@@ -45,7 +45,7 @@ export const iconWrapperStyles: CSSObject = {
   alignItems: 'center',
   justifyContent: 'center',
   borderRadius: '50%',
-  backgroundColor: 'var(--wire-background-base-tertiary)',
+  backgroundColor: 'var(--wire-background-container)',
   width: '20px',
   height: '20px',
 
@@ -60,7 +60,7 @@ export const iconWrapperStyles: CSSObject = {
 
 export const iconStyles: CSSObject = {
   'body.theme-dark &': {
-    fill: 'var(--wire-content-base-primary)',
+    fill: 'var(--wire-content-primary)',
   },
 };
 

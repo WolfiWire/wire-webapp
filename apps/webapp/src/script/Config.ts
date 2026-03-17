@@ -27,12 +27,12 @@ import packageJson from '../../package.json';
 const env = window.wire.env;
 
 export const ACCENT_ID = {
-  AMBER: 5,
-  BLUE: 1,
-  GREEN: 2,
-  PURPLE: 7,
-  RED: 4,
-  TURQUOISE: 6,
+  AZURE: 1,
+  AMETHYST: 2,
+  FLAMINGO: 3,
+  LAGOON: 4,
+  MIDNIGHT: 5,
+  MOSS: 6,
 };
 
 const config = {

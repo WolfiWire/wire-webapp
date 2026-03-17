@@ -63,7 +63,7 @@ export const AccountRegistrationLayout = ({children}: {children: ReactNode}) => 
                 css={registrationLayoutListItemIconCss}
                 width={16}
                 height={16}
-                color="var(--wire-content-positive-primary)"
+                color="var(--wire-content-success)"
               />
               <Text css={whiteFontCss}>{item}</Text>
             </div>

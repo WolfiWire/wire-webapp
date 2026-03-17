@@ -41,7 +41,7 @@ export const radioLabelStyles = (isDisabled: boolean): CSSObject => ({
   position: 'relative',
   display: 'flex',
   alignItems: 'center',
-  color: isDisabled ? 'var(--wire-content-base-secondary)' : 'var(--wire-content-base-primary)',
+  color: isDisabled ? 'var(--wire-content-secondary)' : 'var(--wire-content-primary)',
   cursor: isDisabled ? 'not-allowed' : 'pointer',
   whiteSpace: 'pre',
   fontSize: '1rem',
@@ -58,7 +58,7 @@ export const radioLabelStyles = (isDisabled: boolean): CSSObject => ({
     height: '22px',
     border: '2px solid',
     borderColor: isDisabled ? 'var(--checkbox-background-disabled-selected)' : 'var(--checkbox-border)',
-    background: 'var(--wire-background-base-secondary)',
+    background: 'var(--wire-background-canvas)',
     transition: 'all 0.15s',
   },
 });

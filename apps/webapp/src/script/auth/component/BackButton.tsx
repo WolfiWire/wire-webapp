@@ -34,7 +34,7 @@ export const BackButton = () => {
       data-uie-name="go-index"
       css={{background: 'none', border: 'none', cursor: 'pointer'}}
     >
-      <ArrowIcon direction="left" aria-hidden="true" focusable="false" color="var(--wire-content-base-primary)" />
+      <ArrowIcon direction="left" aria-hidden="true" focusable="false" color="var(--wire-content-primary)" />
     </button>
   );
 };

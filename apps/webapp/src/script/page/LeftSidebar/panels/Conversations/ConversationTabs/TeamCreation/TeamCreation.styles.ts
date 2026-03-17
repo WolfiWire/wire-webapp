@@ -53,7 +53,7 @@ export const iconButtonCss: CSSObject = {
     borderColor: 'var(--accent-color-500)',
   },
   ':focus svg': {
-    fill: 'var(--wire-content-base-primary)',
+    fill: 'var(--wire-content-primary)',
   },
   '.theme-dark &': {
     background: 'var(--accent-color-800)',
@@ -107,7 +107,7 @@ export const buttonCss: CSSObject = {
 const commonContainerCss: CSSObject = {
   padding: '0.5rem',
   borderRadius: '0.5rem',
-  fill: 'var(--wire-content-base-primary)',
+  fill: 'var(--wire-content-primary)',
 
   background: 'var(--accent-color-50)',
   '.theme-dark &': {

@@ -34,33 +34,33 @@ function getHashCode(str: string) {
   return hash;
 }
 
-const green = User.ACCENT_COLOR[ACCENT_ID.GREEN];
-const amber = User.ACCENT_COLOR[ACCENT_ID.AMBER];
-const blue = User.ACCENT_COLOR[ACCENT_ID.BLUE];
-const purple = User.ACCENT_COLOR[ACCENT_ID.PURPLE];
-const red = User.ACCENT_COLOR[ACCENT_ID.RED];
-const turquoise = User.ACCENT_COLOR[ACCENT_ID.TURQUOISE];
+const azure = User.ACCENT_COLOR[ACCENT_ID.AZURE];
+const amethyst = User.ACCENT_COLOR[ACCENT_ID.AMETHYST];
+const flamingo = User.ACCENT_COLOR[ACCENT_ID.FLAMINGO];
+const lagoon = User.ACCENT_COLOR[ACCENT_ID.LAGOON];
+const midnight = User.ACCENT_COLOR[ACCENT_ID.MIDNIGHT];
+const moss = User.ACCENT_COLOR[ACCENT_ID.MOSS];
 
 const groupAvatarOptions = [
-  [green, purple, red],
-  [blue, green, amber],
-  [blue, red, purple],
-  [amber, green, purple],
-  [green, blue, purple],
-  [blue, amber, green],
-  [red, turquoise, purple],
-  [green, red, blue],
-  [amber, blue, purple],
-  [purple, turquoise, green],
-  [green, purple, red],
-  [green, blue, red],
-  [purple, blue, green],
-  [green, blue, amber],
-  [green, amber, purple],
+  [azure, amethyst, flamingo],
+  [lagoon, moss, amethyst],
+  [azure, flamingo, amethyst],
+  [midnight, moss, amethyst],
+  [moss, azure, amethyst],
+  [azure, midnight, moss],
+  [flamingo, lagoon, amethyst],
+  [moss, flamingo, azure],
+  [midnight, azure, amethyst],
+  [amethyst, lagoon, moss],
+  [moss, amethyst, flamingo],
+  [moss, azure, flamingo],
+  [amethyst, azure, moss],
+  [moss, azure, midnight],
+  [moss, midnight, amethyst],
 ];
 
 // The color options for the channel avatar.
-const channelAvatarColorOptions = ['blue', 'purple', 'red', 'green', 'amber', 'turquoise', 'black'];
+const channelAvatarColorOptions = ['azure', 'amethyst', 'flamingo', 'lagoon', 'midnight', 'moss', 'black'];
 
 const borderIdentifier = 'border';
 const backgroundIdentifier = 'background';

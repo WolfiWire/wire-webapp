@@ -53,7 +53,7 @@ export const MessageButton = ({id, label, message, onClick = noop}: MessageButto
         data-uie-waiting={isWaiting}
         showLoading={isWaiting}
         isActive={isSelected}
-        loadingColor="var(--wire-content-base-secondary)"
+        loadingColor="var(--wire-content-secondary)"
         style={{maxWidth: '400px', width: '100%', marginTop: '8px', marginBottom: 0}}
       >
         {label}

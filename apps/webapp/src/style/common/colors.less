@@ -107,31 +107,175 @@
 
 @white: #ffffff;
 @black: #000000;
-@gray-10: #F9FAFA;   // Tailwind Gray-50
-@gray-20: #F3F4F5;   // Tailwind Gray-100
-@gray-30: #E5E7EA;   // Tailwind Gray-200
-@gray-40: #D1D5DA;   // Tailwind Gray-300
-@gray-50: #99A1AE;   // Tailwind Gray-400
-@gray-60: #6A7282;   // Tailwind Gray-500
-@gray-70: #4A5565;   // Tailwind Gray-600
-@gray-80: #364152;   // Tailwind Gray-700
-@gray-90: #1E2938;   // Tailwind Gray-800
-@gray-95: #101828;   // Tailwind Gray-900
-@gray-100: #030712;  // Tailwind Gray-950
 
-// New design colors
+// Gray — matches Color Primitives palette exactly (Gray/50 … Gray/950)
+@gray-50:  #F5F6FA;
+@gray-100: #EDEEF3;
+@gray-200: #DDDFE4;
+@gray-300: #C5C7CE;
+@gray-400: #A4A6AD;
+@gray-500: #82858C;
+@gray-600: #64676D;
+@gray-700: #4B4D53;
+@gray-800: #323439;
+@gray-900: #212226;
+@gray-950: #151619;
+
+// Color palette (accent colors) — matches Color Primitives palette
+@blue-50:   #F2F6FF;  @blue-100:  #E3EDFF;  @blue-200:  #C5D9FF;
+@blue-300:  #9FC0FF;  @blue-400:  #6FA0FF;  @blue-500:  #3D7EFF;
+@blue-600:  #2F66E6;  @blue-700:  #2452BF;  @blue-800:  #1B3D99;
+@blue-900:  #142E73;  @blue-950:  #0D1F4D;
+
+@green-50:  #F1FBF7;  @green-100: #E3F6ED;  @green-200: #C2EBD7;
+@green-300: #94D9BB;  @green-400: #5FC59C;  @green-500: #2FAE7A;
+@green-600: #258E64;  @green-700: #1E7251;  @green-800: #16563D;
+@green-900: #0F3C2A;  @green-950: #09271C;
+
+// Green dark-mode aliases (same values — used by calling/status UI)
+@green-dark-50:  @green-50;   @green-dark-100: @green-100;  @green-dark-200: @green-200;
+@green-dark-300: @green-300;  @green-dark-400: @green-400;  @green-dark-500: @green-500;
+@green-dark-600: @green-600;  @green-dark-700: @green-700;  @green-dark-800: @green-800;
+@green-dark-900: @green-900;  @green-dark-950: @green-950;
+
+@petrol-50: #EEF8FA;  @petrol-100:#DFF2F6;  @petrol-200:#BFE4EA;
+@petrol-300:#8FD2DB;  @petrol-400:#59BCC9;  @petrol-500:#2EA3B6;
+@petrol-600:#258696;  @petrol-700:#1E6C78;  @petrol-800:#16525B;
+@petrol-900:#0F3A40;  @petrol-950:#09262A;
+
+@purple-50: #F6F2FF;  @purple-100:#EDE5FF;  @purple-200:#D8C9FF;
+@purple-300:#BDA6FF;  @purple-400:#9A7FFF;  @purple-500:#7A5CFF;
+@purple-600:#6447E6;  @purple-700:#5036BF;  @purple-800:#3C2899;
+@purple-900:#2A1C73;  @purple-950:#1B124D;
+
+@red-50:    #FEF2F3;  @red-100:   #FDE6E8;  @red-200:   #F7C2C6;
+@red-300:   #EF8F96;  @red-400:   #E35E68;  @red-500:   #D73845;
+@red-600:   #B82C38;  @red-700:   #96242E;  @red-800:   #731B22;
+@red-900:   #531318;  @red-950:   #360C10;
+
+@amber-50:  #FFF8EC;  @amber-100: #FFF1D6;  @amber-200: #FFE1A8;
+@amber-300: #FFD070;  @amber-400: #F5B93E;  @amber-500: #E6A11F;
+@amber-600: #C88417;  @amber-700: #A66A12;  @amber-800: #80510D;
+@amber-900: #5C3A09;  @amber-950: #3B2505;
+
+// Accent color palettes
+@azure-50:  #F0F5FF;  @azure-100: #E0EBFF;  @azure-200: #BFD6FF;
+@azure-300: #8FBBFF;  @azure-400: #5FA0FF;  @azure-500: #1F63E9;
+@azure-600: #1A57FF;  @azure-700: #1648D6;  @azure-800: #1137A8;
+@azure-900: #0C287A;  @azure-950: #071A52;
+
+@amethyst-50:  #F8F0FF;  @amethyst-100: #F0E0FF;  @amethyst-200: #DFC2FF;
+@amethyst-300: #C89BFF;  @amethyst-400: #B06FFF;  @amethyst-500: #A520F7;
+@amethyst-600: #9A1CFF;  @amethyst-700: #7E17D1;  @amethyst-800: #6311A3;
+@amethyst-900: #470C75;  @amethyst-950: #2E074D;
+
+@flamingo-50:  #FFF0F5;  @flamingo-100: #FFE0EB;  @flamingo-200: #FFB8D0;
+@flamingo-300: #FF85AD;  @flamingo-400: #FF5C93;  @flamingo-500: #FF3F7F;
+@flamingo-600: #FF2E72;  @flamingo-700: #E02663;  @flamingo-800: #B81F50;
+@flamingo-900: #8C163C;  @flamingo-950: #5C0E27;
+
+@lagoon-50:  #F2F8FA;  @lagoon-100: #E6F1F5;  @lagoon-200: #C7E0E8;
+@lagoon-300: #9CC9D6;  @lagoon-400: #6FAFC1;  @lagoon-500: #007B9A;
+@lagoon-600: #006782;  @lagoon-700: #00536A;  @lagoon-800: #003F51;
+@lagoon-900: #002C39;  @lagoon-950: #001C24;
+
+@midnight-50:  #F3F6F8;  @midnight-100: #E7EDF1;  @midnight-200: #CBD9E2;
+@midnight-300: #A3BDCC;  @midnight-400: #739CAF;  @midnight-500: #0B3B55;
+@midnight-600: #093246;  @midnight-700: #072837;  @midnight-800: #051F29;
+@midnight-900: #03151B;  @midnight-950: #020E12;
+
+@moss-50:  #F7F7F3;  @moss-100: #ECEDE6;  @moss-200: #D6D8C8;
+@moss-300: #B6BA9E;  @moss-400: #91966F;  @moss-500: #626235;
+@moss-600: #53522E;  @moss-700: #434227;  @moss-800: #32321E;
+@moss-900: #232316;  @moss-950: #16160F;
+
+// CSS custom properties — base primitives available everywhere
 body {
   --white: @white;
   --black: @black;
-  --gray-10: @gray-10;
-  --gray-20: @gray-20;
-  --gray-30: @gray-30;
-  --gray-40: @gray-40;
-  --gray-50: @gray-50;
-  --gray-60: @gray-60;
-  --gray-70: @gray-70;
-  --gray-80: @gray-80;
-  --gray-90: @gray-90;
-  --gray-95: @gray-95;
+
+  // Gray scale
+  --gray-50:  @gray-50;
   --gray-100: @gray-100;
+  --gray-200: @gray-200;
+  --gray-300: @gray-300;
+  --gray-400: @gray-400;
+  --gray-500: @gray-500;
+  --gray-600: @gray-600;
+  --gray-700: @gray-700;
+  --gray-800: @gray-800;
+  --gray-900: @gray-900;
+  --gray-950: @gray-950;
+
+  // Blue
+  --blue-50:   @blue-50;   --blue-100:  @blue-100;  --blue-200:  @blue-200;
+  --blue-300:  @blue-300;  --blue-400:  @blue-400;  --blue-500:  @blue-500;
+  --blue-600:  @blue-600;  --blue-700:  @blue-700;  --blue-800:  @blue-800;
+  --blue-900:  @blue-900;  --blue-950:  @blue-950;
+
+  // Green
+  --green-50:  @green-50;  --green-100: @green-100; --green-200: @green-200;
+  --green-300: @green-300; --green-400: @green-400; --green-500: @green-500;
+  --green-600: @green-600; --green-700: @green-700; --green-800: @green-800;
+  --green-900: @green-900; --green-950: @green-950;
+
+  // Petrol
+  --petrol-50: @petrol-50; --petrol-100:@petrol-100;--petrol-200:@petrol-200;
+  --petrol-300:@petrol-300;--petrol-400:@petrol-400;--petrol-500:@petrol-500;
+  --petrol-600:@petrol-600;--petrol-700:@petrol-700;--petrol-800:@petrol-800;
+  --petrol-900:@petrol-900;--petrol-950:@petrol-950;
+
+  // Purple
+  --purple-50: @purple-50; --purple-100:@purple-100;--purple-200:@purple-200;
+  --purple-300:@purple-300;--purple-400:@purple-400;--purple-500:@purple-500;
+  --purple-600:@purple-600;--purple-700:@purple-700;--purple-800:@purple-800;
+  --purple-900:@purple-900;--purple-950:@purple-950;
+
+  // Red
+  --red-50:    @red-50;    --red-100:   @red-100;   --red-200:   @red-200;
+  --red-300:   @red-300;   --red-400:   @red-400;   --red-500:   @red-500;
+  --red-600:   @red-600;   --red-700:   @red-700;   --red-800:   @red-800;
+  --red-900:   @red-900;   --red-950:   @red-950;
+
+  // Amber
+  --amber-50:  @amber-50;  --amber-100: @amber-100; --amber-200: @amber-200;
+  --amber-300: @amber-300; --amber-400: @amber-400; --amber-500: @amber-500;
+  --amber-600: @amber-600; --amber-700: @amber-700; --amber-800: @amber-800;
+  --amber-900: @amber-900; --amber-950: @amber-950;
+
+  // Azure
+  --azure-50:  @azure-50;  --azure-100: @azure-100; --azure-200: @azure-200;
+  --azure-300: @azure-300; --azure-400: @azure-400; --azure-500: @azure-500;
+  --azure-600: @azure-600; --azure-700: @azure-700; --azure-800: @azure-800;
+  --azure-900: @azure-900; --azure-950: @azure-950;
+
+  // Amethyst
+  --amethyst-50:  @amethyst-50;  --amethyst-100: @amethyst-100; --amethyst-200: @amethyst-200;
+  --amethyst-300: @amethyst-300; --amethyst-400: @amethyst-400; --amethyst-500: @amethyst-500;
+  --amethyst-600: @amethyst-600; --amethyst-700: @amethyst-700; --amethyst-800: @amethyst-800;
+  --amethyst-900: @amethyst-900; --amethyst-950: @amethyst-950;
+
+  // Flamingo
+  --flamingo-50:  @flamingo-50;  --flamingo-100: @flamingo-100; --flamingo-200: @flamingo-200;
+  --flamingo-300: @flamingo-300; --flamingo-400: @flamingo-400; --flamingo-500: @flamingo-500;
+  --flamingo-600: @flamingo-600; --flamingo-700: @flamingo-700; --flamingo-800: @flamingo-800;
+  --flamingo-900: @flamingo-900; --flamingo-950: @flamingo-950;
+
+  // Lagoon
+  --lagoon-50:  @lagoon-50;  --lagoon-100: @lagoon-100; --lagoon-200: @lagoon-200;
+  --lagoon-300: @lagoon-300; --lagoon-400: @lagoon-400; --lagoon-500: @lagoon-500;
+  --lagoon-600: @lagoon-600; --lagoon-700: @lagoon-700; --lagoon-800: @lagoon-800;
+  --lagoon-900: @lagoon-900; --lagoon-950: @lagoon-950;
+
+  // Midnight
+  --midnight-50:  @midnight-50;  --midnight-100: @midnight-100; --midnight-200: @midnight-200;
+  --midnight-300: @midnight-300; --midnight-400: @midnight-400; --midnight-500: @midnight-500;
+  --midnight-600: @midnight-600; --midnight-700: @midnight-700; --midnight-800: @midnight-800;
+  --midnight-900: @midnight-900; --midnight-950: @midnight-950;
+
+  // Moss
+  --moss-50:  @moss-50;  --moss-100: @moss-100; --moss-200: @moss-200;
+  --moss-300: @moss-300; --moss-400: @moss-400; --moss-500: @moss-500;
+  --moss-600: @moss-600; --moss-700: @moss-700; --moss-800: @moss-800;
+  --moss-900: @moss-900; --moss-950: @moss-950;
 }

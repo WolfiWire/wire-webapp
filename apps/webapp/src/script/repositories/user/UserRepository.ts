@@ -943,8 +943,11 @@ export class UserRepository extends TypedEventEmitter<Events> {
    * Change the accent color.
    */
   async changeAccentColor(accentId: AccentColor.AccentColorID): Promise<User> {
+    // Start local update first so the UI reacts immediately (updateUserFromObject
+    // is synchronous for self-user, so the KO observable is updated before the API call)
+    const updatePromise = this.updateUser(this.userState.self().qualifiedId, {accent_id: accentId});
     await this.selfService.putSelf({accent_id: accentId} as any);
-    return this.updateUser(this.userState.self().qualifiedId, {accent_id: accentId});
+    return updatePromise;
   }
 
   /**

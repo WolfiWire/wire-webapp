@@ -18,337 +18,216 @@
  */
 
 // ---------------------------------------------------------------------------
-// Wire Design System — Semantic Color Tokens  (ava custom v1)
+// Wire Design System — Semantic Color Tokens  (ChatGPT palette v1)
 //
-// Source: /design-tokens/tokenstudio/ava custom v1/Theme/
-//   - Light Mode.json  (light values)
-//   - Dark Mode.json   (dark values)
+// Source: /design-tokens/figma export/chatgp plalette/Theme/
+//   - Light Mode.tokens.json
+//   - Dark Mode.tokens.json
 //
-// Primitives: /design-tokens/tokenstudio/ava custom v1/
-//   - Color primitives (Ava)/Mode 1.json  — color scales
-//   - Color primitives (Tailwind)/Value.json — Slate (gray) scale
+// Primitives: /design-tokens/figma export/chatgp plalette/Color Primitives/
+//   - Mode 1.tokens.json
 //
-// Gray mapping  {Gray.N} → CSS variable
-//   {Gray.50}  → var(--gray-10)   {Gray.100} → var(--gray-20)
-//   {Gray.200} → var(--gray-30)   {Gray.300} → var(--gray-40)
-//   {Gray.400} → var(--gray-50)   {Gray.500} → var(--gray-60)
-//   {Gray.600} → var(--gray-70)   {Gray.700} → var(--gray-80)
-//   {Gray.800} → var(--gray-90)   {Gray.900} → var(--gray-95)
-//   {Gray.950} → var(--gray-100)
+// Gray CSS variable mapping (names match palette steps exactly):
+//   Gray/50  → var(--gray-50)   = #F5F6FA
+//   Gray/100 → var(--gray-100)  = #EDEEF3
+//   Gray/200 → var(--gray-200)  = #DDDFE4
+//   Gray/300 → var(--gray-300)  = #C5C7CE
+//   Gray/400 → var(--gray-400)  = #A4A6AD
+//   Gray/500 → var(--gray-500)  = #82858C
+//   Gray/600 → var(--gray-600)  = #64676D
+//   Gray/700 → var(--gray-700)  = #4B4D53
+//   Gray/800 → var(--gray-800)  = #323439
+//   Gray/900 → var(--gray-900)  = #212226
+//   Gray/950 → var(--gray-950)  = #151619
 //
-// Token naming: --wire-{category}-{group}-{variant}
-//   Background → --wire-background-*
-//   Content    → --wire-content-*
-//   Border     → --wire-border-*
+// Token naming convention:
+//   Semantic tokens:  --wire-{background|content|border}-{name}
 // ---------------------------------------------------------------------------
 
-// ---------------------------------------------------------------------------
-// Light Mode
-// ---------------------------------------------------------------------------
+// ===========================================================================
+// LIGHT MODE
+// ===========================================================================
 body,
 body.theme-default {
 
-  // ---- Background / Base --------------------------------------------------
-  --wire-background-base-primary:            var(--white);     // {White.100}
-  --wire-background-base-primary-focus:      var(--gray-20);   // {Gray.100}
-  --wire-background-base-secondary:          var(--gray-10);   // {Gray.50}
-  --wire-background-base-secondary-focus:    var(--gray-30);   // {Gray.200}
-  --wire-background-base-tertiary:           var(--gray-20);   // {Gray.100}
-  --wire-background-base-tertiary-focus:     var(--gray-30);   // {Gray.200}
+  // =========================================================================
+  // § 1 — Figma Semantic Tokens (complete mapping of Theme/Light Mode)
+  // =========================================================================
 
-  // ---- Background / Accent Color ------------------------------------------
-  --wire-background-accent-primary:          var(--accent-color);       // {Accent color.500}
-  --wire-background-accent-primary-focus:    var(--accent-color-700);   // {Accent color.700}
-  --wire-background-accent-secondary:        var(--accent-color-50);    // {Accent color.050}
-  --wire-background-accent-secondary-focus:  var(--accent-color-100);   // {Accent color.100}
+  // ---- Surfaces -----------------------------------------------------------
+  --wire-background-canvas:              var(--gray-50);            // Gray/50   #F8F9FA — page bg
+  --wire-background-container:           var(--gray-100);           // Gray/100  #F1F3F5 — sidebars, panels
+  --wire-background-elevated:            var(--white);              // White     #FFFFFF — menus, popovers
+  --wire-background-surface:             var(--white);              // White     #FFFFFF — content areas
+  --wire-background-overlay:             var(--gray-50);            // Gray/50   #F8F9FA
+  --wire-background-inverse:             var(--gray-950);           // Gray/950  #1B242C
 
-  // ---- Background / Backdrop ----------------------------------------------
-  --wire-background-backdrop-primary:        #0000008c;  // {Black.055}
+  // ---- Status backgrounds -------------------------------------------------
+  --wire-background-accent:              var(--accent-color);       // Accent/500
+  --wire-background-accent-subtle:       var(--accent-color-50);    // Accent/050
+  --wire-background-danger:              var(--red-500);            // Red/500   #D73845
+  --wire-background-danger-subtle:       var(--red-50);             // Red/050   #FEF2F3
+  --wire-background-success:             var(--green-500);          // Green/500 #2FAE7A
+  --wire-background-success-subtle:      var(--green-50);           // Green/050 #F1FBF7
+  --wire-background-warning:             var(--amber-500);          // Amber/500 #E6A11F
+  --wire-background-warning-subtle:      var(--amber-50);           // Amber/050 #FFF8EC
+  --wire-background-disabled:            var(--gray-200);           // Gray/200  #E1E5E9
 
-  // ---- Background / Danger ------------------------------------------------
-  --wire-background-danger-primary:          var(--red-500);  // {Red.500}  #C60000
-  --wire-background-danger-primary-focus:    #7B0000;         // {Red.700}
-  --wire-background-danger-secondary:        #FFDFE0;         // {Red.050}
-  --wire-background-danger-secondary-focus:  #FFADB1;         // {Red.100}
+  // ---- Interaction overlays (semi-transparent) ----------------------------
+  --wire-background-hover-subtle:        fade(#000, 10%);           // Black 10%
+  --wire-background-hover-default:       fade(#000, 20%);           // Black 20%
+  --wire-background-hover-strong:        fade(#000, 30%);           // Black 30%
+  --wire-background-press-subtle:        fade(#000, 20%);           // Black 20%
+  --wire-background-press-default:       fade(#000, 30%);           // Black 30%
+  --wire-background-press-strong:        fade(#000, 40%);           // Black 40%
+  --wire-background-backdrop:            fade(#000, 50%);           // Black 50%
 
-  // ---- Background / Warning -----------------------------------------------
-  --wire-background-warning-primary:         var(--amber-500);  // {Amber.500}  #A95D00
-  --wire-background-warning-primary-focus:   #451500;           // {Amber.700}
-  --wire-background-warning-secondary:       #FFEED5;           // {Amber.050}
-  --wire-background-warning-secondary-focus: #FFE4C1;           // {Amber.100}
+  // ---- Bubbles ------------------------------------------------------------
+  --wire-background-bubble-own:          var(--accent-color);       // Accent/500
+  --wire-background-bubble-own-active:   var(--accent-color-700);   // Accent/700
+  --wire-background-bubble-other:        var(--white);              // White
 
-  // ---- Background / Positive ----------------------------------------------
-  --wire-background-positive-primary:        var(--green-500);  // {Green.500}  #008F27
-  --wire-background-positive-primary-focus:  #003B00;           // {Green.700}
-  --wire-background-positive-secondary:      #E8F5EC;           // {Green.050}
-  --wire-background-positive-secondary-focus:#D5F1DD;           // {Green.100}
+  // ---- Content (text / icon) ----------------------------------------------
+  --wire-content-primary:                var(--black);              // Black
+  --wire-content-secondary:              var(--gray-600);           // Gray/600  #6B7785
+  --wire-content-tertiary:               var(--gray-400);           // Gray/400  #AAB4BE
+  --wire-content-accent:                 var(--accent-color);       // Accent/500
+  --wire-content-on-accent:              var(--white);              // White
+  --wire-content-on-accent-subtle:       var(--accent-color-700);   // Accent/700
+  --wire-content-on-bubble-own:          var(--white);              // White
+  --wire-content-on-bubble-own-secondary:var(--accent-color-100);   // Accent/100
+  --wire-content-on-bubble-other:        var(--gray-950);           // Gray/950  #1B242C
+  --wire-content-danger:                 var(--red-500);            // Red/500
+  --wire-content-on-danger:              var(--white);              // White
+  --wire-content-on-danger-subtle:       var(--red-700);            // Red/700   #96242E
+  --wire-content-success:                var(--green-500);          // Green/500
+  --wire-content-on-success:             var(--white);              // White
+  --wire-content-on-success-subtle:      var(--green-700);          // Green/700 #1E7251
+  --wire-content-warning:                var(--amber-500);          // Amber/500
+  --wire-content-on-warning:             var(--white);              // White
+  --wire-content-on-warning-subtle:      var(--amber-700);          // Amber/700 #A66A12
+  --wire-content-disabled:               var(--gray-600);           // Gray/600  #6B7785
+  --wire-content-on-disabled:            var(--gray-700);           // Gray/700  #525F6B
+  --wire-content-inverse:                var(--white);              // White
 
-  // ---- Background / Neutral -----------------------------------------------
-  --wire-background-neutral-primary:         var(--gray-40);    // {Gray.300}
-  --wire-background-neutral-primary-focus:   var(--gray-90);    // {Gray.800}
-  --wire-background-neutral-secondary:       var(--white);      // {White.100}
-  --wire-background-neutral-secondary-focus: var(--gray-20);    // {Gray.100}
+  // ---- Borders ------------------------------------------------------------
+  --wire-border-default:                 var(--gray-200);           // Gray/200  #E1E5E9
+  --wire-border-subtle:                  var(--gray-100);           // Gray/100  #F1F3F5
+  --wire-border-strong:                  var(--gray-400);           // Gray/400  #AAB4BE
+  --wire-border-disabled:                var(--gray-300);           // Gray/300  #CCD3D9
+  --wire-border-accent:                  var(--accent-color);       // Accent/500
+  --wire-border-accent-subtle:           var(--accent-color-100);   // Accent/100
+  --wire-border-focus:                   var(--accent-color-300);   // Accent/300
+  --wire-border-danger:                  var(--red-500);            // Red/500
+  --wire-border-danger-subtle:           var(--red-100);            // Red/100   #FDE6E8
+  --wire-border-success:                 var(--green-500);          // Green/500
+  --wire-border-success-subtle:          var(--green-100);          // Green/100 #E3F6ED
+  --wire-border-warning:                 var(--amber-500);          // Amber/500
+  --wire-border-warning-subtle:          var(--amber-100);          // Amber/100 #FFF1D6
+  --wire-border-inverse:                 var(--white);              // White
 
-  // ---- Background / Disabled ----------------------------------------------
-  --wire-background-disabled-primary:        var(--gray-50);    // {Gray.400}
-  --wire-background-disabled-secondary:      var(--gray-20);    // {Gray.100}
+  // =========================================================================
+  // § 2 — Component-level variables
+  // =========================================================================
 
-  // ---- Background / Inverted ----------------------------------------------
-  --wire-background-inverted-primary:        var(--gray-100);   // {Gray.950}
-  --wire-background-inverted-primary-focus:  var(--gray-80);    // {Gray.700}
-  --wire-background-inverted-secondary:      var(--gray-100);   // {Gray.950}
-  --wire-background-inverted-secondary-focus:var(--gray-95);    // {Gray.900}
+  --dropdown-menu-bg:                        var(--wire-background-elevated);
 
-  // ---- Background / Bubbles (own messages) --------------------------------
-  --wire-background-bubbles-primary:         var(--accent-color);       // {Accent color.500}
-  --wire-background-bubbles-primary-focus:   var(--accent-color-700);   // {Accent color.700}
-  --wire-background-bubbles-secondary:       var(--accent-color-600);   // {Accent color.600}
-  --wire-background-bubbles-secondary-focus: var(--accent-color-800);   // {Accent color.800}
-
-  // ---- Background / Sheet -------------------------------------------------
-  --wire-background-sheet-primary:           var(--gray-20);    // {Gray.100}
-  --wire-background-sheet-primary-focus:     var(--gray-40);    // {Gray.300}
-  --wire-background-sheet-secondary:         var(--white);      // {White.100}
-  --wire-background-sheet-secondary-focus:   var(--gray-10);    // {Gray.50}
-
-  // ---- Content / Base -----------------------------------------------------
-  --wire-content-base-primary:               var(--black);      // {Black.100}
-  --wire-content-base-secondary:             var(--gray-70);    // {Gray.600}
-
-  // ---- Content / Accent Color ---------------------------------------------
-  --wire-content-accent-primary:             var(--accent-color);       // {Accent color.500}
-  --wire-content-accent-on-primary:          var(--white);              // {White.100}
-  --wire-content-accent-on-secondary:        var(--accent-color);       // {Accent color.500}
-
-  // ---- Content / Danger ---------------------------------------------------
-  --wire-content-danger-primary:             var(--red-500);    // {Red.500}
-  --wire-content-danger-on-primary:          var(--white);      // {White.100}
-  --wire-content-danger-on-secondary:        var(--red-500);    // {Red.500}
-
-  // ---- Content / Warning --------------------------------------------------
-  --wire-content-warning-primary:            var(--amber-500);  // {Amber.500}
-  --wire-content-warning-on-primary:         var(--white);      // {White.100}
-  --wire-content-warning-on-secondary:       var(--amber-500);  // {Amber.500}
-
-  // ---- Content / Positive -------------------------------------------------
-  --wire-content-positive-primary:           var(--green-500);  // {Green.500}
-  --wire-content-positive-on-primary:        var(--white);      // {White.100}
-  --wire-content-positive-on-secondary:      var(--green-500);  // {Green.500}
-
-  // ---- Content / Neutral --------------------------------------------------
-  --wire-content-neutral-on-primary:         var(--gray-100);   // {Gray.950}
-  --wire-content-neutral-on-secondary:       var(--gray-100);   // {Gray.950}
-
-  // ---- Content / Disabled -------------------------------------------------
-  --wire-content-disabled-primary:           var(--gray-70);    // {Gray.600}
-  --wire-content-disabled-on-primary:        var(--gray-80);    // {Gray.700}
-  --wire-content-disabled-on-secondary:      var(--gray-70);    // {Gray.600}
-
-  // ---- Content / Inverted -------------------------------------------------
-  --wire-content-inverted-on-primary:        var(--white);      // {White.100}
-  --wire-content-inverted-on-secondary:      var(--white);      // {White.100}
-
-  // ---- Content / Bubbles --------------------------------------------------
-  --wire-content-bubbles-primary:            var(--white);              // {White.100}
-  --wire-content-bubbles-on-primary:         var(--accent-color-100);   // {Accent color.100}
-  --wire-content-bubbles-on-secondary:       var(--accent-color-200);   // {Accent color.200}
-
-  // ---- Border / Base ------------------------------------------------------
-  --wire-border-base-primary:                var(--gray-30);            // {Gray.200}
-  --wire-border-base-secondary:              var(--white);              // {White.100}
-  --wire-border-base-focus:                  var(--accent-color-300);   // {Accent color.300}
-
-  // ---- Border / Accent Color ----------------------------------------------
-  --wire-border-accent-primary:              var(--accent-color);       // {Accent color.500}
-  --wire-border-accent-secondary:            var(--accent-color-100);   // {Accent color.100}
-  --wire-border-accent-focus:                var(--accent-color-300);   // {Accent color.300}
-
-  // ---- Border / Danger ----------------------------------------------------
-  --wire-border-danger-primary:              var(--red-500);  // {Red.500}
-  --wire-border-danger-secondary:            #FFADB1;         // {Red.100}
-  --wire-border-danger-focus:                #FF545E;         // {Red.300}
-
-  // ---- Border / Warning ---------------------------------------------------
-  --wire-border-warning-primary:             var(--amber-500);  // {Amber.500}
-  --wire-border-warning-secondary:           #FFE4C1;           // {Amber.100}
-  --wire-border-warning-focus:               #FFB767;           // {Amber.300}
-
-  // ---- Border / Positive --------------------------------------------------
-  --wire-border-positive-primary:            var(--green-500);  // {Green.500}
-  --wire-border-positive-secondary:          #D5F1DD;           // {Green.100}
-  --wire-border-positive-focus:              #84E09C;           // {Green.300}
-
-  // ---- Border / Neutral ---------------------------------------------------
-  --wire-border-neutral-primary:             var(--gray-70);    // {Gray.600}
-  --wire-border-neutral-secondary:           var(--gray-40);    // {Gray.300}
-
-  // ---- Border / Disabled --------------------------------------------------
-  --wire-border-disabled-primary:            var(--gray-40);    // {Gray.300}
-  --wire-border-disabled-secondary:          var(--gray-70);    // {Gray.600}
-
-  // ---- Border / Inverted --------------------------------------------------
-  --wire-border-inverted-primary:            var(--white);      // {White.100}
-
-  // ---- react-ui-kit legacy variable overrides ---------------------------------
-  --dropdown-menu-bg:                        var(--wire-background-base-secondary);
-
-  // ---- Component / IconButton (react-ui-kit IconButton PRIMARY variant) ----
-  --icon-button-primary-enabled-bg:          var(--wire-background-base-primary);
-  --icon-button-primary-border:              var(--wire-border-base-primary);
-  --icon-button-primary-hover-bg:            var(--wire-background-base-tertiary);
-  --icon-button-primary-hover-border:        var(--wire-border-base-primary);
-  --icon-button-primary-disabled-bg:         var(--wire-background-disabled-secondary);
+  --icon-button-primary-enabled-bg:          var(--wire-background-surface);
+  --icon-button-primary-border:              var(--wire-border-default);
+  --icon-button-primary-hover-bg:            var(--wire-background-container);
+  --icon-button-primary-hover-border:        var(--wire-border-default);
+  --icon-button-primary-disabled-bg:         var(--wire-background-disabled);
   --icon-button-primary-disabled-border:     transparent;
 }
 
-// ---------------------------------------------------------------------------
-// Dark Mode
-// ---------------------------------------------------------------------------
+// ===========================================================================
+// DARK MODE
+// ===========================================================================
 body.theme-dark {
 
-  // ---- Background / Base --------------------------------------------------
-  --wire-background-base-primary:            var(--gray-95);    // {Gray.900}
-  --wire-background-base-primary-focus:      var(--gray-90);    // {Gray.800}
-  --wire-background-base-secondary:          var(--gray-100);   // {Gray.950}
-  --wire-background-base-secondary-focus:    var(--gray-90);    // {Gray.800}
-  --wire-background-base-tertiary:           var(--black);      // {Black.100}
-  --wire-background-base-tertiary-focus:     var(--gray-80);    // {Gray.700}
+  // =========================================================================
+  // § 1 — Figma Semantic Tokens (complete mapping of Theme/Dark Mode)
+  // =========================================================================
 
-  // ---- Background / Accent Color ------------------------------------------
-  --wire-background-accent-primary:          var(--accent-color-400);   // {Accent color.400}
-  --wire-background-accent-primary-focus:    var(--accent-color-300);   // {Accent color.300}
-  --wire-background-accent-secondary:        var(--accent-color-500);   // {Accent color.500}
-  --wire-background-accent-secondary-focus:  var(--accent-color-400);   // {Accent color.400}
+  // ---- Surfaces -----------------------------------------------------------
+  --wire-background-canvas:              var(--gray-950);           // Gray/950  #1B242C — page bg
+  --wire-background-container:           var(--gray-950);           // Gray/950  #1B242C — sidebars, panels
+  --wire-background-elevated:            var(--gray-800);           // Gray/800  #3E4954 — menus, popovers
+  --wire-background-surface:             var(--gray-900);           // Gray/900  #2C363F — content areas
+  --wire-background-overlay:             var(--gray-950);           // Gray/950  #1B242C
+  --wire-background-inverse:             var(--white);              // White     #FFFFFF
 
-  // ---- Background / Backdrop (same in both modes) -------------------------
-  --wire-background-backdrop-primary:        #0000008c;  // {Black.055}
+  // ---- Status backgrounds -------------------------------------------------
+  --wire-background-accent:              var(--accent-color);       // Accent/500
+  --wire-background-accent-subtle:       var(--accent-color-700);   // Accent/700
+  --wire-background-danger:              var(--red-500);            // Red/500
+  --wire-background-danger-subtle:       var(--red-700);            // Red/700   #96242E
+  --wire-background-success:             var(--green-500);          // Green/500
+  --wire-background-success-subtle:      var(--green-700);          // Green/700 #1E7251
+  --wire-background-warning:             var(--amber-500);          // Amber/500
+  --wire-background-warning-subtle:      var(--amber-700);          // Amber/700 #A66A12
+  --wire-background-disabled:            var(--gray-500);           // Gray/500  #8A96A3
 
-  // ---- Background / Danger ------------------------------------------------
-  --wire-background-danger-primary:          #FF545E;         // {Red.300}
-  --wire-background-danger-primary-focus:    #FF8289;         // {Red.200}
-  --wire-background-danger-secondary:        #7B0000;         // {Red.700}
-  --wire-background-danger-secondary-focus:  #A00000;         // {Red.600}
+  // ---- Interaction overlays (semi-transparent) ----------------------------
+  --wire-background-hover-subtle:        fade(#fff, 10%);           // White 10%
+  --wire-background-hover-default:       fade(#fff, 20%);           // White 20%
+  --wire-background-hover-strong:        fade(#fff, 30%);           // White 30%
+  --wire-background-press-subtle:        fade(#fff, 20%);           // White 20%
+  --wire-background-press-default:       fade(#fff, 30%);           // White 30%
+  --wire-background-press-strong:        fade(#fff, 40%);           // White 40%
+  --wire-background-backdrop:            fade(#000, 50%);           // Black 50%
 
-  // ---- Background / Warning -----------------------------------------------
-  --wire-background-warning-primary:         #ED8E00;           // {Amber.400}
-  --wire-background-warning-primary-focus:   #FFB767;           // {Amber.300}
-  --wire-background-warning-secondary:       #6A2F00;           // {Amber.600}
-  --wire-background-warning-secondary-focus: #A95D00;           // {Amber.500}
+  // ---- Bubbles ------------------------------------------------------------
+  --wire-background-bubble-own:          var(--accent-color-700);   // Accent/700
+  --wire-background-bubble-own-active:   var(--accent-color-600);   // Accent/600
+  --wire-background-bubble-other:        var(--gray-900);           // Gray/900  #2C363F
 
-  // ---- Background / Positive ----------------------------------------------
-  --wire-background-positive-primary:        #00C850;           // {Green.400}
-  --wire-background-positive-primary-focus:  #84E09C;           // {Green.300}
-  --wire-background-positive-secondary:      #003B00;           // {Green.700}
-  --wire-background-positive-secondary-focus:#005900;           // {Green.600}
+  // ---- Content (text / icon) ----------------------------------------------
+  --wire-content-primary:                var(--white);              // White
+  --wire-content-secondary:              var(--gray-300);           // Gray/300  #CCD3D9
+  --wire-content-tertiary:               var(--gray-500);           // Gray/500  #8A96A3
+  --wire-content-accent:                 var(--accent-color-400);   // Accent/400
+  --wire-content-on-accent:              var(--black);              // Black
+  --wire-content-on-accent-subtle:       var(--accent-color-300);   // Accent/300
+  --wire-content-on-bubble-own:          var(--white);              // White
+  --wire-content-on-bubble-own-secondary:var(--white);              // White
+  --wire-content-on-bubble-other:        var(--white);              // White
+  --wire-content-danger:                 var(--red-300);            // Red/300   #EF8F96
+  --wire-content-on-danger:              var(--black);              // Black
+  --wire-content-on-danger-subtle:       var(--red-200);            // Red/200   #F7C2C6
+  --wire-content-success:                var(--green-400);          // Green/400 #5FC59C
+  --wire-content-on-success:             var(--black);              // Black
+  --wire-content-on-success-subtle:      var(--green-300);          // Green/300 #94D9BB
+  --wire-content-warning:                var(--amber-300);          // Amber/300 #FFD070
+  --wire-content-on-warning:             var(--black);              // Black
+  --wire-content-on-warning-subtle:      var(--amber-300);          // Amber/300 #FFD070
+  --wire-content-disabled:               var(--gray-500);           // Gray/500  #8A96A3
+  --wire-content-on-disabled:            var(--gray-500);           // Gray/500  #8A96A3
+  --wire-content-inverse:                var(--black);              // Black
 
-  // ---- Background / Neutral -----------------------------------------------
-  --wire-background-neutral-primary:         var(--gray-80);    // {Gray.700}
-  --wire-background-neutral-primary-focus:   var(--gray-90);    // {Gray.800}
-  --wire-background-neutral-secondary:       var(--gray-95);    // {Gray.900}
-  --wire-background-neutral-secondary-focus: var(--gray-90);    // {Gray.800}
+  // ---- Borders ------------------------------------------------------------
+  --wire-border-default:                 var(--gray-800);           // Gray/800  #3E4954
+  --wire-border-subtle:                  var(--gray-900);           // Gray/900  #2C363F
+  --wire-border-strong:                  var(--gray-600);           // Gray/600  #6B7785
+  --wire-border-disabled:                var(--gray-800);           // Gray/800  #3E4954
+  --wire-border-accent:                  var(--accent-color-400);   // Accent/400
+  --wire-border-accent-subtle:           var(--accent-color-600);   // Accent/600
+  --wire-border-focus:                   var(--accent-color-200);   // Accent/200
+  --wire-border-danger:                  var(--red-300);            // Red/300   #EF8F96
+  --wire-border-danger-subtle:           var(--red-600);            // Red/600   #B82C38
+  --wire-border-success:                 var(--green-400);          // Green/400 #5FC59C
+  --wire-border-success-subtle:          var(--green-500);          // Green/500 #2FAE7A
+  --wire-border-warning:                 var(--amber-300);          // Amber/300 #FFD070
+  --wire-border-warning-subtle:          var(--amber-500);          // Amber/500 #E6A11F
+  --wire-border-inverse:                 var(--gray-950);           // Gray/950  #1B242C
 
-  // ---- Background / Disabled ----------------------------------------------
-  --wire-background-disabled-primary:        var(--gray-80);    // {Gray.700}
-  --wire-background-disabled-secondary:      var(--gray-95);    // {Gray.900}
+  // =========================================================================
+  // § 2 — Component-level variables
+  // =========================================================================
 
-  // ---- Background / Inverted ----------------------------------------------
-  --wire-background-inverted-primary:        var(--white);      // {White.100}
-  --wire-background-inverted-primary-focus:  var(--gray-20);    // {Gray.100}
-  --wire-background-inverted-secondary:      var(--gray-90);    // {Gray.800}
-  --wire-background-inverted-secondary-focus:var(--gray-80);    // {Gray.700}
-
-  // ---- Background / Bubbles (own messages) --------------------------------
-  --wire-background-bubbles-primary:         var(--accent-color-700);   // {Accent color.700}
-  --wire-background-bubbles-primary-focus:   var(--accent-color-600);   // {Accent color.600}
-  --wire-background-bubbles-secondary:       var(--accent-color-600);   // {Accent color.600}
-  --wire-background-bubbles-secondary-focus: var(--accent-color);       // {Accent color.500}
-
-  // ---- Background / Sheet -------------------------------------------------
-  --wire-background-sheet-primary:           var(--gray-100);   // {Gray.950}
-  --wire-background-sheet-primary-focus:     var(--gray-90);    // {Gray.800}
-  --wire-background-sheet-secondary:         var(--gray-95);    // {Gray.900}
-  --wire-background-sheet-secondary-focus:   var(--gray-90);    // {Gray.800}
-
-  // ---- Content / Base -----------------------------------------------------
-  --wire-content-base-primary:               var(--white);      // {White.100}
-  --wire-content-base-secondary:             var(--gray-60);    // {Gray.500}
-
-  // ---- Content / Accent Color ---------------------------------------------
-  --wire-content-accent-primary:             var(--accent-color-400);   // {Accent color.400}
-  --wire-content-accent-on-primary:          var(--black);              // {Black.100}
-  --wire-content-accent-on-secondary:        var(--accent-color-200);   // {Accent color.200}
-
-  // ---- Content / Danger ---------------------------------------------------
-  --wire-content-danger-primary:             #FF545E;         // {Red.300}
-  --wire-content-danger-on-primary:          var(--black);    // {Black.100}
-  --wire-content-danger-on-secondary:        #FFADB1;         // {Red.100}
-
-  // ---- Content / Warning --------------------------------------------------
-  --wire-content-warning-primary:            #FFB767;           // {Amber.300}
-  --wire-content-warning-on-primary:         var(--black);      // {Black.100}
-  --wire-content-warning-on-secondary:       #FFB767;           // {Amber.300}
-
-  // ---- Content / Positive -------------------------------------------------
-  --wire-content-positive-primary:           #00C850;           // {Green.400}
-  --wire-content-positive-on-primary:        var(--black);      // {Black.100}
-  --wire-content-positive-on-secondary:      #84E09C;           // {Green.300}
-
-  // ---- Content / Neutral --------------------------------------------------
-  --wire-content-neutral-on-primary:         var(--white);      // {White.100}
-  --wire-content-neutral-on-secondary:       var(--white);      // {White.100}
-
-  // ---- Content / Disabled -------------------------------------------------
-  --wire-content-disabled-primary:           var(--gray-60);    // {Gray.500}
-  --wire-content-disabled-on-primary:        var(--gray-50);    // {Gray.400}
-  --wire-content-disabled-on-secondary:      var(--gray-60);    // {Gray.500}
-
-  // ---- Content / Inverted -------------------------------------------------
-  --wire-content-inverted-on-primary:        var(--black);      // {Black.100}
-  --wire-content-inverted-on-secondary:      var(--white);      // {White.100}
-
-  // ---- Content / Bubbles --------------------------------------------------
-  --wire-content-bubbles-primary:            var(--white);              // {White.100}
-  --wire-content-bubbles-on-primary:         var(--accent-color-400);   // {Dark.Accent color.400}
-  --wire-content-bubbles-on-secondary:       var(--accent-color-400);   // {Dark.Accent color.400}
-
-  // ---- Border / Base ------------------------------------------------------
-  --wire-border-base-primary:                var(--gray-90);            // {Gray.800}
-  --wire-border-base-secondary:              var(--gray-80);            // {Gray.700}
-  --wire-border-base-focus:                  var(--accent-color-200);   // {Accent color.200}
-
-  // ---- Border / Accent Color ----------------------------------------------
-  --wire-border-accent-primary:              var(--accent-color-400);   // {Accent color.400}
-  --wire-border-accent-secondary:            var(--accent-color-600);   // {Accent color.600}
-  --wire-border-accent-focus:                var(--accent-color-200);   // {Accent color.200}
-
-  // ---- Border / Danger ----------------------------------------------------
-  --wire-border-danger-primary:              #FF545E;         // {Red.300}
-  --wire-border-danger-secondary:            #A00000;         // {Red.600}
-  --wire-border-danger-focus:                #FF8289;         // {Red.200}
-
-  // ---- Border / Warning ---------------------------------------------------
-  --wire-border-warning-primary:             #FFB767;           // {Amber.300}
-  --wire-border-warning-secondary:           #A95D00;           // {Amber.500}
-  --wire-border-warning-focus:               #FFD3A1;           // {Amber.200}
-
-  // ---- Border / Positive --------------------------------------------------
-  --wire-border-positive-primary:            #00C850;           // {Green.400}
-  --wire-border-positive-secondary:          #008F27;           // {Green.500}
-  --wire-border-positive-focus:              #B7EBC6;           // {Green.200}
-
-  // ---- Border / Neutral ---------------------------------------------------
-  --wire-border-neutral-primary:             var(--gray-70);    // {Gray.600}
-  --wire-border-neutral-secondary:           var(--gray-90);    // {Gray.800}
-
-  // ---- Border / Disabled --------------------------------------------------
-  --wire-border-disabled-primary:            var(--gray-90);    // {Gray.800}
-  --wire-border-disabled-secondary:          var(--gray-60);    // {Gray.500}
-
-  // ---- Border / Inverted --------------------------------------------------
-  --wire-border-inverted-primary:            var(--gray-100);   // {Gray.950}
-
-  // ---- react-ui-kit Button background override ----------------------------
+  // react-ui-kit Button uses --accent-color to determine button background.
+  // In dark mode, override it to the lighter accent shade for legibility.
   button {
-    --accent-color: var(--wire-background-accent-primary);
+    --accent-color: var(--wire-background-accent);
   }
 }

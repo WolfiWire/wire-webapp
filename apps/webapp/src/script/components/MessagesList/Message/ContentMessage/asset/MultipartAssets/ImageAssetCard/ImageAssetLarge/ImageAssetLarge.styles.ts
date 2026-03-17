@@ -49,7 +49,7 @@ export const infoWrapperStyles: CSSObject = {
 };
 
 export const loaderIconStyles: CSSObject = {
-  color: 'var(--wire-content-base-secondary)',
+  color: 'var(--wire-content-secondary)',
   fontSize: 'var(--font-size-medium)',
 };
 
@@ -77,5 +77,5 @@ export const errorTextStyles: CSSObject = {
   fontSize: 'var(--font-size-medium)',
   fontWeight: 'var(--line-height-md)',
   lineHeight: 'var(--line-height-sm)',
-  color: 'var(--wire-content-base-secondary)',
+  color: 'var(--wire-content-secondary)',
 };

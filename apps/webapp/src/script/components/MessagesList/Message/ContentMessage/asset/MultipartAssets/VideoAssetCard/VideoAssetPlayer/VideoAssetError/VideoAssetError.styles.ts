@@ -26,11 +26,11 @@ export const wrapperStyles: CSSObject = {
 };
 
 export const iconStyles: CSSObject = {
-  fill: 'var(--wire-content-base-secondary)',
+  fill: 'var(--wire-content-secondary)',
 };
 
 export const textStyles: CSSObject = {
-  color: 'var(--wire-content-base-primary)',
+  color: 'var(--wire-content-primary)',
   fontSize: 'var(--font-size-medium)',
   fontWeight: 'var(--font-weight-regular)',
 };

@@ -31,11 +31,11 @@ export const styles: Styles = {
     },
 
     '.preferences-device-details &': {
-      borderBottom: '1px solid var(--wire-border-base-primary)',
+      borderBottom: '1px solid var(--wire-border-default)',
     },
 
     '.preferences-devices-header &': {
-      borderBottom: '1px solid var(--wire-border-base-primary)',
+      borderBottom: '1px solid var(--wire-border-default)',
     },
 
     '.participant-devices__header &': {

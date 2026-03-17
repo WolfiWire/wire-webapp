@@ -1594,12 +1594,12 @@ declare module 'I18n/en-US.json' {
     'preferencesAboutWebsite': `{brandName} website`;
     'preferencesAccount': `Account`;
     'preferencesAccountAccentColor': `Set a profile color`;
-    'preferencesAccountAccentColorAMBER': `Amber`;
-    'preferencesAccountAccentColorBLUE': `Blue`;
-    'preferencesAccountAccentColorGREEN': `Green`;
-    'preferencesAccountAccentColorPURPLE': `Purple`;
-    'preferencesAccountAccentColorRED': `Red`;
-    'preferencesAccountAccentColorTURQUOISE': `Turquoise`;
+    'preferencesAccountAccentColorMIDNIGHT': `Midnight`;
+    'preferencesAccountAccentColorAZURE': `Azure`;
+    'preferencesAccountAccentColorAMETHYST': `Amethyst`;
+    'preferencesAccountAccentColorFLAMINGO': `Flamingo`;
+    'preferencesAccountAccentColorLAGOON': `Lagoon`;
+    'preferencesAccountAccentColorMOSS': `Moss`;
     'preferencesAccountAppLockCheckbox': `Lock with passcode`;
     'preferencesAccountAppLockDetail': `Lock Wire after {locktime} in the background. Unlock with Touch ID or enter your passcode.`;
     'preferencesAccountAvailabilityUnset': `Set a status`;

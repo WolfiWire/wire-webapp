@@ -31,7 +31,7 @@
   &--active {
     .button-active();
     .call-ui__button--join {
-      outline: 1px solid var(--wire-background-base-primary);
+      outline: 1px solid var(--wire-background-surface);
     }
   }
 }
@@ -87,7 +87,7 @@
   font-weight: var(--font-weight-medium);
 
   &--active {
-    color: var(--wire-content-accent-on-secondary);
+    color: var(--wire-content-accent);
     font-weight: var(--font-weight-bold);
   }
 }
@@ -101,7 +101,7 @@
   color: var(--background);
 
   &--active {
-    color: var(--wire-content-accent-on-secondary);
+    color: var(--wire-content-accent);
   }
 }
 
@@ -117,7 +117,7 @@
   &::before {
     width: 0;
     height: 0;
-    border-top: 4px solid var(--wire-content-base-primary);
+    border-top: 4px solid var(--wire-content-primary);
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
     content: '';
@@ -139,7 +139,7 @@
 
   &--active {
     &::before {
-      border-top-color: var(--wire-background-base-primary);
+      border-top-color: var(--wire-background-surface);
     }
   }
 }

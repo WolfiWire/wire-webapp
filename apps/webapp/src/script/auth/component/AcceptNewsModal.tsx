@@ -57,7 +57,7 @@ const AcceptNewsModal = ({onConfirm, onDecline}: Props) => {
             <Button
               type="button"
               onClick={onDecline}
-              backgroundColor="var(--wire-background-neutral-primary)"
+              backgroundColor="var(--wire-background-disabled)"
               data-uie-name="do-decline-marketing-consent"
             >
               {t('acceptNewsModal.declineButton')}

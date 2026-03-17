@@ -24,7 +24,7 @@
 }
 
 * {
-  --scrollbar-color: @gray-60;
+  --scrollbar-color: @gray-600;
   scrollbar-color: var(--scrollbar-color) transparent;
   scrollbar-width: thin;
   &::-webkit-scrollbar {
@@ -44,7 +44,7 @@
 }
 
 body {
-  color: var(--wire-content-base-primary);
+  color: var(--wire-content-primary);
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
@@ -98,8 +98,8 @@ pre {
   &:after {
     background: linear-gradient(
       -45deg,
-      var(--wire-background-base-primary),
-      var(--wire-background-base-primary) 50%,
+      var(--wire-background-surface),
+      var(--wire-background-surface) 50%,
       transparent 0,
       transparent
     );

@@ -41,7 +41,7 @@ export const buttonStyles: CSSObject = {
   background: 'none',
   padding: '0 16px',
   border: 'none',
-  borderBottom: '1px solid var(--wire-border-base-primary)',
+  borderBottom: '1px solid var(--wire-border-default)',
 
   '&:hover': {
     background: 'var(--foreground-fade-8)',
@@ -68,5 +68,5 @@ export const nameStyles: CSSObject = {
 };
 
 export const arrowIconStyles: CSSObject = {
-  full: 'var(--wire-content-base-secondary)',
+  full: 'var(--wire-content-secondary)',
 };

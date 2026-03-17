@@ -21,17 +21,17 @@ import {CSSObject} from '@emotion/react';
 
 const participantNameColor = (isActivelySpeaking: boolean, isAudioEstablished: boolean) => {
   if (!isAudioEstablished) {
-    return 'var(--wire-content-base-secondary)';
+    return 'var(--wire-content-secondary)';
   }
   if (isActivelySpeaking) {
-    return 'var(--wire-background-base-primary)';
+    return 'var(--wire-background-surface)';
   }
   return 'var(--white)';
 };
 
 export const groupVideoTileWrapper: CSSObject = {
   alignItems: 'center',
-  backgroundColor: 'var(--wire-background-neutral-primary-focus)',
+  backgroundColor: 'var(--wire-background-disabled)',
   borderRadius: '8px',
   display: 'flex',
   height: '100%',
@@ -43,7 +43,7 @@ export const groupVideoActiveSpeakerTile = (isActivelySpeaking: boolean): CSSObj
   borderRadius: '8px',
   bottom: 0,
   boxShadow: isActivelySpeaking
-    ? 'inset 0 0 0 3px var(--accent-color), inset 0 0 0 6px var(--wire-background-base-primary)'
+    ? 'inset 0 0 0 3px var(--accent-color), inset 0 0 0 6px var(--wire-background-surface)'
     : 'none',
   left: 0,
   position: 'absolute',

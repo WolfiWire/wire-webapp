@@ -44,8 +44,8 @@ export const headerCSS: CSSObject = {
 
 export const boxCSS: CSSObject = {
   marginBottom: '24px',
-  background: 'var(--wire-background-base-tertiary)',
-  borderColor: 'var(--wire-background-base-tertiary)',
+  background: 'var(--wire-background-container)',
+  borderColor: 'var(--wire-background-container)',
   padding: '8px',
 };
 

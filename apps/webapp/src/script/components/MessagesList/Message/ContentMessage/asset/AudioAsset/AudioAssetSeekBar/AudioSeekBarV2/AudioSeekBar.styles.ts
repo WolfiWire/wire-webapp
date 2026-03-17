@@ -27,7 +27,7 @@ export const svgStyles: CSSObject = {
   cursor: 'pointer',
 
   path: {
-    fill: 'var(--wire-content-base-secondary)',
+    fill: 'var(--wire-content-secondary)',
     transition: 'all 0.15s ease',
 
     '&.active': {

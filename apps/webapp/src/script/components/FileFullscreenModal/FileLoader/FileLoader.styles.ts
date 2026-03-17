@@ -27,6 +27,6 @@ export const wrapperStyles: CSSObject = {
 };
 
 export const loaderIconStyles: CSSObject = {
-  color: 'var(--wire-content-base-secondary)',
+  color: 'var(--wire-content-secondary)',
   fontSize: 'var(--font-size-medium)',
 };

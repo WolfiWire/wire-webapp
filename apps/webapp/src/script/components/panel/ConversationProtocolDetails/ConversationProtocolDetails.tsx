@@ -35,7 +35,7 @@ const titleStyles: CSSObject = {
 };
 
 const subTitleStyles: CSSObject = {
-  color: 'var(--wire-content-base-secondary)',
+  color: 'var(--wire-content-secondary)',
   fontSize: '0.75rem',
   fontWeight: 400,
   marginBottom: 16,

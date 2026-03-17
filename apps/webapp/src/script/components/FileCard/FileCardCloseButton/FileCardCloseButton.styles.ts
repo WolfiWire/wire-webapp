@@ -21,8 +21,8 @@ import {CSSObject} from '@emotion/react';
 
 export const buttonStyles: CSSObject = {
   alignItems: 'center',
-  backgroundColor: 'var(--wire-background-base-primary)',
-  border: '1px solid var(--wire-border-base-primary)',
+  backgroundColor: 'var(--wire-background-surface)',
+  border: '1px solid var(--wire-border-default)',
   borderRadius: '100%',
   display: 'flex',
   height: '24px',
@@ -33,7 +33,7 @@ export const buttonStyles: CSSObject = {
   width: '24px',
 
   '&:focus, &:hover': {
-    backgroundColor: 'var(--wire-background-base-tertiary)',
-    borderColor: 'var(--wire-border-base-primary)',
+    backgroundColor: 'var(--wire-background-container)',
+    borderColor: 'var(--wire-border-default)',
   },
 };

@@ -29,7 +29,7 @@ export const wrapperStyles: CSSObject = {
 };
 
 export const headingStyles: CSSObject = {
-  color: 'var(--wire-content-base-primary)',
+  color: 'var(--wire-content-primary)',
   fontWeight: 'var(--font-weight-semibold)',
   fontSize: 'var(--font-size-medium)',
   marginBottom: '8px',

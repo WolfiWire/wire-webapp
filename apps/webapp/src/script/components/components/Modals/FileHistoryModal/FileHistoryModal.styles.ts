@@ -65,7 +65,7 @@ export const fileHeaderFileInfoCss: CSSObject = {
   display: 'flex',
   alignItems: 'center',
   gap: '6px',
-  color: 'var(--wire-content-base-secondary)',
+  color: 'var(--wire-content-secondary)',
   height: '21px',
 };
 
@@ -111,7 +111,7 @@ export const fileHistoryTimelineContainerCss: CSSObject = {
     left: '20px',
     top: '15px',
     bottom: '40px',
-    borderLeft: '1px dashed var(--wire-border-base-primary)',
+    borderLeft: '1px dashed var(--wire-border-default)',
   },
 };
 
@@ -122,7 +122,7 @@ export const fileVersionItemWrapperCss: CSSObject = {
   padding: '8px 16px',
   borderRadius: '8px',
   ':hover': {
-    backgroundColor: 'var(--wire-background-base-tertiary)',
+    backgroundColor: 'var(--wire-background-container)',
     button: {
       visibility: 'visible',
     },
@@ -142,8 +142,8 @@ export const versionDotCurrentCss: CSSObject = {
 export const versionDotOldCss: CSSObject = {
   width: '9px',
   height: '9px',
-  backgroundColor: 'var(--wire-background-base-secondary)',
-  border: '1px solid var(--wire-border-base-primary)',
+  backgroundColor: 'var(--wire-background-canvas)',
+  border: '1px solid var(--wire-border-default)',
   borderRadius: '50%',
   marginTop: '8px',
   position: 'relative',
@@ -160,7 +160,7 @@ export const versionTimeTextCss: CSSObject = {
 };
 
 export const versionMetaTextCss: CSSObject = {
-  color: 'var(--wire-content-base-secondary)',
+  color: 'var(--wire-content-secondary)',
   marginTop: '4px',
   margin: 0,
 };

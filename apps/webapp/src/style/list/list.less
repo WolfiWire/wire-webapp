@@ -64,7 +64,7 @@
 
 body.theme-dark {
   .left-list-header {
-    border-bottom-color: var(--wire-border-base-primary);
+    border-bottom-color: var(--wire-border-default);
   }
 }
 
@@ -90,8 +90,8 @@ body.theme-dark {
   padding: 4px 0px 4px 0px;
   border-radius: 24px;
   margin-top: 8px;
-  background-color: var(--wire-background-base-primary);
-  color: var(--wire-content-base-primary);
+  background-color: var(--wire-background-surface);
+  color: var(--wire-content-primary);
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-semibold);
   gap: 8px;
@@ -99,7 +99,7 @@ body.theme-dark {
 
 .slow-connection-indicator svg,
 .slow-connection-indicator svg * {
-  fill: var(--wire-content-base-primary);
+  fill: var(--wire-content-primary);
 }
 
 .left-list-center {
@@ -155,7 +155,7 @@ body.theme-dark {
       bottom: 0;
       left: var(--left-list-item-left-width);
       height: 1px;
-      background-color: var(--wire-border-base-primary);
+      background-color: var(--wire-border-default);
       content: '';
     }
 
@@ -166,8 +166,8 @@ body.theme-dark {
     &:hover,
     &:focus-visible,
     &--active:focus-visible {
-      background: var(--wire-background-base-primary-focus);
-      color: var(--wire-content-base-primary);
+      background: var(--wire-background-hover-subtle);
+      color: var(--wire-content-primary);
     }
 
     &:focus-visible,
@@ -176,17 +176,17 @@ body.theme-dark {
       outline-offset: -2px;
 
       .left-column-icon > svg {
-        fill: var(--wire-content-base-primary);
+        fill: var(--wire-content-primary);
       }
     }
 
     &--active,
     &--active:hover {
-      background-color: var(--wire-background-accent-secondary);
-      color: var(--wire-content-accent-on-secondary);
+      background-color: var(--wire-background-accent-subtle);
+      color: var(--wire-content-accent);
 
       .left-column-icon > svg {
-        fill: var(--wire-content-accent-on-secondary);
+        fill: var(--wire-content-accent);
       }
 
       .column-center {
@@ -269,7 +269,7 @@ body.theme-dark {
   .left-list-item {
     > .column-center,
     > .left-list-item-button > .column-center {
-      border-bottom-color: var(--wire-border-base-primary);
+      border-bottom-color: var(--wire-border-default);
     }
   }
 }

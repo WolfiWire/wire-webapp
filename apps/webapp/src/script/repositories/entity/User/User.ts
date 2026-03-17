@@ -107,12 +107,12 @@ export class User {
 
   public static get ACCENT_COLOR() {
     return {
-      [ACCENT_ID.BLUE]: 'var(--blue-500)',
-      [ACCENT_ID.GREEN]: 'var(--green-500)',
-      [ACCENT_ID.PURPLE]: 'var(--purple-500)',
-      [ACCENT_ID.AMBER]: 'var(--amber-500)',
-      [ACCENT_ID.RED]: 'var(--red-500)',
-      [ACCENT_ID.TURQUOISE]: 'var(--turquoise-500)',
+      [ACCENT_ID.AZURE]: 'var(--azure-500)',
+      [ACCENT_ID.AMETHYST]: 'var(--amethyst-500)',
+      [ACCENT_ID.FLAMINGO]: 'var(--flamingo-500)',
+      [ACCENT_ID.LAGOON]: 'var(--lagoon-500)',
+      [ACCENT_ID.MIDNIGHT]: 'var(--midnight-500)',
+      [ACCENT_ID.MOSS]: 'var(--moss-500)',
     };
   }
 
@@ -143,9 +143,9 @@ export class User {
 
     this.isAvailable = ko.pureComputed(() => this.id !== '' && this.name() !== '');
 
-    this.accent_id = ko.observable(ACCENT_ID.BLUE);
+    this.accent_id = ko.observable(ACCENT_ID.AZURE);
 
-    this.accent_color = ko.pureComputed(() => User.ACCENT_COLOR[this.accent_id()] || User.ACCENT_COLOR[ACCENT_ID.BLUE]);
+    this.accent_color = ko.pureComputed(() => User.ACCENT_COLOR[this.accent_id()] || User.ACCENT_COLOR[ACCENT_ID.AZURE]);
 
     this.email = ko.observable();
 

@@ -30,14 +30,14 @@ export const wrapperStyles: CSSObject = {
 };
 
 export const headingStyles: CSSObject = {
-  color: 'var(--wire-content-base-primary)',
+  color: 'var(--wire-content-primary)',
   fontWeight: 'var(--font-weight-semibold)',
   fontSize: 'var(--font-size-base)',
   marginBottom: '8px',
 };
 
 export const paragraphStyles: CSSObject = {
-  color: 'var(--wire-content-base-primary)',
+  color: 'var(--wire-content-primary)',
   fontWeight: 'var(--font-weight-regular)',
   marginBottom: '8px',
   maxWidth: '260px',

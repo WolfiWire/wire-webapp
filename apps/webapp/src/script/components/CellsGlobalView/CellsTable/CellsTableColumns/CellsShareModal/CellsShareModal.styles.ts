@@ -28,22 +28,22 @@ export const labelStyles: CSSObject = {
   fontSize: 'var(--font-size-base)',
   fontWeight: 'var(--font-weight-regular)',
   marginBottom: '8px',
-  color: 'var(--wire-content-base-primary)',
+  color: 'var(--wire-content-primary)',
 };
 
 export const publicLinkDescriptionStyles: CSSObject = {
   fontSize: 'var(--font-size-small)',
-  color: 'var(--wire-content-base-secondary)',
+  color: 'var(--wire-content-secondary)',
 };
 
 export const passwordDescriptionStyles: CSSObject = {
   fontSize: 'var(--font-size-small)',
-  color: 'var(--wire-content-base-secondary)',
+  color: 'var(--wire-content-secondary)',
 };
 
 export const expirationDescriptionStyles: CSSObject = {
   fontSize: 'var(--font-size-small)',
-  color: 'var(--wire-content-base-secondary)',
+  color: 'var(--wire-content-secondary)',
 };
 
 export const dividerStyles: CSSObject = {

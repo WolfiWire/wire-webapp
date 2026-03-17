@@ -224,7 +224,7 @@ const ClientItem = ({selected, onClientRemoval, onClick, client, clientError, re
       <ContainerXS
         css={{
           ['&:focus-within']: {
-            boxShadow: '0 0 0 1px var(--wire-border-accent-primary)',
+            boxShadow: '0 0 0 1px var(--wire-border-accent)',
           },
           backgroundColor: selected ? '#FFF' : '',
           borderRadius: '12px',

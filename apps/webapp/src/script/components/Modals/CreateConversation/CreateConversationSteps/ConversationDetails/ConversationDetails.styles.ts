@@ -41,11 +41,11 @@ export const upgradeBadgeCss: CSSObject = {
   textTransform: 'uppercase',
   padding: '0px 6px',
   background: 'var(--accent-color)',
-  color: 'var(--wire-background-base-primary)',
+  color: 'var(--wire-background-surface)',
   borderRadius: '4px',
   fontSize: 'var(--font-size-xsmall)',
   fontWeight: 'var(--font-weight-bold)',
-  border: '1px solid var(--wire-background-base-primary)',
+  border: '1px solid var(--wire-background-surface)',
 };
 
 export const salesModalWrapperCss: CSSObject = {
@@ -80,9 +80,9 @@ export const salesModalBodyTextCss: CSSObject = {
 export const salesModalBodyButtonCss: CSSObject = {
   margin: 0,
   width: 'fit-content',
-  backgroundColor: 'var(--wire-background-inverted-primary)',
+  backgroundColor: 'var(--wire-background-inverse)',
   marginTop: '1rem',
-  color: 'var(--wire-content-inverted-on-primary)',
+  color: 'var(--wire-content-inverse)',
 };
 
 export const groupsNotAllowedSectionCss: CSSObject = {

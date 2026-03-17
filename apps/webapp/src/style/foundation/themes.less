@@ -22,29 +22,29 @@ body.theme-default {
   // ----------------------------------------------------------------------------
   // Common Colors
   // ----------------------------------------------------------------------------
-  @foreground: @gray-70;
-  @background: @gray-90;
+  @foreground: @gray-700;
+  @background: @gray-900;
 
   // -------------------------------------------
   // Framework
   // ----------------------------------------------------------------------------
-  @sidebar-folder-selected-bg: var(--wire-background-base-secondary-focus);
+  @sidebar-folder-selected-bg: var(--gray-300);
   @conversation-list-bg-opacity: fade(#000, 64%);
-  @transparent-img-bg: var(--wire-background-base-tertiary);
+  @transparent-img-bg: var(--wire-background-container);
 
   // ----------------------------------------------------------------------------
   // Calling
   // ----------------------------------------------------------------------------
-  @group-video-bg: var(--wire-background-base-secondary);        // gray-10 — exact
+  @group-video-bg: var(--wire-background-canvas);
   @participant-audio-connecting-color: @red-dark-500;
-  @inactive-call-button-bg: var(--wire-background-neutral-secondary);
-  @inactive-call-button-border: var(--wire-border-base-primary);
-  @inactive-call-button-hover-bg: var(--wire-background-base-tertiary);  // gray-20 — exact
-  @disabled-call-button-bg: var(--wire-background-disabled-secondary);
-  @disabled-call-button-border: var(--wire-border-disabled-primary);
-  @disabled-call-button-svg: var(--wire-content-disabled-primary);
-  @toggle-button-unselected-hover-border: var(--wire-border-neutral-primary);  // gray-70 — closest (original gray-80)
-  @toggle-button-unselected-hover-bg: var(--wire-background-base-secondary-focus);  // gray-30 — exact
+  @inactive-call-button-bg: var(--wire-background-surface);
+  @inactive-call-button-border: var(--wire-border-default);
+  @inactive-call-button-hover-bg: var(--wire-background-container);
+  @disabled-call-button-bg: var(--wire-background-disabled);
+  @disabled-call-button-border: var(--gray-400);
+  @disabled-call-button-svg: var(--wire-content-disabled);
+  @toggle-button-unselected-hover-border: var(--gray-700);
+  @toggle-button-unselected-hover-bg: var(--gray-300);
 
   // ----------------------------------------------------------------------------
   // Modal
@@ -60,20 +60,20 @@ body.theme-default {
   // Editing Input
   // ----------------------------------------------------------------------------
   @text-input-editing: mix(@w-yellow, #fff, 16%);
-  @text-input-border-hover: @gray-60;
-  @text-input-label: @gray-80;
+  @text-input-border-hover: @gray-600;
+  @text-input-label: @gray-800;
 
   // ----------------------------------------------------------------------------
   // Checkbox
   // ----------------------------------------------------------------------------
-  @checkbox-background: @gray-20;
-  @checkbox-background-selected: var(--wire-background-accent-primary);
-  @checkbox-background-disabled: @gray-10;
-  @checkbox-background-disabled-selected: @gray-60;
-  @checkbox-border: @gray-80;
-  @checkbox-border-hover: var(--wire-border-accent-primary);
-  @checkbox-border-disabled: @gray-60;
-  @checkbox-alert: var(--wire-border-danger-primary);
+  @checkbox-background: @gray-200;
+  @checkbox-background-selected: var(--wire-background-accent);
+  @checkbox-background-disabled: @gray-50;
+  @checkbox-background-disabled-selected: @gray-600;
+  @checkbox-border: @gray-800;
+  @checkbox-border-hover: var(--wire-border-accent);
+  @checkbox-border-disabled: @gray-600;
+  @checkbox-alert: var(--wire-border-danger);
 
   // ----------------------------------------------------------------------------
   // Message Quote Vertical Bar
@@ -86,10 +86,10 @@ body.theme-default {
   @group-creation-modal-teamname-input-bg: #fff;
 
   // message actions menu
-  @message-actions-background: var(--wire-background-base-primary);
-  @message-actions-border: var(--wire-border-base-primary);
-  @message-actions-background-hover: @gray-20;
-  @message-actions-border-hover: @gray-50;
+  @message-actions-background: var(--wire-background-surface);
+  @message-actions-border: var(--wire-border-default);
+  @message-actions-background-hover: @gray-200;
+  @message-actions-border-hover: @gray-500;
 
   .applyTheme();
 
@@ -106,29 +106,29 @@ body.theme-dark {
   // ----------------------------------------------------------------------------
   // Common Colors
   // ----------------------------------------------------------------------------
-  @foreground: @gray-60;
-  @background: @gray-20;
+  @foreground: @gray-600;
+  @background: @gray-200;
 
   // ----------------------------------------------------------------------------
   // Framework
   // ----------------------------------------------------------------------------
-  @sidebar-folder-selected-bg: var(--wire-background-base-secondary);  // gray-95 — exact
+  @sidebar-folder-selected-bg: var(--wire-background-canvas);
   @conversation-list-bg-opacity: fade(#000, 78%);
-  @transparent-img-bg: var(--wire-background-base-tertiary);
+  @transparent-img-bg: var(--wire-background-container);
 
   // ----------------------------------------------------------------------------
   // Calling
   // ----------------------------------------------------------------------------
-  @group-video-bg: var(--wire-background-base-primary);           // gray-100 — exact
+  @group-video-bg: var(--wire-background-surface);
   @participant-audio-connecting-color: @red-dark-500;
-  @inactive-call-button-bg: var(--wire-background-base-tertiary);
-  @inactive-call-button-border: var(--wire-border-inverted-primary);
-  @inactive-call-button-hover-bg: var(--wire-background-base-tertiary-focus);  // gray-80 — exact
-  @disabled-call-button-bg: var(--wire-background-disabled-secondary);
-  @disabled-call-button-border: var(--wire-border-disabled-primary);
-  @disabled-call-button-svg: var(--wire-content-disabled-primary);
-  @toggle-button-unselected-hover-border: var(--wire-border-disabled-secondary);  // gray-60 — closest (original gray-50)
-  @toggle-button-unselected-hover-bg: var(--wire-background-base-tertiary);      // gray-90 — exact
+  @inactive-call-button-bg: var(--wire-background-container);
+  @inactive-call-button-border: var(--wire-border-inverse);
+  @inactive-call-button-hover-bg: var(--wire-background-surface);
+  @disabled-call-button-bg: var(--gray-950);
+  @disabled-call-button-border: var(--wire-border-disabled);
+  @disabled-call-button-svg: var(--wire-content-disabled);
+  @toggle-button-unselected-hover-border: var(--gray-600);
+  @toggle-button-unselected-hover-bg: var(--wire-background-container);
 
   // ----------------------------------------------------------------------------
   // Modal
@@ -144,26 +144,26 @@ body.theme-dark {
   // Editing Input
   // ----------------------------------------------------------------------------
   @text-input-editing: #42391c;
-  @text-input-border-hover: @gray-40;
-  @text-input-label: @gray-40;
+  @text-input-border-hover: @gray-400;
+  @text-input-label: @gray-400;
 
   // ----------------------------------------------------------------------------
   // Checkbox
   // ----------------------------------------------------------------------------
-  @checkbox-background: @gray-90;
-  @checkbox-background-selected: var(--wire-background-accent-primary);
-  @checkbox-background-disabled: @gray-90;
-  @checkbox-background-disabled-selected: @gray-80;
-  @checkbox-border: @gray-60;
-  @checkbox-border-hover: var(--wire-border-accent-primary);
-  @checkbox-border-disabled: @gray-70;
-  @checkbox-alert: var(--wire-border-danger-primary);
+  @checkbox-background: @gray-900;
+  @checkbox-background-selected: var(--wire-background-accent);
+  @checkbox-background-disabled: @gray-900;
+  @checkbox-background-disabled-selected: @gray-800;
+  @checkbox-border: @gray-600;
+  @checkbox-border-hover: var(--wire-border-accent);
+  @checkbox-border-disabled: @gray-700;
+  @checkbox-alert: var(--wire-border-danger);
 
   // message actions menu
-  @message-actions-background: var(--wire-background-base-tertiary);
-  @message-actions-border: var(--wire-border-inverted-primary);
-  @message-actions-background-hover: @gray-80;
-  @message-actions-border-hover: @gray-70;
+  @message-actions-background: var(--wire-background-elevated);
+  @message-actions-border: var(--wire-border-inverse);
+  @message-actions-background-hover: @gray-800;
+  @message-actions-border-hover: @gray-700;
 
   // ----------------------------------------------------------------------------
   // Message Quote Vertical Bar

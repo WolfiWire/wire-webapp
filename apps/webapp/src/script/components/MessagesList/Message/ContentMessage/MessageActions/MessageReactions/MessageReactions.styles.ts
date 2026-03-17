@@ -46,11 +46,11 @@ export const messageReactionWrapper: CSSObject = {
   flexWrap: 'wrap',
   maxWidth: '100%',
   '.tooltip-content': {
-    backgroundColor: 'var(--wire-background-base-primary) !important',
+    backgroundColor: 'var(--wire-background-surface) !important',
     marginBottom: '0.5rem !important',
     padding: '6px 8px !important',
     '.tooltip-arrow': {
-      borderTopColor: 'var(--wire-background-base-primary) !important',
+      borderTopColor: 'var(--wire-background-surface) !important',
       filter: 'none !important',
     },
   },
@@ -114,9 +114,9 @@ export const getReactionsButtonCSS = (isActive?: boolean, isDisabled?: boolean):
   }
   if (isDisabled) {
     return {
-      border: '1px solid var(--wire-border-disabled-primary)',
-      backgroundColor: 'var(--wire-background-disabled-secondary)',
-      color: 'var(--wire-content-disabled-primary)',
+      border: '1px solid var(--wire-border-disabled)',
+      backgroundColor: 'var(--wire-background-container)',
+      color: 'var(--wire-content-disabled)',
       cursor: 'not-allowed',
       outline: 'none',
     };

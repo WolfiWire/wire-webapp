@@ -23,7 +23,7 @@
 
   display: flex;
   min-width: var(--screen-sm-min);
-  background-color: var(--wire-background-base-primary);
+  background-color: var(--wire-background-surface);
   transition: filter 0.3s;
 
   .left-column {
@@ -31,10 +31,10 @@
     display: flex;
     min-width: var(--conversation-list-width);
     flex: 0 0 auto;
-    border-right: 1px solid var(--wire-border-base-primary);
-    background-color: var(--wire-background-base-primary);
-    color: var(--wire-content-base-primary);
-    fill: var(--wire-content-base-primary);
+    border-right: 1px solid var(--wire-border-default);
+    background-color: var(--wire-background-surface);
+    color: var(--wire-content-primary);
+    fill: var(--wire-content-primary);
 
     &--light-theme {
       color: var(--black);
@@ -102,8 +102,8 @@
     //width: 0;
     height: 100vh;
     max-height: 100%;
-    border-left: 1px solid var(--wire-border-base-primary);
-    background-color: var(--wire-background-base-primary);
+    border-left: 1px solid var(--wire-border-default);
+    background-color: var(--wire-background-container);
     transform: scale(1, 1);
 
     .center-column__overlay {

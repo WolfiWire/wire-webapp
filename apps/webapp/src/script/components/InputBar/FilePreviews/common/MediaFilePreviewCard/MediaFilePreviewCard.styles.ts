@@ -23,7 +23,7 @@ export const wrapperStyles: CSSObject = {
   width: '76px',
   height: '76px',
   borderRadius: '10px',
-  border: '1px solid var(--wire-border-base-primary)',
+  border: '1px solid var(--wire-border-default)',
   position: 'relative',
 };
 

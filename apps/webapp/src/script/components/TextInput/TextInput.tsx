@@ -86,10 +86,10 @@ const TextInput = forwardRef<HTMLInputElement, UserInputProps>(
 
     let changedColor = undefined;
     if (isError) {
-      changedColor = 'var(--wire-content-danger-primary) !important';
+      changedColor = 'var(--wire-content-danger) !important';
     }
     if (isSuccess) {
-      changedColor = 'var(--wire-content-positive-primary) !important';
+      changedColor = 'var(--wire-content-success) !important';
     }
 
     return (
@@ -142,11 +142,11 @@ const TextInput = forwardRef<HTMLInputElement, UserInputProps>(
               }
             }}
           >
-            <Icon.CloseIcon css={{fill: 'var(--wire-background-base-primary)', height: 8, width: 8}} />
+            <Icon.CloseIcon css={{fill: 'var(--wire-background-surface)', height: 8, width: 8}} />
           </button>
         )}
-        {isSuccess && !isError && <CheckIcon css={getIconCSS(changedColor)} color="var(--wire-content-base-primary)" />}
-        {isError && <Icon.ExclamationMark css={getIconCSS(changedColor)} color="var(--wire-content-base-primary)" />}
+        {isSuccess && !isError && <CheckIcon css={getIconCSS(changedColor)} color="var(--wire-content-primary)" />}
+        {isError && <Icon.ExclamationMark css={getIconCSS(changedColor)} color="var(--wire-content-primary)" />}
       </div>
     );
   },

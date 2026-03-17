@@ -20,9 +20,9 @@
 import {CSSObject} from '@emotion/react';
 
 export const wrapper: CSSObject = {
-  border: '1px solid var(--wire-border-base-primary)',
+  border: '1px solid var(--wire-border-default)',
   borderRadius: 4,
-  backgroundColor: 'var(--wire-background-base-secondary)',
+  backgroundColor: 'var(--wire-background-canvas)',
   color: 'var(--foreground)',
   fontSize: 'var(--font-size-xsmall)',
   width: 54,

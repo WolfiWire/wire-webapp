@@ -19,7 +19,7 @@
 
 .conversations {
   width: 320px;
-  background-color: var(--wire-background-base-primary);
+  background-color: var(--wire-background-surface);
 }
 
 .conversations-sidebar {
@@ -40,8 +40,8 @@
     flex-direction: column;
     padding: 8px;
     padding-top: 14px;
-    border-right: 1px solid var(--wire-border-base-primary);
-    background: var(--wire-background-base-primary);
+    border-right: 1px solid var(--wire-border-default);
+    background: var(--wire-background-container);
     transition: width 0.3s ease-in-out;
 
     &[data-is-collapsed='true'] {
@@ -104,7 +104,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-top: 1px solid var(--wire-border-base-primary);
+    border-top: 1px solid var(--wire-border-default);
     padding-block: 8px;
 
     .conversations-sidebar-btn {
@@ -139,7 +139,7 @@
   display: none;
   width: 100%;
   height: 1px;
-  border-top: 1px solid var(--wire-border-base-primary);
+  border-top: 1px solid var(--wire-border-default);
   margin: 8px 0;
 }
 
@@ -225,13 +225,13 @@
     }
 
     &:hover {
-      background-color: var(--wire-background-base-primary-focus);
+      background-color: var(--wire-background-hover-subtle);
     }
   }
 
   &--item.active {
-    background-color: var(--wire-background-accent-secondary);
-    color: var(--wire-content-accent-on-secondary) !important;
+    background-color: var(--wire-background-accent-subtle);
+    color: var(--wire-content-accent) !important;
   }
 }
 
@@ -253,7 +253,7 @@
   .external-link-icon {
     margin-left: auto;
     path {
-      fill: var(--wire-content-base-secondary);
+      fill: var(--wire-content-secondary);
     }
   }
 
@@ -275,22 +275,22 @@
   .conversations-sidebar-btn--text {
     .text-bold-small;
     overflow: hidden;
-    color: var(--wire-content-base-primary);
+    color: var(--wire-content-primary);
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
   &.active {
-    background-color: var(--wire-background-accent-secondary);
-    color: var(--wire-content-accent-on-secondary);
+    background-color: var(--wire-background-accent-subtle);
+    color: var(--wire-content-accent);
 
     svg {
-      color: var(--wire-content-accent-on-secondary);
-      fill: var(--wire-content-accent-on-secondary) !important;
+      color: var(--wire-content-accent);
+      fill: var(--wire-content-accent) !important;
     }
 
     .conversations-sidebar-btn--text {
-      color: var(--wire-content-accent-on-secondary) !important;
+      color: var(--wire-content-accent) !important;
     }
   }
 }
@@ -302,7 +302,7 @@
   width: 6px;
   height: 6px;
   box-sizing: content-box;
-  border: 2px solid var(--wire-background-base-primary);
+  border: 2px solid var(--wire-background-surface);
   border-radius: 6px;
   background: var(--accent-color-500);
   font-size: var(--font-size-small);
@@ -310,7 +310,7 @@
 
   &.active {
     border: 2px solid var(--accent-color-500);
-    background: var(--wire-background-base-primary);
+    background: var(--wire-background-surface);
   }
 }
 
@@ -341,7 +341,7 @@
 
 .conversations-hint-text {
   margin-bottom: 24px;
-  color: var(--wire-content-base-primary);
+  color: var(--wire-content-primary);
   font-size: var(--font-size-xlarge);
   font-weight: var(--font-weight-regular);
 }

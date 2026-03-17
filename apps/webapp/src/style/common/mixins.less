@@ -368,24 +368,24 @@
 .panel-header {
   .heading-h4;
   padding: 0 20px 4px;
-  border-bottom: 1px solid var(--wire-border-base-primary);
+  border-bottom: 1px solid var(--wire-border-default);
   margin-top: 24px;
-  color: var(--wire-content-base-secondary);
+  color: var(--wire-content-secondary);
 }
 
 .button-active() {
-  background-color: var(--wire-background-accent-secondary) !important;
+  background-color: var(--wire-background-accent-subtle) !important;
 }
 
 .button-states() {
   transition: background-color 0.15s ease-in-out;
 
   &:hover {
-    background-color: var(--wire-background-base-primary-focus);
+    background-color: var(--wire-background-hover-subtle);
   }
 
   &:focus-visible {
-    background-color: var(--wire-background-base-primary-focus);
+    background-color: var(--wire-background-hover-subtle);
     outline: 1px solid var(--accent-color-focus);
   }
 }

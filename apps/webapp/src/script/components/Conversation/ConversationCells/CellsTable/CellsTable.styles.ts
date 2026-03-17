@@ -41,7 +41,7 @@ export const tableStyles: CSSObject = {
 export const headerCellStyles: CSSObject = {
   padding: '8px',
   textAlign: 'left',
-  borderBottom: '1px solid var(--wire-border-base-primary)',
+  borderBottom: '1px solid var(--wire-border-default)',
   fontSize: 'var(--font-size-small)',
   fontWeight: 'var(--font-weight-medium)',
   whiteSpace: 'nowrap',
@@ -52,7 +52,7 @@ export const headerCellStyles: CSSObject = {
 
 export const tableCellStyles: CSSObject = {
   padding: '12px',
-  borderBottom: '1px solid var(--wire-border-base-primary)',
+  borderBottom: '1px solid var(--wire-border-default)',
   fontSize: 'var(--font-size-small)',
   whiteSpace: 'nowrap',
   width: '100% !important',
@@ -60,10 +60,10 @@ export const tableCellStyles: CSSObject = {
   [`@media (max-width: ${styleBreakpoint}px)`]: {
     display: 'block',
     padding: '12px 8px',
-    borderBottom: '1px solid var(--wire-border-base-primary)',
+    borderBottom: '1px solid var(--wire-border-default)',
 
     '&[data-cell]': {
-      borderBottom: '1px solid var(--wire-border-base-primary)',
+      borderBottom: '1px solid var(--wire-border-default)',
       '&:nth-last-of-type(2)': {
         borderBottom: 'none',
       },
@@ -91,11 +91,11 @@ export const tableActionsCellStyles: CSSObject = {
 
 export const tableCellRow: CSSObject = {
   display: 'block',
-  borderBottom: '1px solid var(--wire-border-base-primary)',
-  borderTop: '1px solid var(--wire-border-base-primary)',
+  borderBottom: '1px solid var(--wire-border-default)',
+  borderTop: '1px solid var(--wire-border-default)',
 
   '&:hover': {
-    backgroundColor: 'var(--wire-background-base-tertiary)',
+    backgroundColor: 'var(--wire-background-container)',
   },
 
   '&:not(:last-of-type)': {

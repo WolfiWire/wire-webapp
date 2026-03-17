@@ -23,11 +23,11 @@ export const wrapperStyles: CSSObject = {
   display: 'flex',
   alignItems: 'center',
   marginLeft: 15,
-  color: 'var(--wire-content-base-secondary)',
+  color: 'var(--wire-content-secondary)',
   fontSize: 'var(--font-size-xsmall)',
   fontWeight: 500,
   paddingTop: '0.125rem',
-  backgroundColor: 'var(--wire-background-base-secondary)',
+  backgroundColor: 'var(--wire-background-canvas)',
   padding: '0.3125rem',
   position: 'absolute',
   top: '-1.625rem',
@@ -35,7 +35,7 @@ export const wrapperStyles: CSSObject = {
   borderTopRightRadius: 4,
   'div:first-of-type': {
     img: {
-      border: '1px solid var(--wire-border-base-primary)',
+      border: '1px solid var(--wire-border-default)',
     },
   },
 };
@@ -61,7 +61,7 @@ const dotStyles: CSSObject = {
   position: 'absolute',
   width: 2,
   height: 2,
-  backgroundColor: 'var(--wire-content-base-secondary)',
+  backgroundColor: 'var(--wire-content-secondary)',
   borderRadius: '100%',
   bottom: 0,
   transformBox: 'fill-box',
@@ -103,7 +103,7 @@ const dot3KeyFrames = keyframes({
 export const editIconStyles = css`
   animation: ${editIconKeyFrams};
   bottom: 0;
-  fill: var(--wire-content-base-secondary);
+  fill: var(--wire-content-secondary);
   ${animationStyles}
   position: absolute;
 `;

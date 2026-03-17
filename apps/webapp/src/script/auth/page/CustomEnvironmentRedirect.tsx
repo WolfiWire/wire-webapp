@@ -71,7 +71,7 @@ const CustomEnvironmentRedirectComponent = ({doNavigate, doSendNavigationEvent}:
             justify="center"
             align="center"
             style={{
-              backgroundColor: 'var(--wire-background-inverted-secondary)',
+              backgroundColor: 'var(--wire-background-inverse)',
               borderRadius: '50%',
               boxShadow: '0 2px 4px 0 rgba(53, 63, 71, 0.29)',
               height: 120,
@@ -99,7 +99,7 @@ const CustomEnvironmentRedirectComponent = ({doNavigate, doSendNavigationEvent}:
                 cy="62"
                 r="60"
                 strokeWidth="4"
-                stroke="var(--wire-border-accent-primary)"
+                stroke="var(--wire-border-accent)"
                 strokeLinecap="round"
                 strokeDasharray={377}
                 transform="rotate(-90)"

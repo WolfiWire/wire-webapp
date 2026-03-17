@@ -272,7 +272,7 @@
     padding: 8px 12px;
     border: 1px solid var(--button-tertiary-border);
     background: var(--button-tertiary-bg);
-    color: var(--wire-content-base-primary);
+    color: var(--wire-content-primary);
 
     &:focus-visible {
       border: 1px solid var(--accent-color-focus);
@@ -363,8 +363,8 @@
 
   &[disabled]:not([disabled='false']) {
     border: transparent !important;
-    background-color: var(--wire-background-disabled-secondary) !important;
-    color: var(--wire-content-disabled-primary) !important;
+    background-color: var(--wire-background-container) !important;
+    color: var(--wire-content-disabled) !important;
     cursor: not-allowed;
     outline: none !important;
   }
@@ -372,9 +372,9 @@
 
 .button-text-secondary {
   .button-text;
-  border: 1px solid var(--wire-border-base-primary);
-  background-color: var(--wire-background-base-primary);
-  color: var(--wire-content-base-primary);
+  border: 1px solid var(--wire-border-default);
+  background-color: var(--wire-background-surface);
+  color: var(--wire-content-primary);
 
   &:hover {
     border-color: var(--accent-color-400);
@@ -387,12 +387,12 @@
 
   body.theme-dark & {
     &:hover {
-      background-color: var(--wire-background-base-tertiary);
+      background-color: var(--wire-background-container);
     }
 
     &:focus-visible {
-      background-color: var(--wire-background-base-tertiary);
-      outline: 1px solid var(--wire-border-base-primary);
+      background-color: var(--wire-background-container);
+      outline: 1px solid var(--wire-border-default);
     }
   }
 
@@ -403,15 +403,15 @@
 
     body.theme-dark & {
       border: 0;
-      background-color: var(--wire-background-base-primary);
+      background-color: var(--wire-background-surface);
       color: var(--accent-color-500);
     }
   }
 
   &[disabled]:not([disabled='false']) {
-    border: 1px solid var(--wire-border-disabled-primary) !important;
-    background-color: var(--wire-background-disabled-secondary) !important;
-    color: var(--wire-content-disabled-primary) !important;
+    border: 1px solid var(--wire-border-disabled) !important;
+    background-color: var(--wire-background-container) !important;
+    color: var(--wire-content-disabled) !important;
     cursor: not-allowed;
     outline: none !important;
   }
@@ -439,17 +439,17 @@
 
 .button-icon-primary() {
   .button-icon-new;
-  border: 1px solid var(--wire-border-base-primary);
-  background-color: var(--wire-background-base-primary);
-  color: var(--wire-content-base-primary);
+  border: 1px solid var(--wire-border-default);
+  background-color: var(--wire-background-surface);
+  color: var(--wire-content-primary);
 
   &:hover {
-    border-color: var(--wire-border-base-primary);
-    background-color: var(--wire-background-base-tertiary);
+    border-color: var(--wire-border-default);
+    background-color: var(--wire-background-container);
   }
 
   &:focus-visible {
-    background-color: var(--wire-background-base-tertiary);
+    background-color: var(--wire-background-container);
   }
 
   &.active {
@@ -466,8 +466,8 @@
 
   &[disabled]:not([disabled='false']) {
     border: transparent !important;
-    background-color: var(--wire-background-disabled-secondary) !important;
-    color: var(--wire-content-disabled-primary) !important;
+    background-color: var(--wire-background-container) !important;
+    color: var(--wire-content-disabled) !important;
     cursor: not-allowed;
     outline: none !important;
   }
@@ -477,7 +477,7 @@
   .button-icon-new;
   border: 0;
   background-color: transparent;
-  color: var(--wire-content-base-primary);
+  color: var(--wire-content-primary);
 
   &:hover,
   &:focus-visible,
@@ -492,7 +492,7 @@
   }
 
   &.active {
-    background-color: var(--wire-background-base-secondary);
+    background-color: var(--wire-background-canvas);
 
     body.theme-dark & {
       border: 1px solid var(--accent-color-800);
@@ -503,7 +503,7 @@
   &[disabled]:not([disabled='false']) {
     border: transparent !important;
     background-color: transparent !important;
-    color: var(--wire-content-disabled-primary) !important;
+    color: var(--wire-content-disabled) !important;
     cursor: not-allowed;
     outline: none !important;
   }

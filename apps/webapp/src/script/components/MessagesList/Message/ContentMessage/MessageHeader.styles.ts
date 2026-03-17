@@ -31,7 +31,7 @@ export const headerIconBadge: CSSObject = {
 export const headerLabelBadge: CSSObject = {
   fontSize: 'var(--font-size-small)',
   fontWeight: 'var(--font-weight-regular)',
-  color: 'var(--wire-content-base-secondary)',
+  color: 'var(--wire-content-secondary)',
   marginLeft: '4px',
 };
 

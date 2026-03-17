@@ -80,9 +80,9 @@ describe('User', () => {
   describe('accent_color', () => {
     it('can change the accent color', () => {
       const userEntity = new User();
-      userEntity.accent_id(ACCENT_ID.BLUE);
+      userEntity.accent_id(ACCENT_ID.AZURE);
 
-      expect(userEntity.accent_color()).toBe(User.ACCENT_COLOR[ACCENT_ID.BLUE]);
+      expect(userEntity.accent_color()).toBe(User.ACCENT_COLOR[ACCENT_ID.AZURE]);
 
       Object.values(ACCENT_ID).forEach(accentId => {
         userEntity.accent_id(accentId);
@@ -92,7 +92,7 @@ describe('User', () => {
 
       userEntity.accent_id(undefined);
 
-      expect(userEntity.accent_color()).toBe(User.ACCENT_COLOR[ACCENT_ID.BLUE]);
+      expect(userEntity.accent_color()).toBe(User.ACCENT_COLOR[ACCENT_ID.AZURE]);
     });
   });
 });

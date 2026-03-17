@@ -49,6 +49,6 @@ export const styles: {
     letterSpacing: '0.05px',
     lineHeight: '24px',
     textDecoration: 'underline',
-    color: 'var(--wire-content-base-primary)',
+    color: 'var(--wire-content-primary)',
   },
 };

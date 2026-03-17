@@ -134,9 +134,9 @@ export const styles: {
 
     '& .EmojiPickerReact .epr-search-container': {
       input: {
-        border: '1px solid var(--wire-border-base-primary)',
+        border: '1px solid var(--wire-border-default)',
         borderRadius: '12px',
-        background: 'var(--wire-background-base-primary)',
+        background: 'var(--wire-background-surface)',
       },
 
       'button.epr-btn:hover': {

@@ -104,7 +104,7 @@ const GroupVideoThumbnailWrapper = ({children, minimized}: {children?: ReactNode
       minimized
         ? css`
             bottom: unset;
-            box-shadow: 0 0 0 1px var(--wire-border-base-primary);
+            box-shadow: 0 0 0 1px var(--wire-border-default);
             height: 40px;
             right: 8px;
             top: 8px;
@@ -245,7 +245,7 @@ const GroupVideoGrid = ({
             <Icon.LoadingIcon
               css={{
                 '> path': {
-                  fill: 'var(--wire-content-base-primary)',
+                  fill: 'var(--wire-content-primary)',
                 },
                 height: 32,
                 marginBottom: 32,
@@ -254,7 +254,7 @@ const GroupVideoGrid = ({
             />
             <div
               data-uie-name="no-active-speakers"
-              css={{color: 'var(--wire-content-base-primary)', fontSize: 'var(--font-size-xsmall)', fontWeight: 500}}
+              css={{color: 'var(--wire-content-primary)', fontSize: 'var(--font-size-xsmall)', fontWeight: 500}}
             >
               {t('noActiveSpeakers')}
             </div>

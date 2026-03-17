@@ -52,7 +52,7 @@ export const whiteFontCss: CSSObject = {
 export const bodyCss: CSSObject = {
   flex: 'auto',
   flexDirection: 'row',
-  background: 'var(--wire-background-base-secondary)',
+  background: 'var(--wire-background-canvas)',
   height: '100%',
   minHeight: '100vh',
 };

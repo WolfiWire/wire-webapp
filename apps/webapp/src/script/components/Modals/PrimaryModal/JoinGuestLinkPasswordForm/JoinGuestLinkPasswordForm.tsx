@@ -55,7 +55,7 @@ export const JoinGuestLinkPasswordForm = ({onSubmit, inputValue, onInputChange}:
       />
 
       <Link css={linkStyles} href={Config.getConfig().URL.SUPPORT.LEARN_MORE_ABOUT_GUEST_LINKS} target="_blank">
-        <Text block color="var(--wire-content-accent-primary)" css={linkTextStyles}>
+        <Text block color="var(--wire-content-accent)" css={linkTextStyles}>
           {t('guestLinkPasswordModal.learnMoreLink')}
         </Text>
       </Link>

@@ -30,7 +30,7 @@ export const expirationContentStyles: CSSObject = {
 export const expirationLabelStyles: CSSObject = {
   fontSize: 'var(--font-size-medium)',
   fontWeight: 'var(--font-weight-regular)',
-  color: 'var(--wire-content-base-primary)',
+  color: 'var(--wire-content-primary)',
 };
 
 export const expirationFieldsRowStyles: CSSObject = {
@@ -52,10 +52,10 @@ export const datePickerGroupStyles: CSSObject = {
   minHeight: '48px',
   padding: '10px 14px',
   borderRadius: '14px',
-  border: '1px solid var(--wire-border-base-primary)',
-  backgroundColor: 'var(--wire-background-base-primary)',
+  border: '1px solid var(--wire-border-default)',
+  backgroundColor: 'var(--wire-background-surface)',
   'body.theme-dark &': {
-    backgroundColor: 'var(--wire-background-base-tertiary)',
+    backgroundColor: 'var(--wire-background-container)',
   },
 };
 
@@ -81,7 +81,7 @@ export const dateInputStyles: CSSObject = {
   alignItems: 'center',
   gap: 0,
   fontSize: 'var(--font-size-medium)',
-  color: 'var(--wire-content-base-primary)',
+  color: 'var(--wire-content-primary)',
 };
 
 export const dateSegmentStyles: CSSObject = {
@@ -93,10 +93,10 @@ export const dateSegmentStyles: CSSObject = {
     margin: 0,
   },
   '&[data-placeholder]': {
-    color: 'var(--wire-content-base-secondary)',
+    color: 'var(--wire-content-secondary)',
   },
   '&[data-focused]': {
-    backgroundColor: 'var(--wire-background-base-tertiary)',
+    backgroundColor: 'var(--wire-background-container)',
   },
 };
 
@@ -109,10 +109,10 @@ export const calendarButtonStyles: CSSObject = {
   borderRadius: '10px',
   border: '1px solid transparent',
   background: 'transparent',
-  color: 'var(--wire-content-base-primary)',
+  color: 'var(--wire-content-primary)',
   cursor: 'pointer',
   '&:hover, &[data-focus-visible]': {
-    backgroundColor: 'var(--wire-background-base-tertiary)',
+    backgroundColor: 'var(--wire-background-container)',
   },
 };
 
@@ -122,8 +122,8 @@ export const calendarIconStyles: CSSObject = {
 };
 
 export const calendarPopoverStyles: CSSObject = {
-  backgroundColor: 'var(--wire-background-base-primary)',
-  border: '1px solid var(--wire-border-base-primary)',
+  backgroundColor: 'var(--wire-background-surface)',
+  border: '1px solid var(--wire-border-default)',
   borderRadius: '16px',
   padding: '12px',
   boxShadow: '0 12px 30px rgba(0, 0, 0, 0.12)',
@@ -144,7 +144,7 @@ export const calendarHeaderStyles: CSSObject = {
 export const calendarHeadingStyles: CSSObject = {
   fontSize: 'var(--font-size-medium)',
   fontWeight: 'var(--font-weight-semibold)',
-  color: 'var(--wire-content-base-primary)',
+  color: 'var(--wire-content-primary)',
 };
 
 export const calendarNavButtonStyles: CSSObject = {
@@ -154,11 +154,11 @@ export const calendarNavButtonStyles: CSSObject = {
   width: '28px',
   height: '28px',
   borderRadius: '8px',
-  border: '1px solid var(--wire-border-base-primary)',
-  backgroundColor: 'var(--wire-background-base-primary)',
+  border: '1px solid var(--wire-border-default)',
+  backgroundColor: 'var(--wire-background-surface)',
   cursor: 'pointer',
   '&:hover, &[data-focus-visible]': {
-    backgroundColor: 'var(--wire-background-base-tertiary)',
+    backgroundColor: 'var(--wire-background-container)',
   },
 };
 
@@ -167,13 +167,13 @@ export const calendarGridStyles: CSSObject = {
   borderCollapse: 'collapse',
   tableLayout: 'fixed',
   fontSize: 'var(--font-size-small)',
-  color: 'var(--wire-content-base-primary)',
+  color: 'var(--wire-content-primary)',
 };
 
 export const calendarGridHeaderStyles: CSSObject = {
   textTransform: 'uppercase',
   fontSize: 'var(--font-size-small)',
-  color: 'var(--wire-content-base-secondary)',
+  color: 'var(--wire-content-secondary)',
 };
 
 export const calendarHeaderCellStyles: CSSObject = {
@@ -196,7 +196,7 @@ export const calendarCellStyles: CSSObject = {
   margin: '0 auto',
   lineHeight: 1,
   '&[data-outside-month]': {
-    color: 'var(--wire-content-base-secondary)',
+    color: 'var(--wire-content-secondary)',
   },
   '&[data-selected]': {
     backgroundColor: 'var(--accent-color) !important',
@@ -207,7 +207,7 @@ export const calendarCellStyles: CSSObject = {
     outlineOffset: '2px',
   },
   '&[data-disabled]': {
-    color: 'var(--wire-content-disabled-primary)',
+    color: 'var(--wire-content-disabled)',
     cursor: 'not-allowed',
   },
 };
@@ -221,16 +221,16 @@ export const timeSelectStyles: CSSObject = {
   minHeight: '48px',
   borderRadius: '14px',
   '& .css-1dimb5e-singleValue': {
-    color: 'var(--wire-content-base-primary)',
+    color: 'var(--wire-content-primary)',
   },
   '& [class*="singleValue"]': {
-    color: 'var(--wire-content-base-primary)',
+    color: 'var(--wire-content-primary)',
   },
 };
 
 export const timeSelectMenuStyles: CSSObject = {
   '& [role="option"]': {
-    color: 'var(--wire-content-base-primary)',
+    color: 'var(--wire-content-primary)',
   },
 };
 
@@ -239,23 +239,23 @@ export const timeSelectMenuPortalStyles: CSSObject = {
 };
 
 export const expirationErrorBorderStyles: CSSObject = {
-  borderColor: 'var(--wire-border-danger-primary)',
+  borderColor: 'var(--wire-border-danger)',
   boxShadow: 'none',
   outline: 'none',
 };
 
 export const expirationErrorLabelStyles: CSSObject = {
-  color: 'var(--wire-content-danger-primary)',
+  color: 'var(--wire-content-danger)',
 };
 
 export const expirationErrorTextStyles: CSSObject = {
   fontSize: 'var(--font-size-small)',
-  color: 'var(--wire-content-danger-primary)',
+  color: 'var(--wire-content-danger)',
 };
 
 export const expirationErrorShadowStyles: CSSObject = {
-  borderColor: 'var(--wire-border-danger-primary)',
-  boxShadow: '0 0 0 1px var(--wire-border-danger-primary)',
+  borderColor: 'var(--wire-border-danger)',
+  boxShadow: '0 0 0 1px var(--wire-border-danger)',
   outline: 'none',
 };
 

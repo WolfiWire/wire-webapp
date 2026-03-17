@@ -28,8 +28,8 @@ export const headerStyles: CSSObject = {
   height: fileHeaderHeight,
   width: '100%',
   lineHeight: 'var(--line-height-sm)',
-  borderBottom: '1px solid var(--wire-border-base-primary)',
-  backgroundColor: 'var(--wire-background-base-secondary)',
+  borderBottom: '1px solid var(--wire-border-default)',
+  backgroundColor: 'var(--wire-background-canvas)',
 };
 
 export const closeButtonStyles: CSSObject = {
@@ -72,7 +72,7 @@ export const nameStyles: CSSObject = {
 
 export const textStyles: CSSObject = {
   fontSize: 'var(--font-size-small)',
-  color: 'var(--wire-content-base-secondary)',
+  color: 'var(--wire-content-secondary)',
 };
 
 export const actionButtonsStyles: CSSObject = {
@@ -98,7 +98,7 @@ export const editModeButtonStyles: CSSObject = {
   flexShrink: '0',
   marginRight: '8px',
   marginLeft: '16px',
-  backgroundColor: 'var(--wire-background-base-tertiary)',
+  backgroundColor: 'var(--wire-background-container)',
   padding: '4px',
   borderRadius: '12px',
 
@@ -107,12 +107,12 @@ export const editModeButtonStyles: CSSObject = {
     borderRadius: '8px',
     backgroundColor: 'transparent',
     border: 'none',
-    color: 'var(--wire-content-base-secondary)',
+    color: 'var(--wire-content-secondary)',
     transition: 'background-color 0.3s ease-in-out, color 0.3s ease-in-out',
 
     '&.active': {
-      backgroundColor: 'var(--wire-background-base-primary)',
-      color: 'var(--wire-content-base-primary)',
+      backgroundColor: 'var(--wire-background-surface)',
+      color: 'var(--wire-content-primary)',
     },
     svg: {
       marginRight: '8px',

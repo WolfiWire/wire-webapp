@@ -54,7 +54,7 @@ export const userDetails: CSSObject = {
 };
 
 export const userName: CSSObject = {
-  color: 'var(--wire-content-base-primary)',
+  color: 'var(--wire-content-primary)',
   fontSize: 'var(--font-size-medium)',
   fontWeight: 'var(--font-weight-semibold)',
   lineHeight: 'var(--line-height-md)',
@@ -69,7 +69,7 @@ export const userFullName: CSSObject = {
   border: 'none',
   padding: 0,
 
-  color: 'var(--wire-content-base-primary)',
+  color: 'var(--wire-content-primary)',
   fontSize: 'var(--font-size-medium)',
   fontWeight: 'var(--font-weight-semibold)',
   lineHeight: 'var(--line-height-md)',
@@ -86,7 +86,7 @@ export const userHandle = (isSideBarOpen: boolean): CSSObject => ({
     display: 'none',
   }),
 
-  color: 'var(--wire-content-base-secondary)',
+  color: 'var(--wire-content-secondary)',
   fontSize: 'var(--font-size-small)',
   fontWeight: 'var(--font-weight-regular)',
   lineHeight: 'var(--line-height-md)',

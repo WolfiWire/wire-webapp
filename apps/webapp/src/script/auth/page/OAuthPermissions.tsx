@@ -159,7 +159,7 @@ const OAuthPermissionsComponent = ({
     <Page>
       <ContainerXS centerText verticalCenter css={containerCSS}>
         {!oAuthApp ? (
-          <Icon.LoadingIcon width="36" height="36" css={{path: {fill: 'var(--wire-content-accent-primary)'}}} />
+          <Icon.LoadingIcon width="36" height="36" css={{path: {fill: 'var(--wire-content-accent)'}}} />
         ) : (
           <>
             <H2 css={headerCSS}>{t('oauth.headline')}</H2>
@@ -170,7 +170,7 @@ const OAuthPermissionsComponent = ({
               onClick={doLogout}
               data-uie-name="go-logout"
               variant={LinkVariant.PRIMARY}
-              color="var(--wire-content-accent-primary)"
+              color="var(--wire-content-accent)"
             >
               {t('oauth.logout')}
             </Link>

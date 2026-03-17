@@ -45,7 +45,7 @@ describe('User Mapper', () => {
       expect(user_et.email()).toBe('jd@wire.com');
       expect(user_et.name()).toBe('John Doe');
       expect(user_et.isMe).toBeFalsy();
-      expect(user_et.accent_id()).toBe(ACCENT_ID.BLUE);
+      expect(user_et.accent_id()).toBe(ACCENT_ID.AZURE);
     });
 
     it.each([
@@ -95,7 +95,7 @@ describe('User Mapper', () => {
       const user_et = mapper.mapUserFromJson(self_user_payload, '');
 
       expect(user_et.name()).toBe('John Doe');
-      expect(user_et.accent_id()).toBe(ACCENT_ID.BLUE);
+      expect(user_et.accent_id()).toBe(ACCENT_ID.AZURE);
     });
 
     it('will return default accent color if backend returns 0', () => {
@@ -103,7 +103,7 @@ describe('User Mapper', () => {
       const user_et = mapper.mapUserFromJson(self_user_payload, '');
 
       expect(user_et.name()).toBe('John Doe');
-      expect(user_et.accent_id()).toBe(ACCENT_ID.BLUE);
+      expect(user_et.accent_id()).toBe(ACCENT_ID.AZURE);
     });
   });
 
@@ -115,7 +115,7 @@ describe('User Mapper', () => {
       expect(user_et.name()).toBe('John Doe');
       expect(user_et.isMe).toBeTruthy();
       expect(user_et.locale).toBe('en');
-      expect(user_et.accent_id()).toBe(ACCENT_ID.BLUE);
+      expect(user_et.accent_id()).toBe(ACCENT_ID.AZURE);
     });
   });
 
@@ -150,7 +150,7 @@ describe('User Mapper', () => {
       const data = {accent_id: 1, id: entities.user.john_doe.id};
       const updated_user_et = mapper.updateUserFromObject(user_et, data, '');
 
-      expect(updated_user_et.accent_id()).toBe(ACCENT_ID.BLUE);
+      expect(updated_user_et.accent_id()).toBe(ACCENT_ID.AZURE);
     });
 
     it('can update the user name', () => {

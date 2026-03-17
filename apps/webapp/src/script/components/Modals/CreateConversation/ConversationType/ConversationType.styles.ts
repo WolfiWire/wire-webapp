@@ -43,7 +43,7 @@ export const confirmConversationButtonContainerCss: CSSObject = {
 };
 
 export const conversationTypeContainerCss: CSSObject = {
-  borderRight: '1px solid var(--wire-border-base-primary)',
+  borderRight: '1px solid var(--wire-border-default)',
   padding: '1.5rem',
   width: '300px',
 };
@@ -76,12 +76,12 @@ export const conversationOptionContainerCss = (isSelected: boolean) => ({
   background: isSelected ? 'var(--accent-color)' : 'none',
   borderRadius: '12px',
   padding: isSelected ? '12px' : '11px',
-  border: isSelected ? 'none' : '1px solid var(--wire-border-base-primary)',
+  border: isSelected ? 'none' : '1px solid var(--wire-border-default)',
   cursor: 'pointer',
 });
 
 export const conversationOptionCss = (isSelected: boolean): CSSObject => ({
-  color: isSelected ? 'var(--wire-background-base-primary)' : 'var(--text-color)',
+  color: isSelected ? 'var(--wire-background-surface)' : 'var(--text-color)',
   alignItems: 'center',
   gap: '12px',
 });

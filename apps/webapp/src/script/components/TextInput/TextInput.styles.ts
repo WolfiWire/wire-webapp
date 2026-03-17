@@ -40,7 +40,7 @@ export const containerCSS: CSSObject = {
 };
 
 export const errorMessageCSS: CSSObject = {
-  color: 'var(--wire-content-danger-primary)',
+  color: 'var(--wire-content-danger)',
   left: 0,
   lineHeight: 'var(--line-height-small-plus)',
   textTransform: 'unset',
@@ -50,7 +50,7 @@ export const errorMessageCSS: CSSObject = {
 
 export const getInputCSS = (disabled?: boolean, borderColor?: string): CSSObject => ({
   '&::placeholder': {
-    color: 'var(--wire-content-base-secondary)',
+    color: 'var(--wire-content-secondary)',
   },
   '&:hover': {
     borderColor: !disabled ? 'var(--text-input-border-hover)' : undefined,
@@ -63,29 +63,29 @@ export const getInputCSS = (disabled?: boolean, borderColor?: string): CSSObject
   },
   ':-ms-input-placeholder': {
     // Internet Explorer 10-11
-    color: 'var(--wire-content-base-secondary)',
+    color: 'var(--wire-content-secondary)',
   },
   '::-ms-input-placeholder': {
     // Microsoft Edge
-    color: 'var(--wire-content-base-secondary)',
+    color: 'var(--wire-content-secondary)',
   },
   '::placeholder': {
     // Chrome, Firefox, Opera, Safari 10.1+
-    color: 'var(--wire-content-base-secondary)',
+    color: 'var(--wire-content-secondary)',
     opacity: 1, // Firefox
   },
-  background: disabled ? 'var(--wire-background-disabled-secondary)' : 'var(--wire-background-base-primary)',
+  background: disabled ? 'var(--wire-background-container)' : 'var(--wire-background-surface)',
   border: '1px solid',
-  borderColor: borderColor || 'var(--wire-border-base-primary)',
+  borderColor: borderColor || 'var(--wire-border-default)',
   borderRadius: 12,
-  color: 'var(--wire-content-base-primary)',
+  color: 'var(--wire-content-primary)',
   outline: 'none',
   padding: '12px 38px 12px 16px',
   width: '100%',
 });
 
 export const getLabelCSS = (color?: string): CSSObject => ({
-  color: color || 'var(--wire-content-base-primary)',
+  color: color || 'var(--wire-content-primary)',
   fontWeight: 'var(--font-weight-semibold)',
   display: 'flex',
   flexDirection: 'column',
@@ -94,7 +94,7 @@ export const getLabelCSS = (color?: string): CSSObject => ({
 
 export const cancelButtonCSS: CSSObject = {
   alignItems: 'center',
-  background: 'var(--wire-content-base-primary)',
+  background: 'var(--wire-content-primary)',
   border: 'none',
   borderRadius: '50%',
   bottom: '2rem',

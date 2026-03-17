@@ -20,199 +20,136 @@
 @w-black: #000000;
 @w-white: #ffffff;
 
-@w-gray-10: #F9FAFA;   // Tailwind Gray-50
-@w-gray-20: #F3F4F5;   // Tailwind Gray-100
-@w-gray-30: #E5E7EA;   // Tailwind Gray-200
-@w-gray-40: #D1D5DA;   // Tailwind Gray-300
-@w-gray-50: #99A1AE;   // Tailwind Gray-400
-@w-gray-60: #6A7282;   // Tailwind Gray-500
-@w-gray-70: #4A5565;   // Tailwind Gray-600
-@w-gray-80: #364152;   // Tailwind Gray-700
-@w-gray-90: #1E2938;   // Tailwind Gray-800
-@w-gray-95: #101828;   // Tailwind Gray-900
-@w-gray-100: #030712;  // Tailwind Gray-950
+@w-gray-50:  #F5F6FA;   // Gray/50
+@w-gray-100: #EDEEF3;   // Gray/100
+@w-gray-200: #DDDFE4;   // Gray/200
+@w-gray-300: #C5C7CE;   // Gray/300
+@w-gray-400: #A4A6AD;   // Gray/400
+@w-gray-500: #82858C;   // Gray/500
+@w-gray-600: #64676D;   // Gray/600
+@w-gray-700: #4B4D53;   // Gray/700
+@w-gray-800: #323439;   // Gray/800
+@w-gray-900: #212226;   // Gray/900
+@w-gray-950: #151619;   // Gray/950
 
-@w-blue: #1B58F0;    // ava blue-500
-@w-green: #008F27;   // ava green-500
-@w-gray: #D1D5DA;    // Tailwind Gray-300
-@w-orange: #A95D00;  // ava amber-500
+@w-blue: #3D7EFF;    // blue-500
+@w-green: #2FAE7A;   // green-500
+@w-gray: #AAB4BE;    // Gray/400
+@w-orange: #E6A11F;  // amber-500
 @w-pink: #FF2D55;    // iOS pink-500 (no Tailwind equivalent)
-@w-purple: #9434DE;  // ava purple-500
-@w-red: #C60000;     // ava red-500
+@w-purple: #7A5CFF;  // purple-500
+@w-red: #D73845;     // red-500
 @w-yellow: #FFCC00;  // iOS yellow-500 (no Tailwind equivalent)
 
 @accent_colors-0: transparent;
-@accent_colors-1: @w-blue;
-@accent_colors-2: @w-green;
-@accent_colors-3: @w-yellow;
-@accent_colors-4: @w-red;
-@accent_colors-5: @w-orange;
-@accent_colors-6: @w-pink;
-@accent_colors-7: @w-purple;
+@accent_colors-1: @azure-500;
+@accent_colors-2: @amethyst-500;
+@accent_colors-3: @flamingo-500;
+@accent_colors-4: @lagoon-500;
+@accent_colors-5: @midnight-500;
+@accent_colors-6: @moss-500;
 
-@blue-50: #DAE8FF;   // ava blue-050
-@blue-100: #CFDFFF;  // ava blue-100
-@blue-200: #BDD1FF;  // ava blue-200
-@blue-300: #A0BCFF;  // ava blue-300
-@blue-400: #6C97FF;  // ava blue-400
-@blue-500: #1B58F0;  // ava blue-500
-@blue-600: #14239B;  // ava blue-600
-@blue-700: #0D006B;  // ava blue-700
-@blue-800: #090050;  // ava blue-800
-@blue-900: #070040;  // ava blue-900
-@blue-950: #060036;  // ava blue-950
+@azure-50:  #F0F5FF;   @azure-100: #E0EBFF;   @azure-200: #BFD6FF;
+@azure-300: #8FBBFF;   @azure-400: #5FA0FF;   @azure-500: #1F63E9;
+@azure-600: #1A57FF;   @azure-700: #1648D6;   @azure-800: #1137A8;
+@azure-900: #0C287A;   @azure-950: #071A52;
 
-@blue-dark-50: #DAE8FF;   // ava blue-050
-@blue-dark-100: #CFDFFF;  // ava blue-100
-@blue-dark-200: #BDD1FF;  // ava blue-200
-@blue-dark-300: #A0BCFF;  // ava blue-300
-@blue-dark-400: #6C97FF;  // ava blue-400
-@blue-dark-500: #1B58F0;  // ava blue-500
-@blue-dark-600: #14239B;  // ava blue-600
-@blue-dark-700: #0D006B;  // ava blue-700
-@blue-dark-800: #090050;  // ava blue-800
-@blue-dark-900: #070040;  // ava blue-900
-@blue-dark-950: #060036;  // ava blue-950
+// Dark variants shift one step lighter (dark-500 = light-400, for visibility on dark backgrounds)
+@azure-dark-50:  #F0F5FF;   @azure-dark-100: #F0F5FF;   @azure-dark-200: #E0EBFF;
+@azure-dark-300: #BFD6FF;   @azure-dark-400: #8FBBFF;   @azure-dark-500: #5FA0FF;
+@azure-dark-600: #1F63E9;   @azure-dark-700: #1A57FF;   @azure-dark-800: #1648D6;
+@azure-dark-900: #1137A8;   @azure-dark-950: #0C287A;
 
-@black-50: @w-gray-30;
-@black-100: @w-gray-40;
-@black-500: @w-gray-80;
+@amethyst-50:  #F8F0FF;   @amethyst-100: #F0E0FF;   @amethyst-200: #DFC2FF;
+@amethyst-300: #C89BFF;   @amethyst-400: #B06FFF;   @amethyst-500: #A520F7;
+@amethyst-600: #9A1CFF;   @amethyst-700: #7E17D1;   @amethyst-800: #6311A3;
+@amethyst-900: #470C75;   @amethyst-950: #2E074D;
 
-@black-dark-500: @w-gray-40;
-@black-dark-800: @w-gray-80;
-@black-dark-900: @w-gray-90;
+@amethyst-dark-50:  #F8F0FF;   @amethyst-dark-100: #F8F0FF;   @amethyst-dark-200: #F0E0FF;
+@amethyst-dark-300: #DFC2FF;   @amethyst-dark-400: #C89BFF;   @amethyst-dark-500: #B06FFF;
+@amethyst-dark-600: #A520F7;   @amethyst-dark-700: #9A1CFF;   @amethyst-dark-800: #7E17D1;
+@amethyst-dark-900: #6311A3;   @amethyst-dark-950: #470C75;
 
-@green-50: #E8F5EC;   // ava green-050
-@green-100: #D5F1DD;  // ava green-100
-@green-200: #B7EBC6;  // ava green-200
-@green-300: #84E09C;  // ava green-300
-@green-400: #00C850;  // ava green-400
-@green-500: #008F27;  // ava green-500
-@green-600: #005900;  // ava green-600
-@green-700: #003B00;  // ava green-700
-@green-800: #002900;  // ava green-800
-@green-900: #001E00;  // ava green-900
-@green-950: #001800;  // ava green-950
+@flamingo-50:  #FFF0F5;   @flamingo-100: #FFE0EB;   @flamingo-200: #FFB8D0;
+@flamingo-300: #FF85AD;   @flamingo-400: #FF5C93;   @flamingo-500: #FF3F7F;
+@flamingo-600: #FF2E72;   @flamingo-700: #E02663;   @flamingo-800: #B81F50;
+@flamingo-900: #8C163C;   @flamingo-950: #5C0E27;
 
-@green-dark-50: #E8F5EC;   // ava green-050
-@green-dark-100: #D5F1DD;  // ava green-100
-@green-dark-200: #B7EBC6;  // ava green-200
-@green-dark-300: #84E09C;  // ava green-300
-@green-dark-400: #00C850;  // ava green-400
-@green-dark-500: #008F27;  // ava green-500
-@green-dark-600: #005900;  // ava green-600
-@green-dark-700: #003B00;  // ava green-700
-@green-dark-800: #002900;  // ava green-800
-@green-dark-900: #001E00;  // ava green-900
-@green-dark-950: #001800;  // ava green-950
+@flamingo-dark-50:  #FFF0F5;   @flamingo-dark-100: #FFF0F5;   @flamingo-dark-200: #FFE0EB;
+@flamingo-dark-300: #FFB8D0;   @flamingo-dark-400: #FF85AD;   @flamingo-dark-500: #FF5C93;
+@flamingo-dark-600: #FF3F7F;   @flamingo-dark-700: #FF2E72;   @flamingo-dark-800: #E02663;
+@flamingo-dark-900: #B81F50;   @flamingo-dark-950: #8C163C;
 
-@turquoise-50: #EAF6F8;   // ava petrol-050
-@turquoise-100: #D9F1F3;  // ava petrol-100
-@turquoise-200: #BDE8E9;  // ava petrol-200
-@turquoise-300: #8ED9D6;  // ava petrol-300
-@turquoise-400: #1BC0AC;  // ava petrol-400
-@turquoise-500: #008588;  // ava petrol-500
-@turquoise-600: #004C60;  // ava petrol-600
-@turquoise-700: #002C46;  // ava petrol-700
-@turquoise-800: #001936;  // ava petrol-800
-@turquoise-900: #000E2C;  // ava petrol-900
-@turquoise-950: #000726;  // ava petrol-950
+@lagoon-50:  #F2F8FA;   @lagoon-100: #E6F1F5;   @lagoon-200: #C7E0E8;
+@lagoon-300: #9CC9D6;   @lagoon-400: #6FAFC1;   @lagoon-500: #007B9A;
+@lagoon-600: #006782;   @lagoon-700: #00536A;   @lagoon-800: #003F51;
+@lagoon-900: #002C39;   @lagoon-950: #001C24;
 
-@turquoise-dark-50: #EAF6F8;   // ava petrol-050
-@turquoise-dark-100: #D9F1F3;  // ava petrol-100
-@turquoise-dark-200: #BDE8E9;  // ava petrol-200
-@turquoise-dark-300: #8ED9D6;  // ava petrol-300
-@turquoise-dark-400: #1BC0AC;  // ava petrol-400
-@turquoise-dark-500: #008588;  // ava petrol-500
-@turquoise-dark-600: #004C60;  // ava petrol-600
-@turquoise-dark-700: #002C46;  // ava petrol-700
-@turquoise-dark-800: #001936;  // ava petrol-800
-@turquoise-dark-900: #000E2C;  // ava petrol-900
-@turquoise-dark-950: #000726;  // ava petrol-950
+@lagoon-dark-50:  #F2F8FA;   @lagoon-dark-100: #F2F8FA;   @lagoon-dark-200: #E6F1F5;
+@lagoon-dark-300: #C7E0E8;   @lagoon-dark-400: #9CC9D6;   @lagoon-dark-500: #6FAFC1;
+@lagoon-dark-600: #007B9A;   @lagoon-dark-700: #006782;   @lagoon-dark-800: #00536A;
+@lagoon-dark-900: #003F51;   @lagoon-dark-950: #002C39;
 
-@purple-50: #FBDFFF;   // ava purple-050
-@purple-100: #EAC2FF;  // ava purple-100
-@purple-200: #D399FF;  // ava purple-200
-@purple-300: #BC6CFF;  // ava purple-300
-@purple-400: #AD46FF;  // ava purple-400
-@purple-500: #9434DE;  // ava purple-500
-@purple-600: #7218B1;  // ava purple-600
-@purple-700: #4F0081;  // ava purple-700
-@purple-800: #2E0054;  // ava purple-800
-@purple-900: #13002E;  // ava purple-900
-@purple-950: #050016;  // ava purple-950
+@midnight-50:  #F3F6F8;   @midnight-100: #E7EDF1;   @midnight-200: #CBD9E2;
+@midnight-300: #A3BDCC;   @midnight-400: #739CAF;   @midnight-500: #0B3B55;
+@midnight-600: #093246;   @midnight-700: #072837;   @midnight-800: #051F29;
+@midnight-900: #03151B;   @midnight-950: #020E12;
 
-@purple-dark-50: #FBDFFF;   // ava purple-050
-@purple-dark-100: #EAC2FF;  // ava purple-100
-@purple-dark-200: #D399FF;  // ava purple-200
-@purple-dark-300: #BC6CFF;  // ava purple-300
-@purple-dark-400: #AD46FF;  // ava purple-400
-@purple-dark-500: #9434DE;  // ava purple-500
-@purple-dark-600: #7218B1;  // ava purple-600
-@purple-dark-700: #4F0081;  // ava purple-700
-@purple-dark-800: #2E0054;  // ava purple-800
-@purple-dark-900: #13002E;  // ava purple-900
-@purple-dark-950: #050016;  // ava purple-950
+@midnight-dark-50:  #F3F6F8;   @midnight-dark-100: #F3F6F8;   @midnight-dark-200: #E7EDF1;
+@midnight-dark-300: #CBD9E2;   @midnight-dark-400: #A3BDCC;   @midnight-dark-500: #739CAF;
+@midnight-dark-600: #0B3B55;   @midnight-dark-700: #093246;   @midnight-dark-800: #072837;
+@midnight-dark-900: #051F29;   @midnight-dark-950: #03151B;
 
-@red-50: #FFDFE0;   // ava red-050
-@red-100: #FFADB1;  // ava red-100
-@red-200: #FF8289;  // ava red-200
-@red-300: #FF545E;  // ava red-300
-@red-400: #ED132C;  // ava red-400
-@red-500: #C60000;  // ava red-500
-@red-600: #A00000;  // ava red-600
-@red-700: #7B0000;  // ava red-700
-@red-800: #570000;  // ava red-800
-@red-900: #340000;  // ava red-900
-@red-950: #100000;  // ava red-950
+@moss-50:  #F7F7F3;   @moss-100: #ECEDE6;   @moss-200: #D6D8C8;
+@moss-300: #B6BA9E;   @moss-400: #91966F;   @moss-500: #626235;
+@moss-600: #53522E;   @moss-700: #434227;   @moss-800: #32321E;
+@moss-900: #232316;   @moss-950: #16160F;
 
-@red-dark-50: #FFDFE0;   // ava red-050
-@red-dark-100: #FFADB1;  // ava red-100
-@red-dark-200: #FF8289;  // ava red-200
-@red-dark-300: #FF545E;  // ava red-300
-@red-dark-400: #ED132C;  // ava red-400
-@red-dark-500: #C60000;  // ava red-500
-@red-dark-600: #A00000;  // ava red-600
-@red-dark-700: #7B0000;  // ava red-700
-@red-dark-800: #570000;  // ava red-800
-@red-dark-900: #340000;  // ava red-900
-@red-dark-950: #100000;  // ava red-950
+@moss-dark-50:  #F7F7F3;   @moss-dark-100: #F7F7F3;   @moss-dark-200: #ECEDE6;
+@moss-dark-300: #D6D8C8;   @moss-dark-400: #B6BA9E;   @moss-dark-500: #91966F;
+@moss-dark-600: #626235;   @moss-dark-700: #53522E;   @moss-dark-800: #434227;
+@moss-dark-900: #32321E;   @moss-dark-950: #232316;
 
-@amber-50: #FFEED5;   // ava amber-050
-@amber-100: #FFE4C1;  // ava amber-100
-@amber-200: #FFD3A1;  // ava amber-200
-@amber-300: #FFB767;  // ava amber-300
-@amber-400: #ED8E00;  // ava amber-400
-@amber-500: #A95D00;  // ava amber-500
-@amber-600: #6A2F00;  // ava amber-600
-@amber-700: #451500;  // ava amber-700
-@amber-800: #310600;  // ava amber-800
-@amber-900: #250000;  // ava amber-900
-@amber-950: #1E0000;  // ava amber-950
+@black-50: @w-gray-300;
+@black-100: @w-gray-400;
+@black-500: @w-gray-800;
 
-@amber-dark-50: #FFEED5;   // ava amber-050
-@amber-dark-100: #FFE4C1;  // ava amber-100
-@amber-dark-200: #FFD3A1;  // ava amber-200
-@amber-dark-300: #FFB767;  // ava amber-300
-@amber-dark-400: #ED8E00;  // ava amber-400
-@amber-dark-500: #A95D00;  // ava amber-500
-@amber-dark-600: #6A2F00;  // ava amber-600
-@amber-dark-700: #451500;  // ava amber-700
-@amber-dark-800: #310600;  // ava amber-800
-@amber-dark-900: #250000;  // ava amber-900
-@amber-dark-950: #1E0000;  // ava amber-950
+@black-dark-500: @w-gray-400;
+@black-dark-800: @w-gray-800;
+@black-dark-900: @w-gray-900;
+
+// Red, amber kept for non-accent UI uses (warnings, danger states)
+@red-50: #FEF2F3;   @red-100: #FDE6E8;   @red-200: #F7C2C6;
+@red-300: #EF8F96;  @red-400: #E35E68;   @red-500: #D73845;
+@red-600: #B82C38;  @red-700: #96242E;   @red-800: #731B22;
+@red-900: #531318;  @red-950: #360C10;
+
+@red-dark-50: #FEF2F3;   @red-dark-100: #FDE6E8;   @red-dark-200: #F7C2C6;
+@red-dark-300: #EF8F96;  @red-dark-400: #E35E68;   @red-dark-500: #D73845;
+@red-dark-600: #B82C38;  @red-dark-700: #96242E;   @red-dark-800: #731B22;
+@red-dark-900: #531318;  @red-dark-950: #360C10;
+
+@amber-50: #FFF8EC;   @amber-100: #FFF1D6;   @amber-200: #FFE1A8;
+@amber-300: #FFD070;  @amber-400: #F5B93E;   @amber-500: #E6A11F;
+@amber-600: #C88417;  @amber-700: #A66A12;   @amber-800: #80510D;
+@amber-900: #5C3A09;  @amber-950: #3B2505;
+
+@amber-dark-50: #FFF8EC;   @amber-dark-100: #FFF1D6;   @amber-dark-200: #FFE1A8;
+@amber-dark-300: #FFD070;  @amber-dark-400: #F5B93E;   @amber-dark-500: #E6A11F;
+@amber-dark-600: #C88417;  @amber-dark-700: #A66A12;   @amber-dark-800: #80510D;
+@amber-dark-900: #5C3A09;  @amber-dark-950: #3B2505;
 
 .colors() {
-  amber: 5;
-  blue: 1;
-  green: 2;
-  purple: 7;
-  red: 4;
-  turquoise: 6;
+  azure: 1;
+  amethyst: 2;
+  flamingo: 3;
+  lagoon: 4;
+  midnight: 5;
+  moss: 6;
 }
 
-@colors: amber, blue, green, purple, red, turquoise;
-@colorsWithBlack: amber, blue, green, purple, red, turquoise, black;
+@colors: azure, amethyst, flamingo, lagoon, midnight, moss;
+@colorsWithBlack: azure, amethyst, flamingo, lagoon, midnight, moss, black;
 
 @color-index: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950;
 
@@ -269,16 +206,16 @@ each(.colors(), .(@color-key, @color-name) {
   @message-actions-active-background: '@{name}-50';
   @message-reactions-active-border: '@{name}-300';
   @message-reactions-active-background: '@{name}-50';
-  @message-reactions-background: 'w-gray-20';
-  @message-reactions-border: 'w-gray-50';
+  @message-reactions-background: 'w-gray-200';
+  @message-reactions-border: 'w-gray-500';
   @message-reactions-focus-border: '@{name}-500';
-  @message-reactions-count: 'w-gray-80';
+  @message-reactions-count: 'w-gray-800';
   @toggle-button-hover-bg: '@{name}-700';
   @icon-primary-active-fill: '@{name}-500';
   @icon-secondary-active-border: 'accent_colors-0';
   @indicator-range-input-thumb: '@{name}-700';
   @toggle-button-unselected-bg: '@{name}-100';
-  @content-message-timestamp: 'w-gray-70';
+  @content-message-timestamp: 'w-gray-700';
 
   .main-accent-color-@{color-key} {
     --button-primary-hover: @@button-primary-hover;
@@ -337,19 +274,19 @@ each(.colors(), .(@color-key, @color-name) {
     @button-primary-active-dark: '@{name}-dark-800';
     @button-primary-active-bg-dark: '@{name}-dark-800';
     @button-primary-active-border-dark: '@{name}-dark-600';
-    @button-secondary-hover-border-dark: 'w-gray-70';
-    @button-secondary-active-bg-dark: 'w-gray-95';
+    @button-secondary-hover-border-dark: 'w-gray-700';
+    @button-secondary-active-bg-dark: 'w-gray-950';
     @button-secondary-active-border-dark: '@{name}-dark-800';
     @list-item-selected-bg-dark: '@{name}-dark-600';
     @message-actions-active-border-dark: '@{name}-dark-600';
     @message-actions-active-background-dark: '@{name}-dark-800';
     @message-reactions-active-border-dark: '@{name}-dark-700';
     @message-reactions-active-background-dark: '@{name}-dark-900';
-    @message-reactions-background-dark: 'w-gray-90';
-    @message-reactions-border-dark: 'w-gray-80';
+    @message-reactions-background-dark: 'w-gray-900';
+    @message-reactions-border-dark: 'w-gray-800';
     @message-reactions-focus-border-dark: '@{name}-dark-500';
-    @message-reactions-count-dark: 'w-gray-20';
-    @content-message-timestamp-dark: 'w-gray-60';
+    @message-reactions-count-dark: 'w-gray-200';
+    @content-message-timestamp-dark: 'w-gray-600';
     @toggle-button-hover-bg-dark: '@{name}-dark-300';
     @icon-primary-active-fill-dark: 'w-white';
     @icon-secondary-active-border-dark: '@{name}-dark-800' ;

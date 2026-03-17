@@ -55,8 +55,8 @@ export const channelAvatarIconCss = ({
 });
 
 export const channelAvatarLockIconCss: CSSObject = {
-  color: 'var(--wire-background-base-primary)',
-  backgroundColor: 'var(--wire-content-base-primary)',
+  color: 'var(--wire-background-surface)',
+  backgroundColor: 'var(--wire-content-primary)',
   position: 'absolute',
   width: '14px',
   height: '14px',

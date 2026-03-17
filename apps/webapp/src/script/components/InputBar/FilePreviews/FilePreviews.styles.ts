@@ -30,6 +30,6 @@ export const wrapperStyles: CSSObject = {
   overflowY: 'auto',
   overflowX: 'hidden',
   padding: '8px 8px 8px 0',
-  background: 'var(--wire-background-base-primary)',
+  background: 'var(--wire-background-surface)',
   margin: '0',
 };

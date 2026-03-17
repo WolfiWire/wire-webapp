@@ -101,11 +101,11 @@ export const styles: {
     padding: '24px',
     borderRadius: 12,
     border: '1px solid',
-    borderColor: isHighlighted ? 'var(--accent-color)' : 'var(--wire-border-base-primary)',
+    borderColor: isHighlighted ? 'var(--accent-color)' : 'var(--wire-border-default)',
     flex: 1,
     height: 360,
     position: 'relative',
-    background: 'var(--wire-background-base-primary)',
+    background: 'var(--wire-background-surface)',
     [mediaQueryDesktop]: {
       margin: '16px 0',
     },
@@ -136,7 +136,7 @@ export const styles: {
   horizontalLine: {
     width: '100%',
     height: '0.5px',
-    background: 'var(--wire-border-base-primary)',
+    background: 'var(--wire-border-default)',
     margin: '12px 0px',
   },
 };

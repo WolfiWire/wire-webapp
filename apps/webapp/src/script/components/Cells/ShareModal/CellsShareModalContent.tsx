@@ -137,12 +137,12 @@ interface CellsShareModalContentProps {
 }
 
 const DEFAULT_SWITCH_COLORS: SwitchColorProps = {
-  activatedColor: 'var(--wire-content-positive-primary)',
-  activatedColorDark: 'var(--wire-content-positive-primary)',
-  deactivatedColor: 'var(--wire-content-base-secondary)',
-  deactivatedColorDark: 'var(--wire-content-base-secondary)',
-  disabledColor: 'var(--wire-content-base-secondary)',
-  disabledColorDark: 'var(--wire-content-base-secondary)',
+  activatedColor: 'var(--wire-content-success)',
+  activatedColorDark: 'var(--wire-content-success)',
+  deactivatedColor: 'var(--wire-content-secondary)',
+  deactivatedColorDark: 'var(--wire-content-secondary)',
+  disabledColor: 'var(--wire-content-secondary)',
+  disabledColorDark: 'var(--wire-content-secondary)',
 };
 
 const getDefaultLabels = (): CellsShareModalContentLabels => ({

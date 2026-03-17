@@ -82,7 +82,7 @@ export const UserAvatar = ({
 }: UserAvatarProps) => {
   const isImageGrey = !noFilter && [STATE.BLOCKED, STATE.IGNORED, STATE.PENDING, STATE.UNKNOWN].includes(state);
   const isBlocked = state === STATE.BLOCKED;
-  const backgroundColor = state === STATE.UNKNOWN ? 'var(--wire-background-base-tertiary)' : undefined;
+  const backgroundColor = state === STATE.UNKNOWN ? 'var(--wire-background-container)' : undefined;
   const name = useUserName(participant);
   const {
     availability,

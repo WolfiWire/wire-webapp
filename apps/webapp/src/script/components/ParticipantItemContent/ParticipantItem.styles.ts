@@ -26,7 +26,7 @@ export const listWrapper = ({isHighlighted = false, noUnderline = false, noInter
   alignItems: 'center',
 
   '&:hover, &:focus, &:focus-visible': {
-    background: 'var(--wire-background-base-primary-focus)',
+    background: 'var(--wire-background-hover-subtle)',
     '&::after': {
       borderBottom: 'none',
     },
@@ -39,10 +39,10 @@ export const listWrapper = ({isHighlighted = false, noUnderline = false, noInter
   ...(!noInteraction && {
     transition: 'background-color 0.15s ease-in-out',
     '&:hover': {
-      backgroundColor: 'var(--wire-background-base-primary-focus)',
+      backgroundColor: 'var(--wire-background-hover-subtle)',
     },
     '&:focus-visible': {
-      backgroundColor: 'var(--wire-background-base-primary-focus)',
+      backgroundColor: 'var(--wire-background-hover-subtle)',
       outline: '1px solid var(--accent-color-focus)',
     },
   }),
@@ -57,7 +57,7 @@ export const listWrapper = ({isHighlighted = false, noUnderline = false, noInter
       right: 0,
       bottom: 0,
       left: 'var(--left-list-item-left-width)',
-      borderBottom: '1px solid var(--wire-border-base-primary)',
+      borderBottom: '1px solid var(--wire-border-default)',
       content: '""',
     },
   }),
@@ -126,7 +126,7 @@ export const contentText: CSSObject = {
 };
 
 export const nameWrapper: CSSObject = {
-  color: 'var(--wire-content-base-primary)',
+  color: 'var(--wire-content-primary)',
   display: 'flex',
   overflow: 'hidden',
   width: '100%',
