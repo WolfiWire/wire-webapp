@@ -36,13 +36,20 @@
     display: flex;
     overflow: auto;
     width: 220px;
-    height: 100%;
+    height: calc(100% - 16px);
     flex-direction: column;
     padding: 8px;
     padding-top: 14px;
-    border-right: 1px solid var(--wire-border-default);
-    background: var(--wire-background-container);
+    margin: 8px;
+    border-radius: 12px;
+    border: 1px solid var(--wire-border-default);
+    background: var(--wire-background-surface);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
     transition: width 0.3s ease-in-out;
+
+    body.theme-dark & {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
 
     &[data-is-collapsed='true'] {
       width: 64px;

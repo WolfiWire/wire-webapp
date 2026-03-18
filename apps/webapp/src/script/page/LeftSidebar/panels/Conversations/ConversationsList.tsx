@@ -145,7 +145,7 @@ export const ConversationsList = ({
   const rowVirtualizer = useVirtualizer({
     count: conversationsToDisplay.length,
     getScrollElement: () => parentRef.current,
-    estimateSize: () => 56,
+    estimateSize: () => 44,
   });
 
   const debouncedOnConversationClick = useDebouncedCallback(

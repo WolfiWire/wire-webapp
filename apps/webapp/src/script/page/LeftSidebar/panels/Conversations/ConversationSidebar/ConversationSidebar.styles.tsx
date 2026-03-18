@@ -21,7 +21,7 @@ import {CSSObject} from '@emotion/react';
 
 export const conversationsSidebarStyles = (mdBreakpoint: Boolean): CSSObject => ({
   position: mdBreakpoint ? 'absolute' : 'relative',
-  zIndex: mdBreakpoint ? '1000' : 'auto',
+  zIndex: mdBreakpoint ? 1000 : 'auto',
 });
 
 export const conversationsSidebarHandleStyles = (isSidebarOpen: Boolean): CSSObject => ({
