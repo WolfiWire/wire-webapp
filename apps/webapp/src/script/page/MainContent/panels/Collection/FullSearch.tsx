@@ -21,7 +21,7 @@ import {useEffect, useMemo, useRef, useState} from 'react';
 
 import {useDebouncedCallback} from 'use-debounce';
 
-import {CloseIcon, Input, InputSubmitCombo, SearchIcon} from '@wireapp/react-ui-kit';
+import {SearchInput} from 'Components/SearchInput';
 
 import {ContentMessage} from 'Repositories/entity/message/ContentMessage';
 import type {Message} from 'Repositories/entity/message/Message';
@@ -122,30 +122,14 @@ const FullSearch = ({searchProvider, click = noop, change = noop}: FullSearchPro
 
   return (
     <div className="full-search" ref={setElement}>
-      <header>
-        <InputSubmitCombo css={{padding: '0 16px', marginBottom: '20px'}}>
-          <SearchIcon />
-
-          <Input
-            wrapperCSS={{marginBottom: 0, width: '100%', '> div': {width: '100%'}}}
-            type="text"
-            value={searchValue}
-            ref={inputRef}
-            aria-label={t('fullsearchPlaceholder')}
-            placeholder={t('fullsearchPlaceholder')}
-            onChange={event => setSearchValue(event.currentTarget.value)}
-            data-uie-name="full-search-header-input"
-          />
-
-          {searchValue && (
-            <CloseIcon
-              css={{cursor: 'pointer'}}
-              data-uie-name="full-search-dismiss"
-              aria-label={t('fullsearchCancelCloseBtn')}
-              onClick={() => setSearchValue('')}
-            />
-          )}
-        </InputSubmitCombo>
+      <header css={{padding: '0 16px', marginBottom: '20px'}}>
+        <SearchInput
+          ref={inputRef}
+          input={searchValue}
+          setInput={setSearchValue}
+          placeholder={t('fullsearchPlaceholder')}
+          data-uie-name="full-search-header-input"
+        />
       </header>
 
       {hasNoResults && (

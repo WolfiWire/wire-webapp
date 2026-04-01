@@ -136,7 +136,7 @@ export const styles: {
       input: {
         border: '1px solid var(--wire-border-default)',
         borderRadius: '12px',
-        background: 'var(--wire-background-surface)',
+        background: 'var(--wire-background-elevated)',
       },
 
       'button.epr-btn:hover': {

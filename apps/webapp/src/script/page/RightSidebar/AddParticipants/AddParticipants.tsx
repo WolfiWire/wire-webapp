@@ -208,12 +208,14 @@ const AddParticipants: FC<AddParticipantsProps> = ({
       />
 
       <div className="panel__content panel__content--fill">
-        <SearchInput
-          input={searchInput}
-          setInput={onSearchInput}
-          selectedUsers={selectedContacts}
-          placeholder={t('addParticipantsSearchPlaceholder')}
-        />
+        <div style={{padding: '0 16px'}}>
+          <SearchInput
+            input={searchInput}
+            setInput={onSearchInput}
+            selectedUsers={selectedContacts}
+            placeholder={t('addParticipantsSearchPlaceholder')}
+          />
+        </div>
 
         {showIntegrations && (
           <div className="panel__tabs">

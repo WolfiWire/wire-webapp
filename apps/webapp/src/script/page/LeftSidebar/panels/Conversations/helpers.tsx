@@ -21,7 +21,7 @@ import {Conversation} from 'Repositories/entity/Conversation';
 import {t} from 'Util/LocalizerUtil';
 import {replaceAccents} from 'Util/StringUtil';
 
-import {ConversationFilter, SidebarTabs} from './useSidebarStore';
+import {ConversationFilter, ConversationViewFilter, SidebarTabs} from './useSidebarStore';
 
 interface GetTabConversationsProps {
   currentTab: SidebarTabs;
@@ -199,6 +199,67 @@ export const scrollToConversation = (conversationId: string) => {
 
   if (!isVisible) {
     element.scrollIntoView({behavior: 'instant', block: 'center', inline: 'nearest'});
+  }
+};
+
+export interface SectionData {
+  favoriteConversations: Conversation[];
+  groupConversations: Conversation[];
+  channelConversations: Conversation[];
+  directConversations: Conversation[];
+  draftConversations: Conversation[];
+  archivedConversations: Conversation[];
+  folders: Array<{id: string; name: string; conversations: Conversation[]}>;
+}
+
+export const conversationViewFilterOrder: ConversationViewFilter[] = [
+  ConversationViewFilter.FAVORITES,
+  ConversationViewFilter.UNREADS,
+  ConversationViewFilter.DIRECTS,
+  ConversationViewFilter.CHANNELS,
+  ConversationViewFilter.GROUPS,
+  ConversationViewFilter.MENTIONS,
+  ConversationViewFilter.DRAFTS,
+  ConversationViewFilter.FOLDERS,
+];
+
+export const sectionFilterLabels: Record<ConversationViewFilter, string> = {
+  [ConversationViewFilter.FAVORITES]: 'Favorites',
+  [ConversationViewFilter.UNREADS]: 'Unread',
+  [ConversationViewFilter.DIRECTS]: '1:1 Conversations',
+  [ConversationViewFilter.CHANNELS]: 'Channels',
+  [ConversationViewFilter.GROUPS]: 'Groups',
+  [ConversationViewFilter.MENTIONS]: 'Mentions',
+  [ConversationViewFilter.DRAFTS]: 'Drafts',
+  [ConversationViewFilter.FOLDERS]: 'Folders',
+};
+
+export const getSectionConversations = (
+  filter: ConversationViewFilter,
+  sectionData: SectionData,
+  allConversations: Conversation[],
+): Conversation[] => {
+  const notArchived = (c: Conversation) => !sectionData.archivedConversations.includes(c);
+
+  switch (filter) {
+    case ConversationViewFilter.FAVORITES:
+      return sectionData.favoriteConversations;
+    case ConversationViewFilter.UNREADS:
+      return allConversations.filter(c => c.hasUnread());
+    case ConversationViewFilter.DIRECTS:
+      return sectionData.directConversations.filter(notArchived);
+    case ConversationViewFilter.CHANNELS:
+      return sectionData.channelConversations.filter(notArchived);
+    case ConversationViewFilter.GROUPS:
+      return sectionData.groupConversations.filter(notArchived);
+    case ConversationViewFilter.MENTIONS:
+      return allConversations.filter(c => c.unreadState().selfMentions.length > 0);
+    case ConversationViewFilter.DRAFTS:
+      return sectionData.draftConversations;
+    case ConversationViewFilter.FOLDERS:
+      return []; // folders are expanded as individual sections
+    default:
+      return [];
   }
 };
 

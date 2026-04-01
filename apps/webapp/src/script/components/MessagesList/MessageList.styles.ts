@@ -22,6 +22,7 @@ import {CSSObject} from '@emotion/react';
 export const jumpToLastMessageButtonStyles: CSSObject = {
   position: 'sticky',
   right: '10px',
+  width: '40px',
   height: '40px',
   borderRadius: '100%',
   bottom: '10px',
@@ -29,6 +30,9 @@ export const jumpToLastMessageButtonStyles: CSSObject = {
   marginTop: '-40px',
   marginBottom: 0,
   zIndex: 1,
+  backgroundColor: 'var(--wire-background-elevated)',
+  boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
+  border: '1px solid var(--wire-border-default)',
 };
 
 export const jumpToLastMessageChevronStyles: CSSObject = {

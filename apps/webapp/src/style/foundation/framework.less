@@ -23,7 +23,7 @@
 
   display: flex;
   min-width: var(--screen-sm-min);
-  background-color: var(--wire-background-surface);
+  background-color: var(--wire-background-canvas);
   transition: filter 0.3s;
 
   .left-column {
@@ -32,7 +32,7 @@
     min-width: var(--conversation-list-width);
     flex: 0 0 auto;
     border-right: 1px solid var(--wire-border-default);
-    background-color: var(--wire-background-surface);
+    background-color: var(--wire-background-canvas);
     color: var(--wire-content-primary);
     fill: var(--wire-content-primary);
 
@@ -57,6 +57,7 @@
     flex: 1 1 auto;
     overflow-x: hidden;
     overflow-y: auto;
+    background-color: var(--wire-background-surface);
 
     &__overlay {
       position: absolute;
@@ -103,7 +104,7 @@
     height: 100vh;
     max-height: 100%;
     border-left: 1px solid var(--wire-border-default);
-    background-color: var(--wire-background-container);
+    background-color: var(--wire-background-surface);
     transform: scale(1, 1);
 
     .center-column__overlay {

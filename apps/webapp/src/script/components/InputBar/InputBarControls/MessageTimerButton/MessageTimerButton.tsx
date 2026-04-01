@@ -23,6 +23,7 @@ import cx from 'classnames';
 import {container} from 'tsyringe';
 
 import * as Icon from 'Components/Icon';
+import {IconButton} from 'Components/IconButton';
 import {Conversation} from 'Repositories/entity/Conversation';
 import {TeamState} from 'Repositories/team/TeamState';
 import {EphemeralTimings} from 'src/script/ephemeral/EphemeralTimings';
@@ -68,8 +69,7 @@ const MessageTimerButton = ({conversation, teamState = container.resolve(TeamSta
       }),
     );
 
-  // Click on ephemeral button
-  const onClick = (event: MouseEvent<HTMLSpanElement>): void => {
+  const onClick = (event: MouseEvent<HTMLButtonElement>): void => {
     const entries = setEntries();
     showContextMenu({event, entries, identifier: 'message-timer-menu'});
   };
@@ -87,16 +87,16 @@ const MessageTimerButton = ({conversation, teamState = container.resolve(TeamSta
   };
 
   return (
-    <button
+    <IconButton
       id="conversation-input-bar-message-timer"
-      className="input-bar-control conversation-input-bar-message-timer"
+      className="conversation-input-bar-message-timer"
+      active={hasMessageTimer}
       onClick={isTimerDisabled ? undefined : onClick}
       onKeyDown={handleContextKeyDown}
       title={t('tooltipConversationEphemeral')}
       disabled={isTimerDisabled}
       data-uie-value={isTimerDisabled ? 'disabled' : 'enabled'}
       data-uie-name="do-set-ephemeral-timer"
-      type="button"
     >
       {hasMessageTimer ? (
         conversation && (
@@ -120,7 +120,7 @@ const MessageTimerButton = ({conversation, teamState = container.resolve(TeamSta
           <Icon.TimerIcon data-uie-name="message-timer-icon" width={14} height={14} />
         </span>
       )}
-    </button>
+    </IconButton>
   );
 };
 

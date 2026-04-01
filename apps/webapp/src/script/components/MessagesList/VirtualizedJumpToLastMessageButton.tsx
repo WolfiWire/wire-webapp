@@ -17,8 +17,9 @@
  *
  */
 
-import {ChevronIcon, IconButton} from '@wireapp/react-ui-kit';
+import {ChevronIcon} from '@wireapp/react-ui-kit';
 
+import {IconButton} from 'Components/IconButton';
 import {
   jumpToLastMessageButtonStyles,
   jumpToLastMessageChevronStyles,

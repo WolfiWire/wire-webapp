@@ -22,7 +22,9 @@ import {useContext, useEffect, useRef} from 'react';
 import is from '@sindresorhus/is';
 import {container} from 'tsyringe';
 
-import {Button, ButtonVariant, IconButton, IconButtonVariant, useMatchMedia} from '@wireapp/react-ui-kit';
+import {Button, ButtonVariant, useMatchMedia} from '@wireapp/react-ui-kit';
+
+import {IconButton} from 'Components/IconButton';
 
 import {Avatar, AVATAR_SIZE} from 'Components/Avatar';
 import {UserClassifiedBar} from 'Components/ClassifiedBar/ClassifiedBar';
@@ -120,9 +122,7 @@ export const ConnectRequests = ({
           {smBreakpoint && (
             <div css={{width: '100%'}}>
               <IconButton
-                variant={IconButtonVariant.SECONDARY}
                 className="connect-requests-icon-back icon-back"
-                css={{marginBottom: 0}}
                 onClick={() => setCurrentView(ViewType.MOBILE_LEFT_SIDEBAR)}
               />
             </div>

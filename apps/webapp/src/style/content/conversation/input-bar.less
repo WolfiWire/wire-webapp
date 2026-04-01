@@ -27,7 +27,7 @@
   margin: 0 16px 16px;
   border-radius: 16px;
   overflow: hidden;
-  background-color: var(--wire-background-surface);
+  background-color: var(--wire-background-elevated);
   border: 1px solid var(--wire-border-default);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
 
@@ -40,7 +40,7 @@
     display: flex;
     flex-wrap: wrap;
     padding-right: 8px;
-    background-color: var(--wire-background-surface);
+    background-color: var(--wire-background-elevated);
 
     &--editing,
     &--editing .editor-container {
@@ -559,136 +559,6 @@
   margin: 0;
   gap: 4px;
   list-style-type: none;
-}
-
-.input-bar-control {
-  display: flex;
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: none;
-  border-radius: 8px;
-  margin: 0;
-  background: none;
-  background-color: var(--wire-background-surface);
-  color: var(--wire-content-primary);
-
-  svg path {
-    fill: var(--wire-content-primary);
-  }
-
-  &:hover {
-    border-color: var(--wire-border-default);
-    background-color: var(--wire-background-container);
-  }
-
-  &--editing {
-    background-color: transparent;
-
-    &:hover {
-      background-color: var(--accent-color-100);
-    }
-  }
-
-  &:focus-visible {
-    background-color: var(--wire-background-container);
-  }
-
-  &.active {
-    border: 1px solid var(--accent-color-300);
-    background-color: var(--accent-color-50);
-    color: var(--accent-color);
-
-    body.theme-dark & {
-      border: 1px solid var(--accent-color-700);
-      background-color: var(--accent-color-800);
-      color: var(--white);
-    }
-  }
-
-  &--editing.active {
-    background-color: var(--accent-color-100);
-  }
-
-  body.theme-dark &--editing {
-    background-color: transparent;
-
-    &:focus-visible,
-    &:hover {
-      background-color: var(--accent-color-800);
-    }
-  }
-
-  @media (max-width: 768px) {
-    margin-bottom: 0px;
-  }
-
-  body.theme-dark &:focus-visible,
-  &:focus-visible {
-    border: 1px solid var(--accent-color-focus);
-    outline: none;
-  }
-
-  &.no-radius {
-    border-radius: 0;
-  }
-
-  &--send,
-  body.theme-dark &--send {
-    width: 40px;
-    height: 40px;
-    align-self: flex-end;
-    border: 0;
-    border-radius: 50%;
-    margin-bottom: 0;
-    margin-left: 10px;
-    background-color: var(--accent-color-500);
-    color: var(--white);
-
-    > svg {
-      margin-left: 4px;
-    }
-
-    > * {
-      display: flex;
-    }
-
-    &[disabled]:not([disabled='false']) {
-      background-color: var(--wire-background-disabled);
-      color: var(--wire-content-disabled);
-    }
-
-    &:hover {
-      background-color: var(--button-primary-hover);
-    }
-
-    &:focus-visible {
-      border: 1px solid var(--accent-color-800);
-      background-color: var(--button-primary-hover);
-      outline: 1px solid var(--accent-color-800);
-    }
-
-    &:active {
-      border: 1px solid var(--accent-color-focus);
-      background-color: var(--accent-color);
-    }
-
-    body.theme-dark & {
-      color: var(--black);
-
-      &[disabled]:not([disabled='false']) {
-        color: var(--black);
-      }
-
-      &:focus-visible {
-        border: 1px solid var(--accent-color-100);
-        outline: 1px solid var(--accent-color-100);
-      }
-    }
-  }
 }
 
 .input-bar-control-separator {

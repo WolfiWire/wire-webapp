@@ -19,32 +19,24 @@
 
 import type {MouseEvent} from 'react';
 
-import cx from 'classnames';
-
 import {EmojiIcon} from '@wireapp/react-ui-kit';
 
+import {IconButton} from 'Components/IconButton';
 import {t} from 'Util/LocalizerUtil';
 
 interface EmojiButtonProps {
   isActive: boolean;
-  isEditing?: boolean;
   onClick: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const EmojiButton = ({isActive, isEditing = false, onClick}: EmojiButtonProps) => {
-  return (
-    <button
-      className={cx('input-bar-control', {
-        active: isActive,
-        'input-bar-control--editing': isEditing,
-      })}
-      type="button"
-      onClick={onClick}
-      title={t('tooltipConversationEmoji')}
-      aria-label={t('tooltipConversationEmoji')}
-      data-uie-name="add-emoji"
-    >
-      <EmojiIcon width={14} height={14} />
-    </button>
-  );
-};
+export const EmojiButton = ({isActive, onClick}: EmojiButtonProps) => (
+  <IconButton
+    active={isActive}
+    onClick={onClick}
+    title={t('tooltipConversationEmoji')}
+    aria-label={t('tooltipConversationEmoji')}
+    data-uie-name="add-emoji"
+  >
+    <EmojiIcon width={14} height={14} />
+  </IconButton>
+);

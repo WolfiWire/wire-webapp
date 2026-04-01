@@ -19,7 +19,9 @@
 
 import {ReactNode} from 'react';
 
-import {CloseIcon, IconButton, IconButtonVariant} from '@wireapp/react-ui-kit';
+import {CloseIcon} from '@wireapp/react-ui-kit';
+
+import {IconButton} from 'Components/IconButton';
 
 import {t} from 'Util/LocalizerUtil';
 
@@ -39,7 +41,6 @@ export const CellsModalHeader = ({children}: CellsModalHeaderProps) => {
       <h3 css={headingStyles}>{children}</h3>
 
       <IconButton
-        variant={IconButtonVariant.SECONDARY}
         type="button"
         css={closeButtonStyles}
         onClick={onClose}

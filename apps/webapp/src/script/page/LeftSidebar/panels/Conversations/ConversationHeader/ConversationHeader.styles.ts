@@ -41,7 +41,7 @@ export const label: CSSObject = {
 
 export const button: CSSObject = {
   marginBottom: 0,
-  backgroundColor: 'var(--wire-background-surface)',
+  backgroundColor: 'var(--wire-background-elevated)',
   border: '1px solid var(--wire-border-default)',
   color: 'var(--wire-content-primary)',
   svg: {
@@ -55,30 +55,6 @@ export const button: CSSObject = {
   },
 };
 
-const commonIconStyles: CSSObject = {
-  top: '50%',
-  position: 'absolute',
-  transform: 'translateY(-50%)',
-};
-
-export const searchIconStyles: CSSObject = {
-  ...commonIconStyles,
-  left: 10,
-};
-
-export const closeIconStyles: CSSObject = {
-  ...commonIconStyles,
-  right: 10,
-};
-
-export const searchInputStyles: CSSObject = {
-  height: '32px',
-  borderRadius: 8,
-  paddingLeft: 36,
-};
-
 export const searchInputWrapperStyles: CSSObject = {
-  zIndex: 1,
-  position: 'relative',
   marginBlock: '4px 16px',
 };

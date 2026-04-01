@@ -23,7 +23,9 @@ import {amplify} from 'amplify';
 import cx from 'classnames';
 import {container} from 'tsyringe';
 
-import {CallIcon, IconButton, IconButtonVariant, QUERY, TabIndex, useMatchMedia} from '@wireapp/react-ui-kit';
+import {CallIcon, QUERY, TabIndex, useMatchMedia} from '@wireapp/react-ui-kit';
+
+import {IconButton} from 'Components/IconButton';
 import {WebAppEvents} from '@wireapp/webapp-events';
 
 import {ConversationVerificationBadges} from 'Components/Badge';
@@ -256,9 +258,7 @@ export const TitleBar = ({
       <li className="conversation-title-bar-library">
         {smBreakpoint && (
           <IconButton
-            variant={IconButtonVariant.SECONDARY}
             className="conversation-title-bar-icon icon-back"
-            css={{marginBottom: 0}}
             onClick={setLeftSidebar}
             aria-label={t('index.goBack')}
           />
@@ -339,7 +339,6 @@ export const TitleBar = ({
           <>
             <IconButton
               className="icon-search"
-              css={{marginBottom: 0}}
               title={t('tooltipConversationSearch')}
               aria-label={t('tooltipConversationSearch')}
               onClick={onClickCollectionButton}
@@ -351,7 +350,6 @@ export const TitleBar = ({
               <IconButton
                 title={t('tooltipConversationCall')}
                 aria-label={t('tooltipConversationCall')}
-                css={{marginBottom: 0}}
                 onClick={onClickStartAudio}
                 data-uie-name="do-call"
                 disabled={isCallButtonDisabled}

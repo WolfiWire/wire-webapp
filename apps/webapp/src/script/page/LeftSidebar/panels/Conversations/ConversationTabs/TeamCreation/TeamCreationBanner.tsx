@@ -21,7 +21,9 @@ import {useState} from 'react';
 
 import {amplify} from 'amplify';
 
-import {Button, ButtonVariant, IconButton} from '@wireapp/react-ui-kit';
+import {Button, ButtonVariant} from '@wireapp/react-ui-kit';
+
+import {IconButton} from 'Components/IconButton';
 import {WebAppEvents} from '@wireapp/webapp-events';
 
 import {BannerPortal} from 'Components/BannerPortal/BannerPortal';

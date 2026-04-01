@@ -19,26 +19,23 @@
 
 import {ElementType} from 'react';
 
-import cx from 'classnames';
+import {IconButton} from 'Components/IconButton';
 
 interface FormatButtonProps {
   label: string;
   icon: ElementType<any>;
   active: boolean;
   onClick: () => void;
-  isEditing: boolean;
 }
 
-export const FormatButton = ({label, icon: Icon, active, onClick, isEditing}: FormatButtonProps) => {
-  return (
-    <button
-      title={label}
-      aria-label={label}
-      className={cx('input-bar-control', {active, 'input-bar-control--editing': isEditing})}
-      onClick={onClick}
-      data-uie-name={`format-text-${label}`}
-    >
-      <Icon width={14} height={14} />
-    </button>
-  );
-};
+export const FormatButton = ({label, icon: Icon, active, onClick}: FormatButtonProps) => (
+  <IconButton
+    title={label}
+    aria-label={label}
+    active={active}
+    onClick={onClick}
+    data-uie-name={`format-text-${label}`}
+  >
+    <Icon width={14} height={14} />
+  </IconButton>
+);

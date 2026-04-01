@@ -56,7 +56,7 @@ import {ConversationSidebar} from './ConversationSidebar/ConversationSidebar';
 import {ConversationsList} from './ConversationsList';
 import {EmptyConversationList} from './EmptyConversationList';
 import {getGroupParticipantsConversations} from './getGroupParticipantsConversation';
-import {getTabConversations, scrollToConversation} from './helpers';
+import {getTabConversations, scrollToConversation, SectionData} from './helpers';
 import {useDraftConversations} from './hooks/useDraftConversations';
 import {useFolderStore} from './useFoldersStore';
 import {SidebarStatus, SidebarTabs, useSidebarStore} from './useSidebarStore';
@@ -202,6 +202,33 @@ export const Conversations = ({
   const currentFolder = labels
     .map(label => createLabel(label.name, conversationLabelRepository.getLabelConversations(label), label.id))
     .find(folder => folder.id === expandedFolder);
+
+  const sectionData: SectionData = useMemo(
+    () => ({
+      favoriteConversations,
+      groupConversations,
+      channelConversations,
+      directConversations,
+      draftConversations,
+      archivedConversations,
+      folders: labels.map(label => ({
+        id: label.id ?? '',
+        name: label.name,
+        conversations: conversationLabelRepository.getLabelConversations(label, conversations),
+      })),
+    }),
+    [
+      favoriteConversations,
+      groupConversations,
+      channelConversations,
+      directConversations,
+      draftConversations,
+      archivedConversations,
+      labels,
+      conversations,
+      conversationLabelRepository,
+    ],
+  );
 
   const groupParticipantsConversations = getGroupParticipantsConversations({
     currentTab,
@@ -461,6 +488,7 @@ export const Conversations = ({
                 groupParticipantsConversations={groupParticipantsConversations}
                 isGroupParticipantsVisible={isGroupParticipantsVisible}
                 searchInputRef={searchInputRef}
+                sectionData={sectionData}
               />
             )}
           </>

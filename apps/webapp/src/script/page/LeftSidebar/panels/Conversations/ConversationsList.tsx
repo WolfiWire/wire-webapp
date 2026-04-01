@@ -40,7 +40,7 @@ import {ConversationLabel, ConversationLabelRepository} from 'Repositories/conve
 import {ConversationState} from 'Repositories/conversation/ConversationState';
 import {Conversation} from 'Repositories/entity/Conversation';
 import {User} from 'Repositories/entity/User';
-import {SidebarTabs, useSidebarStore} from 'src/script/page/LeftSidebar/panels/Conversations/useSidebarStore';
+import {SidebarTabs, ConversationViewFilter, useSidebarStore} from 'src/script/page/LeftSidebar/panels/Conversations/useSidebarStore';
 import {useKoSubscribableChildren} from 'Util/ComponentUtil';
 import {isKeyboardEvent} from 'Util/KeyboardUtil';
 import {t} from 'Util/LocalizerUtil';
@@ -48,8 +48,16 @@ import {matchQualifiedIds} from 'Util/QualifiedId';
 import {isConversationEntity} from 'Util/TypePredicateUtil';
 
 import {ConnectionRequests} from './ConnectionRequests';
+import {ConversationSection} from './ConversationSection/ConversationSection';
 import {conversationsList, headingTitle, noResultsMessage, virtualizationStyles} from './ConversationsList.styles';
-import {conversationSearchFilter, getConversationsWithHeadings} from './helpers';
+import {
+  conversationSearchFilter,
+  conversationViewFilterOrder,
+  getConversationsWithHeadings,
+  getSectionConversations,
+  SectionData,
+  sectionFilterLabels,
+} from './helpers';
 
 import {generateConversationUrl} from '../../../../router/routeGenerator';
 import {createNavigate, createNavigateKeyboard} from '../../../../router/routerBindings';
@@ -74,6 +82,7 @@ interface ConversationsListProps {
   isGroupParticipantsVisible: boolean;
   isEmpty: boolean;
   searchInputRef: MutableRefObject<HTMLInputElement | null>;
+  sectionData?: SectionData;
 }
 
 export const ConversationsList = ({
@@ -92,9 +101,10 @@ export const ConversationsList = ({
   isGroupParticipantsVisible,
   isEmpty,
   searchInputRef,
+  sectionData,
 }: ConversationsListProps) => {
   const {setCurrentView} = useAppMainState(state => state.responsiveView);
-  const {currentTab} = useSidebarStore();
+  const {currentTab, activeFilters} = useSidebarStore();
 
   const [clickedFilteredConversationId, setClickedFilteredConversationId] = useState<string | null>(null);
 
@@ -170,7 +180,7 @@ export const ConversationsList = ({
       clearSearchFilter();
       setClickedFilteredConversationId(conversation.id);
     },
-    TimeInMillis.SECOND / 2, // Adjust debounce delay as needed
+    TimeInMillis.SECOND / 2,
     {leading: true},
   );
 
@@ -211,6 +221,61 @@ export const ConversationsList = ({
     }
   }, [conversationsFilter, clickedFilteredConversationId, conversationsToDisplay]);
 
+  const isFilterView = activeFilters.length > 0 && currentTab === SidebarTabs.RECENT && !!sectionData;
+
+  const renderConversationCell = (conversation: Conversation, index: number) => (
+    <ConversationListCell key={conversation.id} {...getCommonConversationCellProps(conversation, index)} />
+  );
+
+  if (isFilterView && sectionData) {
+    const searchFilter = conversationsFilter ? conversationSearchFilter(conversationsFilter) : () => true;
+
+    // Build all sections to render
+    const sections: Array<{key: string; title: string; conversations: Conversation[]}> = [];
+
+    for (const filter of conversationViewFilterOrder.filter(f => activeFilters.includes(f))) {
+      if (filter === ConversationViewFilter.FOLDERS) {
+        for (const folder of sectionData.folders) {
+          const folderConvs = folder.conversations.filter(searchFilter);
+          sections.push({
+            key: `folder-${folder.id}`,
+            title: folder.name,
+            conversations: folderConvs,
+          });
+        }
+      } else {
+        const sectionConvs = getSectionConversations(filter, sectionData, conversations).filter(searchFilter);
+        sections.push({
+          key: filter,
+          title: sectionFilterLabels[filter],
+          conversations: sectionConvs,
+        });
+      }
+    }
+
+    return (
+      <>
+        <h2 className="visually-hidden">{t('conversationViewTooltip')}</h2>
+
+        <ConnectionRequests connectionRequests={connectRequests} onConnectionRequestClick={onConnectionRequestClick} />
+
+        <div css={conversationsList} style={{height: '100%', overflow: 'auto', paddingTop: '8px'}}>
+          {sections.map((section, idx) => (
+            <ConversationSection
+              key={section.key}
+              sectionKey={section.key}
+              title={section.title}
+              conversations={section.conversations}
+              unreadCount={section.conversations.filter(c => c.hasUnread()).length}
+              renderConversation={renderConversationCell}
+              isLast={idx === sections.length - 1}
+            />
+          ))}
+        </div>
+      </>
+    );
+  }
+
   return (
     <>
       <h2 className="visually-hidden">{t('conversationViewTooltip')}</h2>
@@ -240,8 +305,6 @@ export const ConversationsList = ({
           {rowVirtualizer.getVirtualItems().map(virtualItem => {
             const conversation = conversationsToDisplay[virtualItem.index];
 
-            // Have to use some hacky way to display properly heading while filtering conversations, can be improved
-            // in the future
             const isHeading = 'isHeader' in conversation && 'heading' in conversation;
 
             if (!isConversationEntity(conversation) && conversationsFilter && !isEmpty && isHeading) {

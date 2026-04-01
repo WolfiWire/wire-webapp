@@ -46,11 +46,11 @@ export const messageReactionWrapper: CSSObject = {
   flexWrap: 'wrap',
   maxWidth: '100%',
   '.tooltip-content': {
-    backgroundColor: 'var(--wire-background-surface) !important',
+    backgroundColor: 'var(--wire-background-elevated) !important',
     marginBottom: '0.5rem !important',
     padding: '6px 8px !important',
     '.tooltip-arrow': {
-      borderTopColor: 'var(--wire-background-surface) !important',
+      borderTopColor: 'var(--wire-background-elevated) !important',
       filter: 'none !important',
     },
   },

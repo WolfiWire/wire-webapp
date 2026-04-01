@@ -19,7 +19,9 @@
 
 import {useCallback} from 'react';
 
-import {FlexBox, IconButton} from '@wireapp/react-ui-kit';
+import {FlexBox} from '@wireapp/react-ui-kit';
+
+import {IconButton} from 'Components/IconButton';
 
 import * as Icon from 'Components/Icon';
 import {t} from 'Util/LocalizerUtil';

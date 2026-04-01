@@ -42,6 +42,17 @@ export enum ConversationFilter {
   PINGS = 'PINGS',
 }
 
+export enum ConversationViewFilter {
+  FAVORITES = 'FAVORITES',
+  UNREADS = 'UNREADS',
+  DIRECTS = 'DIRECTS',
+  CHANNELS = 'CHANNELS',
+  GROUPS = 'GROUPS',
+  MENTIONS = 'MENTIONS',
+  DRAFTS = 'DRAFTS',
+  FOLDERS = 'FOLDERS',
+}
+
 export const SidebarStatus = {
   OPEN: 'OPEN',
   CLOSED: 'CLOSED',
@@ -56,6 +67,11 @@ export interface SidebarStore {
   setCurrentTab: (tab: SidebarTabs) => void;
   conversationFilter: ConversationFilter;
   setConversationFilter: (filter: ConversationFilter) => void;
+  activeFilters: ConversationViewFilter[];
+  toggleViewFilter: (filter: ConversationViewFilter) => void;
+  clearViewFilters: () => void;
+  collapsedSections: string[];
+  toggleSection: (key: string) => void;
 }
 
 const useSidebarStore = create<SidebarStore>()(
@@ -69,16 +85,43 @@ const useSidebarStore = create<SidebarStore>()(
       setStatus: status => set({status: status}),
       conversationFilter: ConversationFilter.NONE,
       setConversationFilter: (filter: ConversationFilter) => set({conversationFilter: filter}),
+      activeFilters: [ConversationViewFilter.GROUPS, ConversationViewFilter.CHANNELS, ConversationViewFilter.DIRECTS],
+      toggleViewFilter: (filter: ConversationViewFilter) =>
+        set(state => ({
+          activeFilters: state.activeFilters.includes(filter)
+            ? state.activeFilters.filter(f => f !== filter)
+            : [...state.activeFilters, filter],
+        })),
+      clearViewFilters: () => set({activeFilters: []}),
+      collapsedSections: [] as string[],
+      toggleSection: (key: string) =>
+        set(state => ({
+          collapsedSections: state.collapsedSections.includes(key)
+            ? state.collapsedSections.filter(k => k !== key)
+            : [...state.collapsedSections, key],
+        })),
     }),
     {
       name: 'sidebar-store',
       storage: createJSONStorage(() => localStorage),
       partialize: state => ({
         status: state.status,
-        currentTab: [SidebarTabs.PREFERENCES, SidebarTabs.CONNECT, SidebarTabs.CELLS].includes(state.currentTab)
+        currentTab: [
+          SidebarTabs.PREFERENCES,
+          SidebarTabs.CONNECT,
+          SidebarTabs.CELLS,
+          SidebarTabs.FAVORITES,
+          SidebarTabs.GROUPS,
+          SidebarTabs.CHANNELS,
+          SidebarTabs.DIRECTS,
+          SidebarTabs.FOLDER,
+          SidebarTabs.ARCHIVES,
+        ].includes(state.currentTab)
           ? SidebarTabs.RECENT
           : state.currentTab,
         conversationFilter: state.conversationFilter,
+        activeFilters: state.activeFilters,
+        collapsedSections: state.collapsedSections,
       }),
     },
   ),

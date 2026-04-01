@@ -28,17 +28,17 @@
 //   - Mode 1.tokens.json
 //
 // Gray CSS variable mapping (names match palette steps exactly):
-//   Gray/50  → var(--gray-50)   = #F5F6FA
-//   Gray/100 → var(--gray-100)  = #EDEEF3
-//   Gray/200 → var(--gray-200)  = #DDDFE4
-//   Gray/300 → var(--gray-300)  = #C5C7CE
-//   Gray/400 → var(--gray-400)  = #A4A6AD
-//   Gray/500 → var(--gray-500)  = #82858C
-//   Gray/600 → var(--gray-600)  = #64676D
-//   Gray/700 → var(--gray-700)  = #4B4D53
-//   Gray/800 → var(--gray-800)  = #323439
-//   Gray/900 → var(--gray-900)  = #212226
-//   Gray/950 → var(--gray-950)  = #151619
+//   Gray/50  → var(--gray-50)   = #FAFAFA
+//   Gray/100 → var(--gray-100)  = #F2F2F2
+//   Gray/200 → var(--gray-200)  = #E2E2E2
+//   Gray/300 → var(--gray-300)  = #CECECE
+//   Gray/400 → var(--gray-400)  = #AEAEAE
+//   Gray/500 → var(--gray-500)  = #8B8B8B
+//   Gray/600 → var(--gray-600)  = #6A6A6A
+//   Gray/700 → var(--gray-700)  = #4E4E4E
+//   Gray/800 → var(--gray-800)  = #383838
+//   Gray/900 → var(--gray-900)  = #262626
+//   Gray/950 → var(--gray-950)  = #141414
 //
 // Token naming convention:
 //   Semantic tokens:  --wire-{background|content|border}-{name}
@@ -55,22 +55,22 @@ body.theme-default {
   // =========================================================================
 
   // ---- Surfaces -----------------------------------------------------------
-  --wire-background-canvas:              var(--gray-50);            // Gray/50   #F8F9FA — page bg
-  --wire-background-container:           var(--gray-100);           // Gray/100  #F1F3F5 — sidebars, panels
+  --wire-background-canvas:              var(--gray-50);            // Gray/50   #FAFAFA — page bg
+  --wire-background-container:           var(--white);              // White     #FFFFFF — sidebars, panels
   --wire-background-elevated:            var(--white);              // White     #FFFFFF — menus, popovers
-  --wire-background-surface:             var(--white);              // White     #FFFFFF — content areas
-  --wire-background-overlay:             var(--gray-50);            // Gray/50   #F8F9FA
-  --wire-background-inverse:             var(--gray-950);           // Gray/950  #1B242C
+  --wire-background-surface:             var(--gray-50);            // Gray/50   #FAFAFA — content areas
+  --wire-background-overlay:             var(--gray-50);            // Gray/50   #FAFAFA
+  --wire-background-inverse:             var(--gray-950);           // Gray/950  #141414
 
   // ---- Status backgrounds -------------------------------------------------
   --wire-background-accent:              var(--accent-color);       // Accent/500
-  --wire-background-accent-subtle:       var(--accent-color-50);    // Accent/050
+  --wire-background-accent-subtle:       var(--accent-color-200);   // Accent/200 #BFD6FF
   --wire-background-danger:              var(--red-500);            // Red/500   #D73845
-  --wire-background-danger-subtle:       var(--red-50);             // Red/050   #FEF2F3
+  --wire-background-danger-subtle:       var(--red-100);            // Red/100   #FDE6E8
   --wire-background-success:             var(--green-500);          // Green/500 #2FAE7A
-  --wire-background-success-subtle:      var(--green-50);           // Green/050 #F1FBF7
+  --wire-background-success-subtle:      var(--green-100);          // Green/100 #E3F6ED
   --wire-background-warning:             var(--amber-500);          // Amber/500 #E6A11F
-  --wire-background-warning-subtle:      var(--amber-50);           // Amber/050 #FFF8EC
+  --wire-background-warning-subtle:      var(--amber-100);          // Amber/100 #FFF1D6
   --wire-background-disabled:            var(--gray-200);           // Gray/200  #E1E5E9
 
   // ---- Interaction overlays (semi-transparent) ----------------------------
@@ -83,38 +83,38 @@ body.theme-default {
   --wire-background-backdrop:            fade(#000, 50%);           // Black 50%
 
   // ---- Bubbles ------------------------------------------------------------
-  --wire-background-bubble-own:          var(--accent-color);       // Accent/500
-  --wire-background-bubble-own-active:   var(--accent-color-700);   // Accent/700
+  --wire-background-bubble-own:          var(--accent-color);       // Accent/500 #1F63E9
+  --wire-background-bubble-own-secondary:var(--accent-color-700);   // Accent/700 #1648D6
   --wire-background-bubble-other:        var(--white);              // White
 
   // ---- Content (text / icon) ----------------------------------------------
   --wire-content-primary:                var(--black);              // Black
-  --wire-content-secondary:              var(--gray-600);           // Gray/600  #6B7785
-  --wire-content-tertiary:               var(--gray-400);           // Gray/400  #AAB4BE
-  --wire-content-accent:                 var(--accent-color);       // Accent/500
+  --wire-content-secondary:              var(--gray-600);           // Gray/600  #6A6A6A
+  --wire-content-tertiary:               var(--gray-400);           // Gray/400  #AEAEAE
+  --wire-content-accent:                 var(--accent-color-600);   // Accent/600 #1A57FF
   --wire-content-on-accent:              var(--white);              // White
-  --wire-content-on-accent-subtle:       var(--accent-color-700);   // Accent/700
+  --wire-content-on-accent-subtle:       var(--accent-color-800);   // Accent/800 #1137A8
   --wire-content-on-bubble-own:          var(--white);              // White
   --wire-content-on-bubble-own-secondary:var(--accent-color-100);   // Accent/100
-  --wire-content-on-bubble-other:        var(--gray-950);           // Gray/950  #1B242C
-  --wire-content-danger:                 var(--red-500);            // Red/500
+  --wire-content-on-bubble-other:        var(--gray-950);           // Gray/950  #141414
+  --wire-content-danger:                 var(--red-600);            // Red/600   #B82C38
   --wire-content-on-danger:              var(--white);              // White
   --wire-content-on-danger-subtle:       var(--red-700);            // Red/700   #96242E
-  --wire-content-success:                var(--green-500);          // Green/500
+  --wire-content-success:                var(--green-600);          // Green/600 #258E64
   --wire-content-on-success:             var(--white);              // White
   --wire-content-on-success-subtle:      var(--green-700);          // Green/700 #1E7251
-  --wire-content-warning:                var(--amber-500);          // Amber/500
+  --wire-content-warning:                var(--amber-600);          // Amber/600 #C88417
   --wire-content-on-warning:             var(--white);              // White
   --wire-content-on-warning-subtle:      var(--amber-700);          // Amber/700 #A66A12
-  --wire-content-disabled:               var(--gray-600);           // Gray/600  #6B7785
-  --wire-content-on-disabled:            var(--gray-700);           // Gray/700  #525F6B
+  --wire-content-disabled:               var(--gray-600);           // Gray/600  #6A6A6A
+  --wire-content-on-disabled:            var(--gray-700);           // Gray/700  #4E4E4E
   --wire-content-inverse:                var(--white);              // White
 
   // ---- Borders ------------------------------------------------------------
-  --wire-border-default:                 var(--gray-200);           // Gray/200  #E1E5E9
-  --wire-border-subtle:                  var(--gray-100);           // Gray/100  #F1F3F5
-  --wire-border-strong:                  var(--gray-400);           // Gray/400  #AAB4BE
-  --wire-border-disabled:                var(--gray-300);           // Gray/300  #CCD3D9
+  --wire-border-default:                 var(--gray-200);           // Gray/200  #E2E2E2
+  --wire-border-subtle:                  fade(#000, 5%);            // Black/5 alpha #0000000D
+  --wire-border-strong:                  var(--gray-400);           // Gray/400  #AEAEAE
+  --wire-border-disabled:                var(--gray-300);           // Gray/300  #CECECE
   --wire-border-accent:                  var(--accent-color);       // Accent/500
   --wire-border-accent-subtle:           var(--accent-color-100);   // Accent/100
   --wire-border-focus:                   var(--accent-color-300);   // Accent/300
@@ -131,13 +131,6 @@ body.theme-default {
   // =========================================================================
 
   --dropdown-menu-bg:                        var(--wire-background-elevated);
-
-  --icon-button-primary-enabled-bg:          var(--wire-background-surface);
-  --icon-button-primary-border:              var(--wire-border-default);
-  --icon-button-primary-hover-bg:            var(--wire-background-container);
-  --icon-button-primary-hover-border:        var(--wire-border-default);
-  --icon-button-primary-disabled-bg:         var(--wire-background-disabled);
-  --icon-button-primary-disabled-border:     transparent;
 }
 
 // ===========================================================================
@@ -150,23 +143,23 @@ body.theme-dark {
   // =========================================================================
 
   // ---- Surfaces -----------------------------------------------------------
-  --wire-background-canvas:              var(--gray-950);           // Gray/950  #1B242C — page bg
-  --wire-background-container:           var(--gray-950);           // Gray/950  #1B242C — sidebars, panels
-  --wire-background-elevated:            var(--gray-800);           // Gray/800  #3E4954 — menus, popovers
-  --wire-background-surface:             var(--gray-900);           // Gray/900  #2C363F — content areas
-  --wire-background-overlay:             var(--gray-950);           // Gray/950  #1B242C
+  --wire-background-canvas:              var(--gray-950);           // Gray/950  #141414 — page bg
+  --wire-background-container:           var(--gray-950);           // Gray/950  #141414 — sidebars, panels
+  --wire-background-elevated:            var(--gray-900);           // Gray/900  #262626 — menus, popovers
+  --wire-background-surface:             var(--gray-950);           // Gray/950  #141414 — content areas
+  --wire-background-overlay:             var(--gray-950);           // Gray/950  #141414
   --wire-background-inverse:             var(--white);              // White     #FFFFFF
 
   // ---- Status backgrounds -------------------------------------------------
   --wire-background-accent:              var(--accent-color);       // Accent/500
-  --wire-background-accent-subtle:       var(--accent-color-700);   // Accent/700
+  --wire-background-accent-subtle:       var(--accent-color-600);   // Accent/600 #1A57FF
   --wire-background-danger:              var(--red-500);            // Red/500
   --wire-background-danger-subtle:       var(--red-700);            // Red/700   #96242E
   --wire-background-success:             var(--green-500);          // Green/500
   --wire-background-success-subtle:      var(--green-700);          // Green/700 #1E7251
   --wire-background-warning:             var(--amber-500);          // Amber/500
   --wire-background-warning-subtle:      var(--amber-700);          // Amber/700 #A66A12
-  --wire-background-disabled:            var(--gray-500);           // Gray/500  #8A96A3
+  --wire-background-disabled:            var(--gray-800);           // Gray/800  #383838
 
   // ---- Interaction overlays (semi-transparent) ----------------------------
   --wire-background-hover-subtle:        fade(#fff, 10%);           // White 10%
@@ -178,17 +171,17 @@ body.theme-dark {
   --wire-background-backdrop:            fade(#000, 50%);           // Black 50%
 
   // ---- Bubbles ------------------------------------------------------------
-  --wire-background-bubble-own:          var(--accent-color-700);   // Accent/700
-  --wire-background-bubble-own-active:   var(--accent-color-600);   // Accent/600
-  --wire-background-bubble-other:        var(--gray-900);           // Gray/900  #2C363F
+  --wire-background-bubble-own:          var(--accent-color-700);   // Accent/700 #1648D6
+  --wire-background-bubble-own-secondary:var(--accent-color-600);   // Accent/600 #1A57FF
+  --wire-background-bubble-other:        var(--gray-900);           // Gray/900  #262626
 
   // ---- Content (text / icon) ----------------------------------------------
   --wire-content-primary:                var(--white);              // White
-  --wire-content-secondary:              var(--gray-300);           // Gray/300  #CCD3D9
-  --wire-content-tertiary:               var(--gray-500);           // Gray/500  #8A96A3
-  --wire-content-accent:                 var(--accent-color-400);   // Accent/400
+  --wire-content-secondary:              var(--gray-400);           // Gray/400  #AEAEAE
+  --wire-content-tertiary:               var(--gray-500);           // Gray/500  #8B8B8B
+  --wire-content-accent:                 var(--accent-color-400);   // Accent/400 #5FA0FF
   --wire-content-on-accent:              var(--black);              // Black
-  --wire-content-on-accent-subtle:       var(--accent-color-300);   // Accent/300
+  --wire-content-on-accent-subtle:       var(--accent-color-100);   // Accent/100 #E0EBFF
   --wire-content-on-bubble-own:          var(--white);              // White
   --wire-content-on-bubble-own-secondary:var(--white);              // White
   --wire-content-on-bubble-other:        var(--white);              // White
@@ -201,16 +194,16 @@ body.theme-dark {
   --wire-content-warning:                var(--amber-300);          // Amber/300 #FFD070
   --wire-content-on-warning:             var(--black);              // Black
   --wire-content-on-warning-subtle:      var(--amber-300);          // Amber/300 #FFD070
-  --wire-content-disabled:               var(--gray-500);           // Gray/500  #8A96A3
-  --wire-content-on-disabled:            var(--gray-500);           // Gray/500  #8A96A3
+  --wire-content-disabled:               var(--gray-500);           // Gray/500  #8B8B8B
+  --wire-content-on-disabled:            var(--gray-500);           // Gray/500  #8B8B8B
   --wire-content-inverse:                var(--black);              // Black
 
   // ---- Borders ------------------------------------------------------------
-  --wire-border-default:                 var(--gray-800);           // Gray/800  #3E4954
-  --wire-border-subtle:                  var(--gray-900);           // Gray/900  #2C363F
-  --wire-border-strong:                  var(--gray-600);           // Gray/600  #6B7785
-  --wire-border-disabled:                var(--gray-800);           // Gray/800  #3E4954
-  --wire-border-accent:                  var(--accent-color-400);   // Accent/400
+  --wire-border-default:                 var(--gray-800);           // Gray/800  #383838
+  --wire-border-subtle:                  fade(#fff, 5%);            // White/5 alpha #FFFFFF0D
+  --wire-border-strong:                  var(--gray-600);           // Gray/600  #6A6A6A
+  --wire-border-disabled:                var(--gray-800);           // Gray/800  #383838
+  --wire-border-accent:                  var(--accent-color-400);   // Accent/400 #5FA0FF
   --wire-border-accent-subtle:           var(--accent-color-600);   // Accent/600
   --wire-border-focus:                   var(--accent-color-200);   // Accent/200
   --wire-border-danger:                  var(--red-300);            // Red/300   #EF8F96
@@ -219,7 +212,7 @@ body.theme-dark {
   --wire-border-success-subtle:          var(--green-500);          // Green/500 #2FAE7A
   --wire-border-warning:                 var(--amber-300);          // Amber/300 #FFD070
   --wire-border-warning-subtle:          var(--amber-500);          // Amber/500 #E6A11F
-  --wire-border-inverse:                 var(--gray-950);           // Gray/950  #1B242C
+  --wire-border-inverse:                 var(--gray-950);           // Gray/950  #141414
 
   // =========================================================================
   // § 2 — Component-level variables

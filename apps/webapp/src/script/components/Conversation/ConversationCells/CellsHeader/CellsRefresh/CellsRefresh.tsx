@@ -17,7 +17,9 @@
  *
  */
 
-import {IconButton, IconButtonVariant, ReloadIcon} from '@wireapp/react-ui-kit';
+import {ReloadIcon} from '@wireapp/react-ui-kit';
+
+import {IconButton} from 'Components/IconButton';
 
 import {t} from 'Util/LocalizerUtil';
 
@@ -30,7 +32,6 @@ interface CellsRefreshProps {
 export const CellsRefresh = ({onRefresh}: CellsRefreshProps) => {
   return (
     <IconButton
-      variant={IconButtonVariant.PRIMARY}
       onClick={onRefresh}
       css={buttonStyles}
       aria-label={t('cells.refreshButton')}

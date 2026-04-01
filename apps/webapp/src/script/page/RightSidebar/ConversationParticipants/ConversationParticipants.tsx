@@ -89,12 +89,11 @@ const ConversationParticipants: FC<ConversationParticipantsProps> = ({
       />
 
       <div className="panel__content conversation-participants__content">
-        <div style={{padding: '0 12px'}}>
+        <div style={{padding: '0 16px'}}>
           <SearchInput
             input={searchInput}
             setInput={setSearchInput}
             placeholder={t('conversationParticipantsSearchPlaceholder')}
-            forceDark
           />
         </div>
 

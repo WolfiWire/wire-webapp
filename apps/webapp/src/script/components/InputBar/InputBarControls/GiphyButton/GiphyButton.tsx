@@ -18,28 +18,22 @@
  */
 
 import * as Icon from 'Components/Icon';
+import {IconButton} from 'Components/IconButton';
 import {t} from 'Util/LocalizerUtil';
 
 interface GiphyButtonProps {
   onGifClick: () => void;
 }
 
-export const GiphyButton = ({onGifClick}: GiphyButtonProps) => {
-  return (
-    <>
-      <li>
-        <button
-          className="input-bar-control"
-          type="button"
-          css={{marginBottom: '0'}}
-          title={t('extensionsBubbleButtonGif')}
-          aria-label={t('extensionsBubbleButtonGif')}
-          onClick={onGifClick}
-          data-uie-name="do-giphy-popover"
-        >
-          <Icon.GifIcon width={14} height={14} />
-        </button>
-      </li>
-    </>
-  );
-};
+export const GiphyButton = ({onGifClick}: GiphyButtonProps) => (
+  <li>
+    <IconButton
+      title={t('extensionsBubbleButtonGif')}
+      aria-label={t('extensionsBubbleButtonGif')}
+      onClick={onGifClick}
+      data-uie-name="do-giphy-popover"
+    >
+      <Icon.GifIcon width={14} height={14} />
+    </IconButton>
+  </li>
+);

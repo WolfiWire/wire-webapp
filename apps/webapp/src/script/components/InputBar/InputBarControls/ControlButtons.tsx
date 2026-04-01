@@ -89,13 +89,13 @@ const ControlButtons = ({
       <>
         {showFormatButton && (
           <li>
-            <FormatTextButton isActive={isFormatActive} isEditing onClick={onFormatClick} />
+            <FormatTextButton isActive={isFormatActive} onClick={onFormatClick} />
           </li>
         )}
 
         {showEmojiButton && (
           <li>
-            <EmojiButton isActive={isEmojiActive} isEditing onClick={onEmojiClick} />
+            <EmojiButton isActive={isEmojiActive} onClick={onEmojiClick} />
           </li>
         )}
         {(showFormatButton || showEmojiButton) && (
@@ -104,7 +104,7 @@ const ControlButtons = ({
           </li>
         )}
         <li>
-          <CancelEditButton isEditing onClick={onCancelEditing} />
+          <CancelEditButton onClick={onCancelEditing} />
         </li>
       </>
     );

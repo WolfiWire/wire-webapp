@@ -22,6 +22,7 @@ import {useRef} from 'react';
 import {TabIndex} from '@wireapp/react-ui-kit';
 
 import * as Icon from 'Components/Icon';
+import {IconButton} from 'Components/IconButton';
 import {t} from 'Util/LocalizerUtil';
 
 interface ImageUploadButtonProps {
@@ -46,11 +47,10 @@ export const ImageUploadButton = ({onSelectImages, acceptedImageTypes}: ImageUpl
 
   return (
     <form ref={formRef}>
-      <button
-        type="button"
+      <IconButton
         aria-label={t('tooltipConversationAddImage')}
         title={t('tooltipConversationAddImage')}
-        className="input-bar-control file-button"
+        className="file-button"
         onClick={() => imageRef.current?.click()}
         data-uie-name="do-share-image"
       >
@@ -65,7 +65,7 @@ export const ImageUploadButton = ({onSelectImages, acceptedImageTypes}: ImageUpl
           type="file"
           multiple
         />
-      </button>
+      </IconButton>
     </form>
   );
 };

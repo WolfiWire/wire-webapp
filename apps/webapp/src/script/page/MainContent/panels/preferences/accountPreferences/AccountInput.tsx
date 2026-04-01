@@ -19,7 +19,7 @@
 
 import {FC, InputHTMLAttributes, useEffect, useRef, useState} from 'react';
 
-import {IconButton, IconButtonVariant} from '@wireapp/react-ui-kit';
+import {IconButton} from 'Components/IconButton';
 
 import * as Icon from 'Components/Icon';
 import {TextInput} from 'Components/TextInput';
@@ -149,7 +149,6 @@ const AccountInput: FC<AccountInputProps> = ({
 
             {!readOnly && (
               <IconButton
-                variant={IconButtonVariant.SECONDARY}
                 css={{
                   margin: '0 0.5rem',
                 }}

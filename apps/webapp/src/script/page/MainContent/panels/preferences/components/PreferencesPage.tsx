@@ -19,7 +19,9 @@
 
 import {FC} from 'react';
 
-import {IconButton, IconButtonVariant, QUERY, useMatchMedia} from '@wireapp/react-ui-kit';
+import {QUERY, useMatchMedia} from '@wireapp/react-ui-kit';
+
+import {IconButton} from 'Components/IconButton';
 
 import {FadingScrollbar} from 'Components/FadingScrollbar';
 import {useAppMainState, ViewType} from 'src/script/page/state';
@@ -43,7 +45,6 @@ const PreferencesPage: FC<PreferencesPageProps> = ({title, children}) => {
       <div className="preferences-titlebar">
         {smBreakpoint && isCentralColumn && (
           <IconButton
-            variant={IconButtonVariant.SECONDARY}
             className="conversation-title-bar-icon icon-back"
             css={buttonsStyle}
             onClick={() => setCurrentView(ViewType.MOBILE_LEFT_SIDEBAR)}

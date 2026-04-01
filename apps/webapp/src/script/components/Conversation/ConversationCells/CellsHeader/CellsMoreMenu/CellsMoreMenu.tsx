@@ -19,7 +19,9 @@
 
 import {QualifiedId} from '@wireapp/api-client/lib/user';
 
-import {DropdownMenu, IconButton, IconButtonVariant, MoreIcon, TrashIcon} from '@wireapp/react-ui-kit';
+import {DropdownMenu, MoreIcon, TrashIcon} from '@wireapp/react-ui-kit';
+
+import {IconButton} from 'Components/IconButton';
 
 import {t} from 'Util/LocalizerUtil';
 
@@ -36,7 +38,7 @@ export const CellsMoreMenu = ({conversationQualifiedId}: CellsMoreMenuProps) => 
   return (
     <DropdownMenu>
       <DropdownMenu.Trigger asChild>
-        <IconButton variant={IconButtonVariant.PRIMARY} css={buttonStyles}>
+        <IconButton css={buttonStyles}>
           <MoreIcon />
         </IconButton>
       </DropdownMenu.Trigger>

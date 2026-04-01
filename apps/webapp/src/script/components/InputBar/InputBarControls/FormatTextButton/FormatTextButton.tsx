@@ -19,31 +19,23 @@
 
 import type {MouseEvent} from 'react';
 
-import cx from 'classnames';
-
 import * as Icon from 'Components/Icon';
+import {IconButton} from 'Components/IconButton';
 import {t} from 'Util/LocalizerUtil';
 
 interface FormatTextButtonProps {
   isActive: boolean;
-  isEditing?: boolean;
   onClick: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const FormatTextButton = ({isActive, isEditing = false, onClick}: FormatTextButtonProps) => {
-  return (
-    <button
-      className={cx(`input-bar-control`, {
-        active: isActive,
-        'input-bar-control--editing': isEditing,
-      })}
-      type="button"
-      onClick={onClick}
-      title={isActive ? t('tooltipConversationHideFormatting') : t('tooltipConversationShowFormatting')}
-      aria-label={isActive ? t('tooltipConversationHideFormatting') : t('tooltipConversationShowFormatting')}
-      data-uie-name="format-text"
-    >
-      <Icon.MarkdownIcon width={14} height={14} />
-    </button>
-  );
-};
+export const FormatTextButton = ({isActive, onClick}: FormatTextButtonProps) => (
+  <IconButton
+    active={isActive}
+    onClick={onClick}
+    title={isActive ? t('tooltipConversationHideFormatting') : t('tooltipConversationShowFormatting')}
+    aria-label={isActive ? t('tooltipConversationHideFormatting') : t('tooltipConversationShowFormatting')}
+    data-uie-name="format-text"
+  >
+    <Icon.MarkdownIcon width={14} height={14} />
+  </IconButton>
+);

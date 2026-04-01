@@ -1,6 +1,6 @@
 /*
  * Wire
- * Copyright (C) 2025 Wire Swiss GmbH
+ * Copyright (C) 2024 Wire Swiss GmbH
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,22 +17,4 @@
  *
  */
 
-import {IconButton} from 'Components/IconButton';
-import * as Icon from 'Components/Icon';
-import {t} from 'Util/LocalizerUtil';
-
-interface CellAssetUploadButtonProps {
-  onClick: () => void;
-}
-
-export const CellAssetUploadButton = ({onClick}: CellAssetUploadButtonProps) => (
-  <IconButton
-    aria-label={t('tooltipConversationFile')}
-    title={t('tooltipConversationFile')}
-    className="file-button"
-    onClick={onClick}
-    data-uie-name="do-share-file"
-  >
-    <Icon.AttachmentIcon />
-  </IconButton>
-);
+export {IconButton} from './IconButton';

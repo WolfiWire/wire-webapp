@@ -21,28 +21,22 @@ import {forwardRef, KeyboardEvent, MutableRefObject, useEffect} from 'react';
 
 import {amplify} from 'amplify';
 
-import {CircleCloseIcon, IconButton, Input, SearchIcon} from '@wireapp/react-ui-kit';
+import {IconButton} from 'Components/IconButton';
 import {WebAppEvents} from '@wireapp/webapp-events';
 
 import * as Icon from 'Components/Icon';
 import {useCreateConversationModal} from 'Components/Modals/CreateConversation/hooks/useCreateConversationModal';
+import {SearchInput} from 'Components/SearchInput';
 import {ConversationLabel} from 'Repositories/conversation/ConversationLabelRepository';
 import {User} from 'Repositories/entity/User';
 import {generatePermissionHelpers} from 'Repositories/user/UserPermission';
 import {SidebarTabs} from 'src/script/page/LeftSidebar/panels/Conversations/useSidebarStore';
-import {handleEnterDown, handleEscDown} from 'Util/KeyboardUtil';
 import {t} from 'Util/LocalizerUtil';
 import {useChannelsFeatureFlag} from 'Util/useChannelsFeatureFlag';
 
-import {
-  button,
-  header,
-  label,
-  closeIconStyles,
-  searchIconStyles,
-  searchInputStyles,
-  searchInputWrapperStyles,
-} from './ConversationHeader.styles';
+import {ConversationSectionFilterButton} from '../ConversationSectionFilterButton/ConversationSectionFilterButton';
+
+import {button, header, label, searchInputWrapperStyles} from './ConversationHeader.styles';
 
 interface ConversationHeaderProps {
   currentTab: SidebarTabs;
@@ -76,7 +70,7 @@ export const ConversationHeaderComponent = ({
   const isFolderView = currentTab === SidebarTabs.FOLDER;
 
   const conversationsHeaderTitle: Partial<Record<SidebarTabs, string>> = {
-    [SidebarTabs.RECENT]: t('conversationViewAllConversations'),
+    [SidebarTabs.RECENT]: t('videoCallOverlayConversations'),
     [SidebarTabs.FAVORITES]: t('conversationLabelFavorites'),
     [SidebarTabs.GROUPS]: t('conversationLabelGroups'),
     [SidebarTabs.CHANNELS]: t('conversationLabelChannels'),
@@ -84,11 +78,6 @@ export const ConversationHeaderComponent = ({
     [SidebarTabs.FOLDER]: t('folderViewTooltip'),
     [SidebarTabs.ARCHIVES]: t('conversationFooterArchive'),
     [SidebarTabs.CONNECT]: t('searchConnect'),
-  };
-
-  const onKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-    handleEscDown(event, () => setSearchValue(''));
-    handleEnterDown(event, () => onSearchEnterClick(event));
   };
 
   useEffect(() => {
@@ -119,6 +108,8 @@ export const ConversationHeaderComponent = ({
           {isFolderView && currentFolder ? currentFolder.name : conversationsHeaderTitle[currentTab]}
         </h2>
 
+        {currentTab === SidebarTabs.RECENT && <ConversationSectionFilterButton />}
+
         {currentTab !== SidebarTabs.ARCHIVES && (canCreateGroupConversation() || canExternalUserCreateChannel) && (
           <IconButton
             onClick={showCreateConversationModal}
@@ -132,23 +123,16 @@ export const ConversationHeaderComponent = ({
       </div>
 
       {showSearchInput && (
-        <Input
-          onKeyDown={onKeyDown}
-          ref={searchInputRef}
-          className="label-1"
-          value={searchValue}
-          onChange={event => setSearchValue(event.currentTarget.value)}
-          startContent={<SearchIcon width={14} height={14} css={searchIconStyles} />}
-          endContent={
-            searchValue && (
-              <CircleCloseIcon className="cursor-pointer" onClick={() => setSearchValue('')} css={closeIconStyles} />
-            )
-          }
-          inputCSS={searchInputStyles}
-          wrapperCSS={searchInputWrapperStyles}
-          placeholder={searchInputPlaceholder}
-          data-uie-name="search-conversations"
-        />
+        <div css={searchInputWrapperStyles}>
+          <SearchInput
+            ref={searchInputRef}
+            input={searchValue}
+            setInput={setSearchValue}
+            placeholder={searchInputPlaceholder}
+            onEnter={onSearchEnterClick}
+            data-uie-name="search-conversations"
+          />
+        </div>
       )}
     </>
   );

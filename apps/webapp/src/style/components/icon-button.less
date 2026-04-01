@@ -1,0 +1,86 @@
+/*
+ * Wire
+ * Copyright (C) 2024 Wire Swiss GmbH
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see http://www.gnu.org/licenses/.
+ *
+ */
+
+// ---------------------------------------------------------------------------
+// Unified icon button — single style definition for all icon buttons.
+//
+// Default : transparent background, no visible border, 32×32 px
+// Hover   : var(--wire-background-hover-subtle) tint
+// Active  : accent-tinted border + background + icon colour
+// Disabled: var(--wire-content-disabled) icon colour
+// Focus   : var(--wire-border-accent) border, no outline
+// ---------------------------------------------------------------------------
+
+.wire-icon-btn {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  margin: 0;
+  background: transparent;
+  color: var(--wire-content-primary);
+  cursor: pointer;
+
+  svg,
+  svg path {
+    fill: currentColor;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: var(--wire-background-hover-subtle);
+  }
+
+  &:focus-visible {
+    border-color: var(--wire-border-accent);
+    outline: none;
+  }
+
+  &:disabled,
+  &[disabled] {
+    color: var(--wire-content-disabled);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  // Active / selected (toggle-on) — accent tinted
+  &--active {
+    border-color: var(--accent-color-300);
+    background-color: var(--accent-color-50);
+    color: var(--accent-color);
+
+    body.theme-dark & {
+      border-color: var(--accent-color-700);
+      background-color: var(--accent-color-800);
+      color: var(--white);
+    }
+
+    &:hover:not(:disabled) {
+      background-color: var(--accent-color-100);
+
+      body.theme-dark & {
+        background-color: var(--accent-color-700);
+      }
+    }
+  }
+}

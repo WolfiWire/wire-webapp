@@ -17,145 +17,98 @@
  *
  */
 
-.search-outer {
-  overflow: hidden;
-}
+// ---------------------------------------------------------------------------
+// Unified search input — matches the ConversationHeader reference design.
+// Theming is handled entirely via DS tokens; no forceDark overrides needed.
+// ---------------------------------------------------------------------------
 
-.user-list-light {
-  padding: 0 !important;
-}
-
-.search-inner-wrap {
-  overflow-x: hidden;
-}
-
-.search-inner {
-  .hide-scrollbar;
+.search-input-wrap {
   position: relative;
-
   display: flex;
-  max-height: 84px;
-  flex-wrap: wrap;
   align-items: center;
-  overflow-y: auto;
 }
 
-.search-inner > span {
-  .label-bold-xs;
-
-  position: relative;
-  flex: 0 0 auto;
-  padding-right: 16px;
-  line-height: var(--line-height-lg);
-
-  &::before {
-    .dot-size(2px);
-
-    position: absolute;
-    top: 11px;
-    right: 7px;
-    background-color: var(--foreground-fade-40);
-    content: '';
-
-    .user-list-light & {
-      background-color: var(--background-fade-40);
-    }
-  }
-
-  &:last-child {
-    margin-right: 8px;
-  }
+.search-input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  color: var(--wire-content-secondary);
+  pointer-events: none;
+  z-index: 1;
 }
 
-.search-inner > input {
+.search-input-field {
   .label-1;
 
   width: 100%;
-  min-width: 65px;
   height: 32px;
-  flex: 1 1;
-  padding: 20px 20px 20px 40px;
+  padding: 0 36px;
   border: 1px solid var(--wire-border-default);
-  border-radius: 12px;
+  border-radius: 8px;
   appearance: none;
   background: var(--wire-background-surface);
-  color: currentColor;
+  color: var(--wire-content-primary);
   outline: none;
+
+  // Suppress browser-native search cancel decoration
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration {
+    appearance: none;
+  }
 
   &:invalid {
     box-shadow: none;
   }
 
   &::placeholder {
-    &:invalid {
-      color: var(--wire-content-secondary);
-    }
     color: var(--wire-content-secondary);
   }
 
-  &:placeholder-shown {
-    .ellipsis-nowrap;
-    font-size: 14px;
-  }
-
-  // hack for chrome to fix line height issue
+  // Chrome line-height tweak
   &::-webkit-input-placeholder {
     transform: translateY(-1px);
   }
 
-  .user-list-light & {
-    &::placeholder {
-      color: var(--background-fade-40);
-    }
-  }
-
   &:hover {
-    border-color: var(--text-input-border-hover);
+    border-color: var(--wire-border-strong);
   }
 
   &:focus,
-  &:focus-visible,
-  &:active {
-    border-color: var(--accent-color-500);
+  &:focus-visible {
+    border-color: var(--wire-border-accent);
   }
 }
 
-
-.search-icon {
+.search-input-clear {
   position: absolute;
-  z-index: 1;
-  left: 16px;
-  height: var(--avatar-diameter-xs);
-  line-height: var(--avatar-diameter-xs);
-}
-
-.search-input-cancel {
-  position: absolute;
+  right: 8px;
   top: 50%;
-  right: 16px;
-  bottom: 17px;
+  transform: translateY(-50%);
   display: flex;
-  width: 16px;
-  height: 16px;
   align-items: center;
   justify-content: center;
+  width: 16px;
+  height: 16px;
   padding: 0;
   border: none;
   border-radius: 50%;
-  margin: 0;
-  background: var(--wire-content-primary);
-  transform: translateY(-50%);
-}
+  background: var(--wire-content-secondary);
+  cursor: pointer;
+  line-height: 0;
 
-.search-input-selected {
-  margin-top: 10px;
-
-  & > span {
-    margin-right: 8px;
-    margin-bottom: 6px;
+  svg {
+    fill: var(--wire-background-surface);
   }
-}
 
-.search-input-padding {
-  padding: 0 40px !important;
+  &:hover {
+    background: var(--wire-content-primary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--wire-border-accent);
+    outline-offset: 2px;
+  }
 }

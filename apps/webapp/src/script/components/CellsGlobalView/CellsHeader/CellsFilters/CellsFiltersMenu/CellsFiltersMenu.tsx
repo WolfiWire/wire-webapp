@@ -19,7 +19,9 @@
 
 import {useState} from 'react';
 
-import {IconButton, IconButtonVariant, OptionsIcon} from '@wireapp/react-ui-kit';
+import {OptionsIcon} from '@wireapp/react-ui-kit';
+
+import {IconButton} from 'Components/IconButton';
 
 import {CellsRepository} from 'Repositories/cells/CellsRepository';
 
@@ -41,7 +43,7 @@ export const CellsFiltersMenu = ({activeFiltersCount, cellsRepository}: CellsFil
 
   return (
     <>
-      <IconButton variant={IconButtonVariant.PRIMARY} css={buttonStyles} onClick={() => setIsOpen(true)}>
+      <IconButton active={activeFiltersCount > 0} css={buttonStyles} onClick={() => setIsOpen(true)}>
         <OptionsIcon />
         {activeFiltersCount > 0 && <span css={counterStyles}>{activeFiltersCount}</span>}
       </IconButton>

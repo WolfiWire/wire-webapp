@@ -17,9 +17,9 @@
  *
  */
 
-import React, {useEffect, useLayoutEffect, useRef} from 'react';
+import React, {forwardRef, useEffect, useImperativeHandle, useLayoutEffect, useRef} from 'react';
 
-import cx from 'classnames';
+import {SearchIcon} from '@wireapp/react-ui-kit';
 
 import type {User} from 'Repositories/entity/User';
 import {MAX_HANDLE_LENGTH} from 'Repositories/user/UserHandleGenerator';
@@ -29,84 +29,72 @@ import {t} from 'Util/LocalizerUtil';
 import * as Icon from '../Icon';
 
 interface SearchInputProps {
-  onEnter?: (event: React.KeyboardEvent<HTMLInputElement>) => void | Promise<void>;
-  /** Will force the component to have a dark theme and not follow user's theme */
-  forceDark?: boolean;
   input: string;
+  setInput: (value: string) => void;
   placeholder: string;
   selectedUsers?: User[];
-  setInput: (input: string) => void;
+  onEnter?: (event: React.KeyboardEvent<HTMLInputElement>) => void | Promise<void>;
+  className?: string;
+  'data-uie-name'?: string;
 }
 
-export const SearchInput = ({
-  onEnter,
-  input,
-  selectedUsers = [],
-  placeholder,
-  setInput,
-  forceDark,
-}: SearchInputProps) => {
-  const innerElement = useRef<HTMLDivElement>(null);
-  const inputElement = useRef<HTMLInputElement>(null);
+export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
+  ({input, setInput, placeholder, selectedUsers = [], onEnter, className, 'data-uie-name': dataUieName}, ref) => {
+    const innerRef = useRef<HTMLInputElement>(null);
 
-  const emptyInput = input.length === 0;
-  const noSelectedUsers = selectedUsers.length === 0;
+    // Forward the inner ref to the external ref so callers can focus/read the element
+    useImperativeHandle(ref, () => innerRef.current!);
 
-  useLayoutEffect(() => {
-    if (inputElement.current && innerElement.current) {
-      inputElement.current.focus();
-      innerElement.current.scrollTop = inputElement.current.scrollHeight;
-    }
-  }, [selectedUsers.length]);
+    // Re-focus and clear text after each user selection (people-picker behaviour)
+    useLayoutEffect(() => {
+      innerRef.current?.focus();
+    }, [selectedUsers.length]);
 
-  useEffect(() => {
-    setInput('');
-  }, [selectedUsers.length]);
+    useEffect(() => {
+      setInput('');
+    }, [selectedUsers.length]);
 
-  const placeHolderText = emptyInput && noSelectedUsers ? placeholder : '';
+    return (
+      <div className={`search-input-wrap${className ? ` ${className}` : ''}`}>
+        <span className="search-input-icon" aria-hidden="true">
+          <SearchIcon width={14} height={14} />
+        </span>
 
-  return (
-    <form
-      autoComplete="off"
-      className={`search-outer ${forceDark ? '' : 'user-list-light'}`}
-      css={noSelectedUsers && {minHeight: '32px'}}
-    >
-      <div className="search-inner-wrap">
-        <div className="search-inner" ref={innerElement}>
-          <div className="search-icon icon-search" />
+        <input
+          ref={innerRef}
+          className="search-input-field"
+          type="search"
+          value={input}
+          maxLength={MAX_HANDLE_LENGTH}
+          placeholder={placeholder}
+          spellCheck={false}
+          aria-label={placeholder}
+          data-uie-name={dataUieName ?? 'enter-search'}
+          onChange={event => setInput(event.target.value)}
+          onKeyDown={(event: React.KeyboardEvent<HTMLInputElement>) => {
+            if (event.key === 'Escape') {
+              event.preventDefault();
+              setInput('');
+            } else if (isEnterKey(event.nativeEvent)) {
+              event.preventDefault();
+              void onEnter?.(event);
+            }
+          }}
+        />
 
-          <input
-            className={cx('search-input', {'search-input-padding': !!input})}
-            data-uie-name="enter-users"
-            maxLength={MAX_HANDLE_LENGTH}
-            onChange={event => setInput(event.target.value)}
-            onKeyDown={(event: React.KeyboardEvent<HTMLInputElement>) => {
-              if (isEnterKey(event.nativeEvent)) {
-                event.preventDefault();
-                void onEnter?.(event);
-              }
-              return true;
-            }}
-            placeholder={placeHolderText}
-            ref={inputElement}
-            required
-            spellCheck={false}
-            type="text"
-            value={input}
-            aria-label={placeholder}
-          />
-
-          {input && (
-            <button
-              className="search-input-cancel"
-              onClick={() => setInput('')}
-              aria-label={t('accessibility.searchInput.cancel')}
-            >
-              <Icon.CloseIcon css={{fill: 'var(--wire-background-surface)', height: 8, width: 8}} />
-            </button>
-          )}
-        </div>
+        {input && (
+          <button
+            className="search-input-clear"
+            type="button"
+            onClick={() => setInput('')}
+            aria-label={t('accessibility.searchInput.cancel')}
+          >
+            <Icon.CloseIcon width={8} height={8} />
+          </button>
+        )}
       </div>
-    </form>
-  );
-};
+    );
+  },
+);
+
+SearchInput.displayName = 'SearchInput';

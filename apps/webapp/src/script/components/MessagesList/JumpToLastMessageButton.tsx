@@ -21,8 +21,9 @@ import {useEffect, useState} from 'react';
 
 import {useDebouncedCallback} from 'use-debounce';
 
-import {ChevronIcon, IconButton} from '@wireapp/react-ui-kit';
+import {ChevronIcon} from '@wireapp/react-ui-kit';
 
+import {IconButton} from 'Components/IconButton';
 import {
   jumpToLastMessageButtonStyles,
   jumpToLastMessageChevronStyles,

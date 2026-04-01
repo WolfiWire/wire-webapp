@@ -154,7 +154,6 @@ const StartUI = ({
           placeholder={t('searchPeopleOnlyPlaceholder')}
           setInput={setSearchQuery}
           onEnter={openFirstConversation}
-          forceDark
         />
       </div>
       {showServiceTab && (

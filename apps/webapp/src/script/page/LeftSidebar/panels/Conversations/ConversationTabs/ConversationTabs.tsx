@@ -20,13 +20,10 @@
 import {container} from 'tsyringe';
 
 import {
-  GroupIcon,
   MessageIcon,
-  StarIcon,
   ExternalLinkIcon,
   Tooltip,
   SupportIcon,
-  ChannelIcon,
   CollectionIcon,
   TeamIcon,
 } from '@wireapp/react-ui-kit';
@@ -38,28 +35,23 @@ import {User} from 'Repositories/entity/User';
 import {TeamState} from 'Repositories/team/TeamState';
 import {FEATURES, hasAccessToFeature} from 'Repositories/user/UserPermission';
 import {getManageTeamUrl} from 'src/script/externalRoute';
-import {ConversationFolderTab} from 'src/script/page/LeftSidebar/panels/Conversations/ConversationTab/ConversationFolderTab';
 import {SidebarTabs} from 'src/script/page/LeftSidebar/panels/Conversations/useSidebarStore';
 import {Core} from 'src/script/service/CoreSingleton';
 import {useKoSubscribableChildren} from 'Util/ComponentUtil';
 import {isDataDogEnabled} from 'Util/DataDog';
 import {getWebEnvironment} from 'Util/Environment';
 import {replaceLink, t} from 'Util/LocalizerUtil';
-import {useChannelsFeatureFlag} from 'Util/useChannelsFeatureFlag';
 
 import {
   footerDisclaimer,
   footerDisclaimerEllipsis,
   footerDisclaimerTooltip,
   iconStyle,
-  conversationsTitleWrapper,
 } from './ConversationTabs.styles';
-import {FolderIcon} from './FolderIcon';
 import {TeamCreationBanner} from './TeamCreation/TeamCreationBanner';
 
 import {Config} from '../../../../../Config';
 import {ContentState} from '../../../../useAppState';
-import {ConversationFilterButton} from '../ConversationFilterButton';
 import {ConversationTab} from '../ConversationTab';
 
 interface ConversationTabsProps {
@@ -79,100 +71,21 @@ interface ConversationTabsProps {
 
 export const ConversationTabs = ({
   unreadConversations,
-  favoriteConversations,
-  archivedConversations,
-  groupConversations,
-  conversationRepository,
-  directConversations,
   onChangeTab,
   currentTab,
   onClickPreferences,
   showNotificationsBadge = false,
   selfUser,
-  channelConversations,
 }: ConversationTabsProps) => {
-  const {isChannelsEnabled, isChannelsFeatureEnabled} = useChannelsFeatureFlag();
   const core = container.resolve(Core);
   const teamState = container.resolve(TeamState);
-  const totalUnreadConversations = unreadConversations.length;
   const {teamRole} = useKoSubscribableChildren(selfUser, ['teamRole']);
   const {isCellsEnabled: isCellsEnabledForTeam} = useKoSubscribableChildren(teamState, ['isCellsEnabled']);
-
-  const totalUnreadFavoriteConversations = favoriteConversations.filter(favoriteConversation =>
-    favoriteConversation.hasUnread(),
-  ).length;
-
-  const totalUnreadArchivedConversations = archivedConversations.filter(conversation =>
-    conversation.hasUnread(),
-  ).length;
-
-  const filterUnreadAndArchivedConversations = (conversation: Conversation) =>
-    !conversation.is_archived() && conversation.hasUnread();
 
   const isTeamCreationEnabled =
     Config.getConfig().FEATURE.ENABLE_TEAM_CREATION &&
     core.backendFeatures.version >= Config.getConfig().MIN_TEAM_CREATION_SUPPORTED_API_VERSION;
 
-  const channelConversationsLength = channelConversations.filter(filterUnreadAndArchivedConversations).length;
-  const groupConversationsLength = groupConversations.filter(filterUnreadAndArchivedConversations).length;
-
-  const conversationTabs = [
-    {
-      type: SidebarTabs.RECENT,
-      title: t('conversationViewTooltip'),
-      dataUieName: 'go-recent-view',
-      Icon: <MessageIcon />,
-      unreadConversations: unreadConversations.length,
-    },
-    {
-      type: SidebarTabs.FAVORITES,
-      title: t('conversationLabelFavorites'),
-      dataUieName: 'go-favorites-view',
-      Icon: <StarIcon />,
-      unreadConversations: totalUnreadFavoriteConversations,
-    },
-    {
-      type: SidebarTabs.GROUPS,
-      title: t('conversationLabelGroups'),
-      dataUieName: 'go-groups-view',
-      Icon: <GroupIcon height={20} width={20} />,
-      unreadConversations: isChannelsEnabled
-        ? groupConversationsLength
-        : groupConversationsLength + channelConversationsLength,
-    },
-    {
-      type: SidebarTabs.DIRECTS,
-      title: t('conversationLabelDirects'),
-      dataUieName: 'go-directs-view',
-      Icon: <Icon.PeopleIcon />,
-      unreadConversations: directConversations.filter(filterUnreadAndArchivedConversations).length,
-    },
-    {
-      type: SidebarTabs.FOLDER,
-      title: t('folderViewTooltip'),
-      dataUieName: 'go-folders-view',
-      Icon: <FolderIcon />,
-      unreadConversations: totalUnreadConversations,
-    },
-    {
-      type: SidebarTabs.ARCHIVES,
-      title: t('tooltipConversationsArchived', {number: archivedConversations.length}),
-      label: t('conversationFooterArchive'),
-      dataUieName: 'go-archive',
-      Icon: <Icon.ArchiveIcon />,
-      unreadConversations: totalUnreadArchivedConversations,
-    },
-  ];
-
-  if (isChannelsEnabled && (channelConversations.some(channel => !channel.is_archived()) || isChannelsFeatureEnabled)) {
-    conversationTabs.splice(2, 0, {
-      type: SidebarTabs.CHANNELS,
-      title: t('conversationLabelChannels'),
-      dataUieName: 'go-channels-view',
-      Icon: <ChannelIcon />,
-      unreadConversations: channelConversationsLength,
-    });
-  }
   const manageTeamUrl = getManageTeamUrl();
   const replaceWireLink = replaceLink('https://app.wire.com', '', '');
 
@@ -186,36 +99,24 @@ export const ConversationTabs = ({
         aria-owns="tab-1 tab-2 tab-3 tab-4 tab-5 tab-6 tab-7"
         className="conversations-sidebar-list"
       >
-        <div className="conversations-sidebar-title" css={conversationsTitleWrapper}>
-          <span>{t('videoCallOverlayConversations')}</span>
-          <ConversationFilterButton />
-        </div>
-
-        {conversationTabs.map((conversationTab, index) => {
-          if (conversationTab.type === SidebarTabs.FOLDER) {
-            return (
-              <ConversationFolderTab
-                {...conversationTab}
-                unreadConversations={unreadConversations}
-                conversationRepository={conversationRepository}
-                key={conversationTab.type}
-                conversationTabIndex={index + 1}
-                onChangeTab={onChangeTab}
-                isActive={conversationTab.type === currentTab}
-              />
-            );
-          }
-
-          return (
-            <ConversationTab
-              {...conversationTab}
-              key={conversationTab.type}
-              conversationTabIndex={index + 1}
-              onChangeTab={onChangeTab}
-              isActive={conversationTab.type === currentTab}
-            />
-          );
-        })}
+        <ConversationTab
+          type={SidebarTabs.RECENT}
+          title={t('conversationViewTooltip')}
+          dataUieName="go-recent-view"
+          Icon={<MessageIcon />}
+          unreadConversations={unreadConversations.length}
+          conversationTabIndex={1}
+          onChangeTab={onChangeTab}
+          isActive={[
+            SidebarTabs.RECENT,
+            SidebarTabs.FAVORITES,
+            SidebarTabs.GROUPS,
+            SidebarTabs.CHANNELS,
+            SidebarTabs.DIRECTS,
+            SidebarTabs.FOLDER,
+            SidebarTabs.ARCHIVES,
+          ].includes(currentTab)}
+        />
 
         <div className="conversations-sidebar-divider" />
 
@@ -229,7 +130,7 @@ export const ConversationTabs = ({
           type={SidebarTabs.CONNECT}
           Icon={<Icon.AddParticipantsIcon />}
           onChangeTab={onChangeTab}
-          conversationTabIndex={conversationTabs.length + 1}
+          conversationTabIndex={2}
           dataUieName="go-people"
           isActive={currentTab === SidebarTabs.CONNECT}
         />
@@ -248,7 +149,7 @@ export const ConversationTabs = ({
               type={SidebarTabs.CELLS}
               Icon={<CollectionIcon />}
               onChangeTab={onChangeTab}
-              conversationTabIndex={conversationTabs.length + 2}
+              conversationTabIndex={3}
               dataUieName="go-cells"
               isActive={currentTab === SidebarTabs.CELLS}
             />

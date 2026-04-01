@@ -18,6 +18,7 @@
  */
 
 import * as Icon from 'Components/Icon';
+import {IconButton} from 'Components/IconButton';
 import {t} from 'Util/LocalizerUtil';
 
 interface PingButtonProps {
@@ -25,18 +26,14 @@ interface PingButtonProps {
   isDisabled: boolean;
 }
 
-export const PingButton = ({isDisabled, onClick}: PingButtonProps) => {
-  return (
-    <button
-      className="input-bar-control"
-      type="button"
-      onClick={onClick}
-      disabled={isDisabled}
-      title={t('tooltipConversationPing')}
-      aria-label={t('tooltipConversationPing')}
-      data-uie-name="do-ping"
-    >
-      <Icon.PingIcon width={14} height={14} />
-    </button>
-  );
-};
+export const PingButton = ({isDisabled, onClick}: PingButtonProps) => (
+  <IconButton
+    onClick={onClick}
+    disabled={isDisabled}
+    title={t('tooltipConversationPing')}
+    aria-label={t('tooltipConversationPing')}
+    data-uie-name="do-ping"
+  >
+    <Icon.PingIcon width={14} height={14} />
+  </IconButton>
+);
